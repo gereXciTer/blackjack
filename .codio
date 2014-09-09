@@ -3,7 +3,9 @@
 
 // Run button configuration
   "commands": {
-        "Node version": "node --version"
+        "Node version": "node --version",
+        "Brunch watch": "cd ~/workspace/blackjack && brunch watch --server",
+      "start UnGit": "ungit --port=9501"
   },
 
 // Preview button configuration
@@ -11,6 +13,7 @@
         "Project Index (static)": "https://{{domain}}/{{index}}",
         "Current File (static)": "https://{{domain}}/{{filepath}}",
         "Box URL": "http://{{domain}}:3333/",
-        "Box URL SSL": "https://{{domain}}:9500/"
+        "Box URL SSL": "https://{{domain}}:9500/",
+      	"Visit Ungit": "https://{{domain}}:9501/#/repository?path=/home/codio/workspace"
   }
 }
