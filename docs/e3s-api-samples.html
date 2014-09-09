@@ -7,11 +7,10 @@ To change this template use Tools | Templates.
     <title></title>
 </head>
 <body>
-    <table>
-        <tr>
-            <td>user search by email</td>
-            <td>https://e3s.epam.com/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&query={%22email%22:%22volodymyr_hartsev@epam.com%22}&fields=city,country,fullNameSum.full,project&limit=5</td>
-        </tr>
-    </table>
+    <ul>
+        <li><a href="https://e3s.epam.com/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&query={%22email%22:%22volodymyr_hartsev@epam.com%22}&limit=5">user search by email</a></li>
+        <li><a href="https://e3s.epam.com/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.project.api.data.ProjectProjectionEntity&query={%22name%22:%22UBS-WMAT%22}">project search by name</a></li>
+        <li><a href="https://e3s.epam.com/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&query={%22upsaidSum%22:{%22$in%22:[%224060741400008484376%22]}}&limit=5">projejct team list</a></li>
+    </ul>
 </body>
 </html>
