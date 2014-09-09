@@ -1,8 +1,12 @@
 <div>
   <select>
-    <option value=""></option>
+	{{#each participants}}
+    <option value="{{name}}">{{name}}</option>
+	{{/each}}
   </select>
 </div>
 
-<a class="btn big back" href="#">Back</a>
-<a class="btn big next" href="#">Next</a>
+<div class="wizard-buttons">
+  <a class="btn big back" href="#">< Back</a>
+  <a class="btn big next" href="#">Next ></a>
+</div>

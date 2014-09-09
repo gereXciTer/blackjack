@@ -2,7 +2,7 @@
 * Created with BlackJack.
 * User: exciter
 * Date: 2014-09-09
-* Time: 06:25 PM
+* Time: 11:36 PM
 * To change this template use Tools | Templates.
 */
 
@@ -11,15 +11,12 @@ var View = require('views/base/view');
 module.exports = View.extend({
   autoRender: true,
   className: 'new-desk',
-  template: require('./templates/new-desk'),
+  template: require('./templates/desk'),
   regions: {
-    step1: '#step1',
-    step2: '#step2',
-    step3: '#step3',
-    step4: '#step4'
+		
   },
   attach: function(args){
     this.constructor.__super__.attach.apply(this, arguments);
-    this.$el.height($(window).height() - this.$el.offset().top * 2)
+    
   },
 });

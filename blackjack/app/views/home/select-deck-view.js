@@ -21,7 +21,8 @@ module.exports = View.extend({
     this.params = args;
   },
   goNext: function(e){
-		e.preventDefault(); 
+		e.preventDefault();
+    Chaplin.utils.redirectTo('desk#viewdesk', {id: 2})
   },
   goBack: function(e){
 		e.preventDefault();    

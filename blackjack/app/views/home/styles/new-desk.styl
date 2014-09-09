@@ -1,27 +1,50 @@
 .new-desk
-  width: 300px
-  margin: 0 auto
+  width: 400px
+  margin: 2em auto
   overflow: visible
   position: relative
   .steps
+  	margin: 0
+    padding: 0
     list-style: none
     white-space: nowrap
     position: absolute
     left: 0
+    height: 100%
     transition: all .5s ease-in-out
-    li
-      display: inline-block
+    overflow: hidden
+    &>li
+      display: block
+      float: left
+      height: 100%
       &>div
-        margin: 2em
+      	text-align: center
+      	height: 100%
+        width: 300px
+        margin: 0 2em
         position: relative
-        &.dimmed
-          &::after
-          	content: ' '
-            position: absolute
+        &.dimmed::after
+          content: ' '
+          position: absolute
+          width: 100%
+          height: 100%
+          left: 0
+          top: 0
+          background-color: white
+          opacity: 0.75
+        ul
+        	list-style: none
+          margin: 1em 0
+          padding: 0
+          text-align: left
+          li input[type="text"]
+	          margin: 0.2em 0
             width: 100%
-            height: 100%
-            left: 0
-            top: 0
-            background-color: white
-            opacity: 0.75
 
+.wizard-buttons
+	position: absolute
+  bottom: 0.5em
+  width: 100%
+  text-align: center
+  a
+  	margin: 0 2em

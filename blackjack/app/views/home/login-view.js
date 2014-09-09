@@ -7,6 +7,7 @@
 */
 
 var View = require('views/base/view');
+var Model = require('models/base/model');
 
 var SelectProjectView = require('views/home/select-project-view');
 
@@ -34,7 +35,12 @@ module.exports = View.extend({
     
     this.params.parentView.subview('step2', new SelectProjectView({
       region: 'step2',
-      parentView: this.params.parentView
+      parentView: this.params.parentView,
+      model: new Model({participants: [
+        {name:'GLO-ODC'},
+        {name:'UBS-WMATVLK'},
+        {name:'HBO-GOT'}
+      ]})
     }));
   }
 });

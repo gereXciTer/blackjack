@@ -16,7 +16,8 @@ module.exports = View.extend({
   template: require('./templates/select-participants'),
   events: {
     'click a.next': 'goNext',
-    'click a.back': 'goBack'
+    'click a.back': 'goBack',
+    'click a.add-guest': 'addGuest'
   },
   initialize: function(args){
     this.constructor.__super__.initialize.apply(this, arguments);
@@ -52,5 +53,10 @@ module.exports = View.extend({
     
     this.params.parentView.removeSubview('step4');
     this.params.parentView.removeSubview('step3');
+  },
+  addGuest: function(e){
+    e.preventDefault();    
+    var target = $(e.currentTarget);
+    target.siblings('ul').append('<li><input type="text" name="guest[]" placeholder="Enter email to invite guest" /></li>');
   }
 });
