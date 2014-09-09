@@ -1,4 +1,4 @@
 blackjack
 =========
 
-Bkack Jack and girls for EPAM Hackaton US North 2014
+Preference and flutist girls :) for EPAM Hackaton US North 2014
