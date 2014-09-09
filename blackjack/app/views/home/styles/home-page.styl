@@ -1,19 +1,52 @@
 @import 'nib'
 
+.btn
+  display inline-block
+  padding 0.2em 0.5em
+  text-decoration none
+  border: 1px solid black
+  color: black
+  &:hover
+  	color: white
+    background-color: black
+	&.big
+  	font-size: 1.2em
+    
+.center
+	text-align: center
+  
+.hr
+	margin: 1em 0
+  height: 1.2em
+  line-height: 1.2em
+  position: relative
+  font-size: 0.8em
+  &::before
+  	content: ' '
+    position: absolute
+    display: block
+    width: 100%
+    height: 1px
+    background-color: black
+    top: 0.6em
+  span
+  	padding 0 1em
+  	background: white
+    z-index: 1
+    position: relative
+  
+  
 .home-page
-  width: 551px
-  height: 275px
-  margin: 0 auto
-  padding: 5px
-  margin-bottom: 0.5em
-  color: #fff
-  background-color: #7fc4d6
-  .icon-brunch-logo-napkin
-    background-repeat: no-repeat
-    width: 256px
-    height: 256px
-    margin: 0 auto
-    transition: background-size 0.2s
-    background-size: 100%
-    background-image: url('http://brunch.io/images/svg/png/brunch-logo-napkin.png')
+	padding-top: 10em
+  .center
+  	margin: 0 auto
+  	width: 50%
+    min-width: 300px
+  .hr
+  	margin: 5em 0
 
+#desksSearchResult
+	display: none
+  
+input[type="text"]
+	padding: 0.2em
