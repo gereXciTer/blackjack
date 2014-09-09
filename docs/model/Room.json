@@ -1,0 +1,55 @@
+[{
+    "name": "Test room",
+    "deck": "Fibonacci",
+    "active": true,
+    "projectName": "UBS-WMA",
+    "_id": "540f3bd936a772f00496b0a6",
+    "__v": 0,
+    "stories": [{
+        "summary": "Story ABC",
+        "estimate": 5,
+        "active": false,
+        "revealed": true,
+        "_id": "540f3bd936a772f00496b0aa",
+        "votes": [{
+            "upsaId": "4060741400008484376",
+            "estimate": 5,
+            "_id": "540f3bd936a772f00496b0ac"
+        }, {
+            "upsaId": "4000625400000002447",
+            "estimate": 8,
+            "_id": "540f3bd936a772f00496b0ab"
+        }]
+    }, {
+        "summary": "Story ABC",
+        "estimate": 5,
+        "active": true,
+        "revealed": false,
+        "_id": "540f3bd936a772f00496b0a8",
+        "votes": [{
+            "upsaId": "4060741400008484376",
+            "estimate": 3,
+            "_id": "540f3bd936a772f00496b0a9"
+        }]
+    }, {
+        "summary": "Story ABC",
+        "estimate": -1,
+        "active": false,
+        "revealed": false,
+        "_id": "540f3bd936a772f00496b0a7",
+        "votes": []
+    }],
+    "people": [{
+        "upsaId": "4000625400000002447",
+        "name": "Alexey Zadorozhny",
+        "email": "alexey_zadorozhny@epam.com",
+        "online": true,
+        "_id": "540f3bd936a772f00496b0ae"
+    }, {
+        "upsaId": "4060741400008484376",
+        "name": "Volodymyr Hartsev",
+        "email": "volodymyr_hartsev@epam.com",
+        "online": false,
+        "_id": "540f3bd936a772f00496b0ad"
+    }]
+}]
