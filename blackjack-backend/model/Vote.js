@@ -1,7 +1,8 @@
 exports.make = function (Schema, mongoose) {
     Vote = new Schema({
 		upsaId: String,
-    	estimate: Number
+        storyId: String,
+    	estimate: String
     });
     return mongoose.model('Vote', Vote);
 };

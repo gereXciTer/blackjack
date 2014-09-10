@@ -1,13 +1,10 @@
 exports.make = function (Schema, mongoose) {
     Story = new Schema({
 		summary: String,
-		estimate: Number,
+		estimate: String,
 		active: Boolean,
 		revealed: Boolean,
-		votes: [{
-			type: Schema.Types.ObjectId,
-      		ref: 'Votes'            
-        }]
+        roomId: String
     });
     return mongoose.model('Story', Story);
 };
