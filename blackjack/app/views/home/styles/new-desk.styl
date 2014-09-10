@@ -23,15 +23,18 @@
         width: 300px
         margin: 0 2em
         position: relative
-        &.dimmed::after
-          content: ' '
-          position: absolute
-          width: 100%
-          height: 100%
-          left: 0
-          top: 0
-          background-color: white
-          opacity: 0.75
+        &.dimmed
+        	.wizard-buttons
+          	opacity: 0
+        	&::after
+            content: ' '
+            position: absolute
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            background-color: white
+            opacity: 0.75
         ul
         	list-style: none
           margin: 1em 0
@@ -49,9 +52,11 @@
   margin-left: 0.5em
   
 .wizard-buttons
+	opacity: 1
 	position: absolute
   bottom: 0.5em
   width: 100%
   text-align: center
+  transition: all .5s ease-in-out
   a
   	margin: 0 2em
