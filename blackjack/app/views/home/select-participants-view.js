@@ -58,5 +58,6 @@ module.exports = View.extend({
     e.preventDefault();    
     var target = $(e.currentTarget);
     target.siblings('ul').append('<li><input type="text" name="guest[]" placeholder="Enter email to invite guest" /></li>');
+    target.siblings('ul').find('input[type="text"]:last').focus();
   }
 });
