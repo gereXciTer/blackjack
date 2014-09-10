@@ -23,7 +23,7 @@ module.exports = View.extend({
   goNext: function(e){
 		e.preventDefault();
     var formData = $('#newDeskForm').serializeObject();
-    console.log(formData)
+
     if(!formData.deskName){
       $('#deskName').addClass('error');
     }else{
@@ -43,17 +43,7 @@ module.exports = View.extend({
     }
   },
   goBack: function(e){
-		e.preventDefault();    
-    
-    var slides = this.params.parentView.$el.find('.steps');
-    var leftOffset = 0;
-    slides.find('#step3').prevAll().each(function(index, el){
-      leftOffset += $(el).width();
-    });
-    slides.css({left: '-' + leftOffset + 'px'});
-
-    this.params.parentView.$el.find('.step3').removeClass('dimmed');
-    
-    this.params.parentView.removeSubview('step4');
-  }
+		e.preventDefault();
+    Chaplin.mediator.publish('deskWizardGoBack', 3);
+  },
 });

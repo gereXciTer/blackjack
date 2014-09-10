@@ -38,22 +38,12 @@ module.exports = View.extend({
       },
       success: function(data){
         
-//         console.log(data.attributes)
-        
-        _this.$el.addClass('dimmed');
-
-        var slides = _this.params.parentView.$el.find('.steps');
-        var leftOffset = 0;
-        slides.find('#step3').prevAll().each(function(index, el){
-          leftOffset += $(el).width();
+        Chaplin.mediator.publish('deskWizardGoForward', {
+          step:3, 
+          model: new Model({participants: data.attributes}), 
+          el:  _this.$el,
+          view: SelectParticipantsView
         });
-        slides.css({left: '-' + leftOffset + 'px'});
-
-        _this.params.parentView.subview('step3', new SelectParticipantsView({
-          region: 'step3',
-          parentView: _this.params.parentView,
-          model: new Model({participants: data.attributes})
-        }));
         
       },
       error: function(){
@@ -65,18 +55,6 @@ module.exports = View.extend({
   },
   goBack: function(e){
 		e.preventDefault();
-    
-    var slides = this.params.parentView.$el.find('.steps');
-    var leftOffset = 0;
-    slides.find('#step1').prevAll().each(function(index, el){
-      leftOffset += $(el).width();
-    });
-    slides.css({left: '-' + leftOffset + 'px'});
-
-    this.params.parentView.$el.find('.step1').removeClass('dimmed');
-    
-    this.params.parentView.removeSubview('step4');
-    this.params.parentView.removeSubview('step3');
-    this.params.parentView.removeSubview('step2');
-  }
+    Chaplin.mediator.publish('deskWizardGoBack', 1);
+  },
 });

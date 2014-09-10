@@ -41,13 +41,48 @@ module.exports = Controller.extend({
           parentView: _this.view,
           model: new Model({projects: projarray})
         }));
-        
       },
       error: function(xhr, status){
         console.log(status.statusText);
         Chaplin.utils.redirectTo('home#index');
       }
     });
+		
+    Chaplin.mediator.unsubscribe('deskWizardGoBack');
+    Chaplin.mediator.subscribe('deskWizardGoBack',function(step){
+      var slides = _this.view.$el.find('.steps');
+      var leftOffset = 0;
+      slides.find('#step' + step).prevAll().each(function(index, el){
+        leftOffset += $(el).width();
+      });
+      slides.css({left: '-' + leftOffset + 'px'});
+      _this.view.$el.find('.step' + step).removeClass('dimmed');
+
+      _this.view.$el.find('#step' + step).nextAll('li').each(function(index, el){
+        _this.view.removeSubview(el.id);
+      });
+    });
+    
+    Chaplin.mediator.unsubscribe('deskWizardGoForward');
+    Chaplin.mediator.subscribe('deskWizardGoForward',function(params){
+      var step = params.step;
+      
+      params.el.addClass('dimmed');
+
+      var slides = _this.view.$el.find('.steps');
+      var leftOffset = 0;
+      slides.find('#step' + step).prevAll().each(function(index, el){
+        leftOffset += $(el).width();
+      });
+      slides.css({left: '-' + leftOffset + 'px'});
+
+      _this.view.subview('step' + step, new params.view({
+        region: 'step' + step,
+        parentView: _this.view,
+        model: params.model
+      }));
+    });
+    
 
   }
 });

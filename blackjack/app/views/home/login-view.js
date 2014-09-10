@@ -34,25 +34,18 @@ module.exports = View.extend({
       timeout: 10000,
       url: 'http://lesson-pizza.codio.io:8080/api/employee/',
       success: function(data){
+        var projects = data.attributes[0].projectall.split(' '),
+            projarray = [];
+        for(var i = 0; i<projects.length; i++){
+          projarray.push({name: projects[i]});
+        }
         
-        _this.$el.addClass('dimmed');
-
-        var slides = _this.params.parentView.$el.find('.steps');
-        var leftOffset = 0;
-        slides.find('#step2').prevAll().each(function(index, el){
-          leftOffset += $(el).width();
+        Chaplin.mediator.publish('deskWizardGoForward', {
+          step:2, 
+          model: Model({projects: projarray}), 
+          el:  _this.$el,
+          view: SelectProjectView
         });
-        slides.css({left: '-' + leftOffset + 'px'});
-
-        _this.params.parentView.subview('step2', new SelectProjectView({
-          region: 'step2',
-          parentView: _this.params.parentView,
-          model: new Model({projects: [
-            {name:'GLO-ODC'},
-            {name:'UBS-WMATVLK'},
-            {name:'HBO-GOT'}
-          ]})
-        }));
         
       },
       error: function(){

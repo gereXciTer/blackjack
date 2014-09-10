@@ -25,35 +25,20 @@ module.exports = View.extend({
   },
   goNext: function(e){
 		e.preventDefault();    
-    this.$el.addClass('dimmed');
     
-    var slides = this.params.parentView.$el.find('.steps');
-    var leftOffset = 0;
-    slides.find('#step4').prevAll().each(function(index, el){
-      leftOffset += $(el).width();
+    Chaplin.mediator.publish('deskWizardGoForward', {
+      step:4, 
+      model: null,
+      el:  this.$el,
+      view: SelectDeckView
     });
-    slides.css({left: '-' + leftOffset + 'px'});
-    
-    this.params.parentView.subview('step4', new SelectDeckView({
-      region: 'step4',
-      parentView: this.params.parentView
-    }));
   },
+ 
   goBack: function(e){
-		e.preventDefault();    
-    
-    var slides = this.params.parentView.$el.find('.steps');
-    var leftOffset = 0;
-    slides.find('#step2').prevAll().each(function(index, el){
-      leftOffset += $(el).width();
-    });
-    slides.css({left: '-' + leftOffset + 'px'});
-
-    this.params.parentView.$el.find('.step2').removeClass('dimmed');
-    
-    this.params.parentView.removeSubview('step4');
-    this.params.parentView.removeSubview('step3');
+		e.preventDefault();
+    Chaplin.mediator.publish('deskWizardGoBack', 2);
   },
+  
   addGuest: function(e){
     e.preventDefault();    
     var target = $(e.currentTarget);
