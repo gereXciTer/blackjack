@@ -25,28 +25,47 @@ module.exports = View.extend({
   },
   goNext: function(e){
 		e.preventDefault();
-    this.$el.addClass('dimmed');
-    
-    var slides = this.params.parentView.$el.find('.steps');
-    var leftOffset = 0;
-    slides.find('#step3').prevAll().each(function(index, el){
-      leftOffset += $(el).width();
+    var userModel = new Model();
+    var _this = this;
+            
+    userModel.fetch({
+      type: 'GET',
+      dataType: 'json',
+      timeout: 10000,
+      url: 'https://lesson-pizza.codio.io:9500/api/project',
+      data: {
+        name: _this.$el.find('#selectedProject').val()
+      },
+      success: function(data){
+        
+//         console.log(data.attributes)
+        
+        _this.$el.addClass('dimmed');
+
+        var slides = _this.params.parentView.$el.find('.steps');
+        var leftOffset = 0;
+        slides.find('#step3').prevAll().each(function(index, el){
+          leftOffset += $(el).width();
+        });
+        slides.css({left: '-' + leftOffset + 'px'});
+
+        _this.params.parentView.subview('step3', new SelectParticipantsView({
+          region: 'step3',
+          parentView: _this.params.parentView,
+          model: new Model({participants: data.attributes})
+        }));
+        
+      },
+      error: function(){
+        console.log('error fetching data');
+      }
     });
-    slides.css({left: '-' + leftOffset + 'px'});
+
     
-    this.params.parentView.subview('step3', new SelectParticipantsView({
-      region: 'step3',
-      parentView: this.params.parentView,
-      model: new Model({participants: [
-        {id:1, name:'John Doe'},
-        {id:1, name:'John Doe'},
-        {id:1, name:'John Doe'}
-      ]})
-    }));
   },
   goBack: function(e){
 		e.preventDefault();
-
+    
     var slides = this.params.parentView.$el.find('.steps');
     var leftOffset = 0;
     slides.find('#step1').prevAll().each(function(index, el){

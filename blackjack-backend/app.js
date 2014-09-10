@@ -22,7 +22,7 @@
                 headers: {
                     "Authorization": req.headers.authorization
                 },
-                path: '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum.full,upsaidSum&query={%22email%22:%22' + user.name + '%22}'
+                path: '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum&query={%22email%22:%22' + user.name + '%22}'
             };
             https.get(options, function(resp) {
                 var body = "";
@@ -32,6 +32,58 @@
                 resp.on('end', function() {
             		res.set("Content-type", "application/json");
                     res.status(200).send(body);
+                });
+            }).on("error", function(e) {
+                res.status(500).send(e);
+            });
+        }
+    });
+    app.get('(/api)?/project', function(req, res) {
+        var user = auth(req);
+        if(!user) {
+            res.set("WWW-Authenticate", "Basic");
+            res.status(401).end();
+            return;
+        } else {
+            var options = {
+                host: 'e3s.epam.com',
+                port: 443,
+                headers: {
+                    "Authorization": req.headers.authorization
+                },
+                path: '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.project.api.data.ProjectProjectionEntity&query={%22name%22:%22' + req.query.name + '%22}&fields=teamUpsaIds'
+            };
+            https.get(options, function(resp) {
+                var body = "";
+                resp.on('data', function(chunk) {
+                    body += chunk;
+                });
+                resp.on('end', function() {
+                  var items = JSON.parse(body)[0].teamUpsaIds;
+                  var options = {
+                      host: 'e3s.epam.com',
+                      port: 443,
+                      headers: {
+                          "Authorization": req.headers.authorization
+                      },
+                      path: '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&query={%22upsaidSum%22:{%22$in%22:' + JSON.stringify(items) + '}}&fields=fullNameSum,upsaidSum'
+                  };
+                  https.get(options, function(resp) {
+                      var body = "";
+                      resp.on('data', function(chunk) {
+                          body += chunk;
+                      });
+                      resp.on('end', function() {
+                        var items = JSON.parse(body)[0].teamUpsaIds;
+                        res.set("Content-type", "application/json");
+                        res.status(200).send(body);
+                      });
+                  }).on("error", function(e) {
+                      res.status(500).send(e);
+                  });
+                  
+//             			res.set("Content-type", "application/json");
+//                   res.status(200).send(body);
                 });
             }).on("error", function(e) {
                 res.status(500).send(e);
