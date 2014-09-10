@@ -28,7 +28,7 @@ module.exports = Controller.extend({
       type: 'GET',
       dataType: 'json',
       timeout: 10000,
-      url: 'http://lesson-pizza.codio.io:8080/api/employee/',
+      url: 'https://lesson-pizza.codio.io:9500/api/employee/',
       success: function(data){
         var projects = data.attributes[0].projectall.split(' '),
             projarray = [];
