@@ -27,7 +27,6 @@ module.exports = Controller.extend({
     userModel.fetch({
       type: 'GET',
       dataType: 'json',
-      timeout: 30000,
       url: 'https://lesson-pizza.codio.io:9500/api/employee',
       success: function(data){
         var projects = data.attributes[0].projectall.split(' '),
@@ -43,7 +42,7 @@ module.exports = Controller.extend({
         }));
       },
       error: function(xhr, status){
-        console.log(status.statusText);
+        console.log(arguments);
         Chaplin.utils.redirectTo('home#index');
       }
     });
