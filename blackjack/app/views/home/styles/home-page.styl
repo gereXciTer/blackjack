@@ -1,14 +1,21 @@
 @import 'nib'
 
+body
+  font-family: 'Roboto', sans-serif
+  
 .btn
   display inline-block
   padding 0.2em 0.5em
   text-decoration none
-  border: 1px solid black
+  border: 1px solid #555
+  border-radius: 0em
+  box-shadow: #333 0 0 0.0em
+  background: #eee
   color: black
+  font-weight: bold
   &:hover
   	color: white
-    background-color: black
+    background-color: #555
 	&.big
   	font-size: 1.2em
     
@@ -48,5 +55,5 @@
 #desksSearchResult
 	display: none
   
-input[type="text"]
+input[type="text"],input[type="password"]
 	padding: 0.2em
