@@ -32,22 +32,7 @@ module.exports = View.extend({
       type: 'GET',
       dataType: 'json',
       timeout: 10000,
-      data: {email: $('#loginForm input').val()},
       url: 'http://lesson-pizza.codio.io:8080/api/employee/',
-
-//       crossDomain: true,
-//       beforeSend: function(xhr) {
-//         xhr.setRequestHeader('Authorization', 'Basic dm9sb2R5bXlyX2hhcnRzZXZAZXBhbS5jb206S2FybWlhbjQ3');
-//         xhr.setRequestHeader('GET', 'https://e3s.epam.com/search/people HTTP/1.1');
-//         xhr.setRequestHeader('Host', 'e3s.epam.com');
-//         xhr.setRequestHeader('Authorization', 'Basic YWxleGV5X3phZG9yb3pobnlAZXBhbS5jb206OTg3b2l1S0pIbmJ2');
-//       },
-//       url: 'https://e3s.epam.com/rest/e3s-eco-scripting-impl/0.1.0/data/select',
-      url: 'https://volodymyr_hartsev@epam.com:Karmian47@e3s.epam.com/search/people',
-//       data: {
-//         type: 'com.epam.e3s.app.people.api.data.EmployeeEntity',
-//         query: '{"email":"volodymyr_hartsev@epam.com"}'
-//       },
       success: function(data){
         
         _this.$el.addClass('dimmed');

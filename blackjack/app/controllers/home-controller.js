@@ -6,6 +6,7 @@ var HomePageView = require('views/home/home-page-view');
 var NewDeskView = require('views/home/new-desk-view');
 
 var LoginView = require('views/home/login-view');
+var SelectProjectView = require('views/home/select-project-view');
 
 module.exports = Controller.extend({
   beforeAction: function() {
@@ -20,10 +21,32 @@ module.exports = Controller.extend({
   newdesk: function(){
     this.reuse('header', HeaderView, {region: 'header'});
     this.view = new NewDeskView({region: 'main'});
-    
-    this.view.subview('step1', new LoginView({
-      region: 'step1',
-      parentView: this.view
-    }));
+    var userModel = new Model();
+    var _this = this;
+            
+    userModel.fetch({
+      type: 'GET',
+      dataType: 'json',
+      timeout: 10000,
+      url: 'http://lesson-pizza.codio.io:8080/api/employee/',
+      success: function(data){
+        var projects = data.attributes[0].projectall.split(' '),
+            projarray = [];
+        for(var i = 0; i<projects.length; i++){
+          projarray.push({name: projects[i]});
+        }
+        
+        _this.view.subview('step2', new SelectProjectView({
+          region: 'step2',
+          parentView: _this.view,
+          model: new Model({projects: projarray})
+        }));
+        
+      },
+      error: function(){
+        console.log('error fetching data');
+      }
+    });
+
   }
 });
