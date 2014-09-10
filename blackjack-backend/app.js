@@ -5,10 +5,18 @@
  * Time: 02:29 PM
  */
 (function() {
+    var eut = require('express-uri-template');
     var express = require('express');
     var auth = require('basic-auth');
     var https = require('https')
     var app = express();
+    /*app.use(function(req, res, next) {
+        if(req.protocol !== "https") {
+            res.status(400).send("HTTP is not supported! Please use HTTP<b>S</b>.");
+        } else {
+            next();
+        }
+    });*/
     app.use(function(req, res, next) {
         var user = auth(req);
         if(!user) {
@@ -19,70 +27,63 @@
             next();
         }
     });
-    app.get('(/api)?/employee', function(req, res) {
-        var options = {
-            host: 'e3s.epam.com',
-            port: 443,
+    var buildHttpOptions = function(host, port, basicAuth, pathTemplate, params) {
+        params.colon = ":";
+        params.colon1 = ":";
+        params.colon2 = ":";
+        params.colon3 = ":";
+        params.colon5 = ":";
+        console.log(eut(pathTemplate, params)); 
+        return {
+            host: host,
+            port: port,
             headers: {
-                "Authorization": req.headers.authorization
+                "Authorization": basicAuth
             },
-            path: '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum&query={%22email%22:%22' + req.user.name + '%22}'
+            path: eut(pathTemplate, params)
         };
+    };
+    var buildE3SHttpOptions = function(basicAuth, pathTemplate, params) {
+        return buildHttpOptions('e3s.epam.com', 443, basicAuth, pathTemplate, params);
+    }
+    var sendHttps = function(options, successCallback, errorCallback) {
         https.get(options, function(resp) {
             var body = "";
             resp.on('data', function(chunk) {
                 body += chunk;
             });
             resp.on('end', function() {
-                res.set("Content-type", "application/json");
-                res.status(200).send(body);
+                successCallback(body);
             });
         }).on("error", function(e) {
+            errorCallback(e);
+        });
+    };
+    var sendE3SHttps = function(basicAuth, pathTemplate, params, successCallback, errorCallback) {
+        var options = buildE3SHttpOptions(basicAuth, pathTemplate, params);
+        sendHttps(options, successCallback, errorCallback);
+    };
+    var proxyE3SReq = function(req, res, pathTemplate, params, successCallback, errorCallback){
+        sendE3SHttps(req.headers.authorization, pathTemplate, params, successCallback || function(body) {
+            res.set("Content-type", "application/json");
+            res.status(200).send(body);
+        }, errorCallback || function(e) {
             res.status(500).send(e);
+        });
+    };    
+    app.get('(/api)?/employee', function(req, res) {
+        proxyE3SReq(req, res, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum&query={%22email%22:colon%22:email%22}', {
+            "email": req.user.name
         });
     });
     app.get('(/api)?/project', function(req, res) {
-        var options = {
-            host: 'e3s.epam.com',
-            port: 443,
-            headers: {
-                "Authorization": req.headers.authorization
-            },
-            path: '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.project.api.data.ProjectProjectionEntity&query={%22name%22:%22' + req.query.name + '%22}&fields=teamUpsaIds'
-        };
-        https.get(options, function(resp) {
-            var body = "";
-            resp.on('data', function(chunk) {
-                body += chunk;
+        proxyE3SReq(req, res, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.project.api.data.ProjectProjectionEntity&query={%22name%22:colon%22:query%22}&fields=teamUpsaIds', {
+            query: req.query.name
+        }, function(body) {
+            var items = JSON.parse(body)[0].teamUpsaIds;
+            proxyE3SReq(req, res, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&query={%22upsaidSum%22:colon{%22$in%22:colon1:teamUpsaIds}}&fields=fullNameSum,upsaidSum&limit=100', {
+                teamUpsaIds: JSON.stringify(items)
             });
-            resp.on('end', function() {
-                var items = JSON.parse(body)[0].teamUpsaIds;
-                var options = {
-                    host: 'e3s.epam.com',
-                    port: 443,
-                    headers: {
-                        "Authorization": req.headers.authorization
-                    },
-                    path: '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&query={%22upsaidSum%22:{%22$in%22:' + JSON.stringify(items) + '}}&fields=fullNameSum,upsaidSum&limit=100'
-                };
-                https.get(options, function(resp) {
-                    var body = "";
-                    resp.on('data', function(chunk) {
-                        body += chunk;
-                    });
-                    resp.on('end', function() {
-                        var items = JSON.parse(body)[0].teamUpsaIds;
-                        res.set("Content-type", "application/json");
-                        res.status(200).send(body);
-                    });
-                }).on("error", function(e) {
-                    res.status(500).send(e);
-                });
-                //             			res.set("Content-type", "application/json");
-                //                   res.status(200).send(body);
-            });
-        }).on("error", function(e) {
-            res.status(500).send(e);
         });
     });
     /*
