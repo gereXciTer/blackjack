@@ -8,6 +8,7 @@
 
 var View = require('views/base/view');
 var Model = require('models/base/model');
+var ProjectModel = require('models/project');
 
 var SelectParticipantsView = require('views/home/select-participants-view');
 
@@ -25,14 +26,10 @@ module.exports = View.extend({
   },
   goNext: function(e){
 		e.preventDefault();
-    var userModel = new Model();
+    var projectModel = new ProjectModel();
     var _this = this;
             
-    userModel.fetch({
-      type: 'GET',
-      dataType: 'json',
-      timeout: 10000,
-      url: '/api/project',
+    projectModel.fetch({
       data: {
         name: _this.$el.find('#selectedProject').val()
       },
