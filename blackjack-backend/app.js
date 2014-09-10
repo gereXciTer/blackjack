@@ -9,7 +9,7 @@
     var auth = require('basic-auth');
     var https = require('https')
     var app = express();
-    app.get('/api/employee', function(req, res) {
+    app.get('(/api)?/employee', function(req, res) {
         var user = auth(req);
         if(!user) {
             res.set("WWW-Authenticate", "Basic");
