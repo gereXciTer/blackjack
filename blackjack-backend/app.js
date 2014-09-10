@@ -22,7 +22,7 @@
                 headers: {
                     "Authorization": req.headers.authorization
                 },
-                path: '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum.full,upsaidSum&query={%22email%22:%22' + req.query.email + '%22}'
+                path: '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum.full,upsaidSum&query={%22email%22:%22' + user.name + '%22}'
             };
             https.get(options, function(resp) {
                 var body = "";
