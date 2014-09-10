@@ -27,7 +27,19 @@ module.exports = View.extend({
     if(!formData.deskName){
       $('#deskName').addClass('error');
     }else{
-	    Chaplin.utils.redirectTo('desk#viewdesk', {id: 2});
+      $.ajax({
+        type: 'POST',
+        url:'https://lesson-pizza.codio.io:9500/api/desks/',
+        data: JSON.stringify(formData),
+        contentType: "application/json; charset=utf-8",
+        success: function(data){
+          var deskId = JSON.parse(data).deskId;
+			    Chaplin.utils.redirectTo('desk#viewdesk', {id: deskId});
+        },
+        error: function(){
+          console.log('New desk saving error');
+        }
+      });
     }
   },
   goBack: function(e){
