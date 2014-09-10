@@ -8,6 +8,7 @@
 
 var View = require('views/base/view');
 var Model = require('models/base/model');
+var UserModel = require('models/user');
 
 var SelectProjectView = require('views/home/select-project-view');
 
@@ -25,14 +26,10 @@ module.exports = View.extend({
   goNext: function(e){
 		e.preventDefault();
     
-    var userModel = new Model();
+    var userModel = new UserModel();
     var _this = this;
             
     userModel.fetch({
-      type: 'GET',
-      dataType: 'json',
-      timeout: 10000,
-      url: 'http://lesson-pizza.codio.io:8080/api/employee/',
       success: function(data){
         var projects = data.attributes[0].projectall.split(' '),
             projarray = [];

@@ -29,7 +29,7 @@ module.exports = View.extend({
     }else{
       $.ajax({
         type: 'POST',
-        url:'https://lesson-pizza.codio.io:9500/api/desks/',
+        url:'/api/desks/',
         data: JSON.stringify(formData),
         contentType: "application/json; charset=utf-8",
         success: function(data){

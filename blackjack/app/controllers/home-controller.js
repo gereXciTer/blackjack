@@ -1,5 +1,6 @@
 var Controller = require('controllers/base/controller');
 var Model = require('models/base/model');
+var User = require('models/user');
 
 var HeaderView = require('views/home/header-view');
 var HomePageView = require('views/home/home-page-view');
@@ -15,19 +16,28 @@ module.exports = Controller.extend({
   },
 
   index: function() {
-    this.view = new HomePageView({region: 'main'});
+    var _this = this;
+    var userModel = new User();
+
+    userModel.fetch({
+      success: function(data){
+    		_this.view = new HomePageView({region: 'main'});
+      },
+      error: function(xhr, status){
+        console.log(arguments);
+        Chaplin.utils.redirectTo('home#index');
+      }
+    });
   },
   
   newdesk: function(){
+    var _this = this;
+    var userModel = new User();
+
     this.reuse('header', HeaderView, {region: 'header'});
     this.view = new NewDeskView({region: 'main'});
-    var userModel = new Model();
-    var _this = this;
             
     userModel.fetch({
-      type: 'GET',
-      dataType: 'json',
-      url: 'https://lesson-pizza.codio.io:9500/api/employee',
       success: function(data){
         var projects = data.attributes[0].projectall.split(' '),
             projarray = [];

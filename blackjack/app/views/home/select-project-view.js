@@ -32,7 +32,7 @@ module.exports = View.extend({
       type: 'GET',
       dataType: 'json',
       timeout: 10000,
-      url: 'https://lesson-pizza.codio.io:9500/api/project',
+      url: '/api/project',
       data: {
         name: _this.$el.find('#selectedProject').val()
       },
