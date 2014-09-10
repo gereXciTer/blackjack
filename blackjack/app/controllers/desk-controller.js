@@ -17,8 +17,22 @@ module.exports = Controller.extend({
   viewdesk: function(params){
     this.reuse('header', HeaderView, {region: 'header'});
     
-    this.view = new DeskView({region: 'main'});
+    var self = this;
+    
     var deskModel = new Model();
+    
+    var showDesk = function(){
+      self.view = new DeskView({
+        region: 'main',
+        model: deskModel
+      });
+
+    };
+    
+    showDesk();
+//     deskModel.fetch({
+//       success: showDesk
+//     });
 
     
   }

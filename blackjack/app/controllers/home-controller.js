@@ -20,20 +20,6 @@ module.exports = Controller.extend({
   newdesk: function(){
     this.reuse('header', HeaderView, {region: 'header'});
     this.view = new NewDeskView({region: 'main'});
-    var userModel = new Model();
-
-//     userModel.fetch({
-//       type: 'GET',
-//       dataType: 'jsonp',
-//       timeout: 10000,
-//       url: 'https://e3s.epam.com/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&query={%22email%22:%22volodymyr_hartsev@epam.com%22}&fields=fullNameSum.full,project',
-//       success: function(data){
-//         console.log(data);
-//       },
-//       error: function(){
-//         console.log('error fetching data');
-//       }
-//     });
     
     this.view.subview('step1', new LoginView({
       region: 'step1',
