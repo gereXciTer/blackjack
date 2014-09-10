@@ -12,7 +12,6 @@
     app.use(auth.basic);
     console.log("http basic auth enabled");
     app.get('(/api)?/employee', function(req, res) {
-      	console.log('employee requested');
         e3s.proxyE3SReq(req, res, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum&query={%22email%22:colon%22:email%22}', {
             "email": req.user.name
         });
