@@ -24,7 +24,11 @@ module.exports = View.extend({
 		e.preventDefault();
     var formData = $('#newDeskForm').serializeObject();
     console.log(formData)
-    Chaplin.utils.redirectTo('desk#viewdesk', {id: 2});
+    if(!formData.deskName){
+      $('#deskName').addClass('error');
+    }else{
+	    Chaplin.utils.redirectTo('desk#viewdesk', {id: 2});
+    }
   },
   goBack: function(e){
 		e.preventDefault();    
