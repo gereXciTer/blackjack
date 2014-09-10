@@ -9,9 +9,11 @@ exports.basic = function(req, res, next) {
 	var auth = require('basic-auth');
     var user = auth(req);
     if(!user) {
-        res.set("WWW-Authenticate", "Basic");
+    	console.log("not authenticated, responding with 401");
+        res.set('WWW-Authenticate", "Basic realm="blackjack"');
         res.status(401).end();
     } else {
+    	console.log("authenticated as " + user.name);
         req.user = user;
         next();
     }

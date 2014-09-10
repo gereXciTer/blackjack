@@ -3,7 +3,8 @@ exports.make = function (Schema, mongoose) {
 		upsaId: String,
 		name: String,
         email: String,
-		online: Boolean
+		online: Boolean,
+        activeRoom: String
     });
     return mongoose.model('Person', Person);
 };

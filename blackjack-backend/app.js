@@ -10,6 +10,7 @@
     var auth = require('./modules/express-http-basic.js');
     var e3s = require('./modules/e3s-helper.js')
     app.use(auth.basic);
+    console.log("http basic auth enabled");
     app.get('(/api)?/employee', function(req, res) {
         e3s.proxyE3SReq(req, res, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum&query={%22email%22:colon%22:email%22}', {
             "email": req.user.name
@@ -25,16 +26,15 @@
             });
         });
     });
-    /*
+    
     var mongoose = require('mongoose');
     mongoose.connect('mongodb://blackjackapp:pAssword1!@ds035740.mongolab.com:35740/blackjack');
-    //    var Vote = require('./model/Vote.js').make(mongoose.Schema, mongoose);
-    //    var Story = require('./model/Story.js').make(mongoose.Schema, mongoose);
-    //    var Person = require('./model/Person.js').make(mongoose.Schema, mongoose);
-    var Room = require('./model/Room.js').make(mongoose.Schema, mongoose);
-
-    app.get('/rooms', function(req, res) {
-        var query = req.query.query ? Room.where(JSON.parse(req.query.query)) : Room.where();
+    var Vote = require('./model/Vote.js').make(mongoose.Schema, mongoose);
+    var Story = require('./model/Story.js').make(mongoose.Schema, mongoose);
+    var Person = require('./model/Person.js').make(mongoose.Schema, mongoose);
+    var Desk = require('./model/Desk.js').make(mongoose.Schema, mongoose);
+    app.get('(/api)?/desks', function(req, res) {
+        var query = req.query.query ? Desk.where(JSON.parse(req.query.query)) : Desk.where();
         query.find(function(err, rooms) {
             if(err) {
                 res.set(500).send(err);
@@ -44,8 +44,8 @@
             }
         });
     });
-    app.get('/rooms/:id', function(req, res) {
-        var query = Room.where({
+    app.get('(/api)?/desks/:id', function(req, res) {
+        var query = Desk.where({
             _id: req.params.id
         });
         query.findOne(function(err, room) {
@@ -57,85 +57,41 @@
             }
         });
     });
-    app.post('/rooms', function(req, res) {
-        var room = new Room(JSON.parse(req.body));
+    app.post('(/api)?/desks', function(req, res) {
+        var room = new Desk(JSON.parse(req.body));
         room.save(function(err) {
             if(err) {
                 res.status(500).send(err);
             } else {
-                res.set("Link", "</rooms/" + room._id + ">; rel=\"created-resource\"");
+                res.set("Link", "</api/desks/" + room._id + ">; rel=\"created-resource\"");
                 res.status(201).send();
             }
         });
     });
-    app.put('/rooms/:id', function(req, res) {
-        var query = Room.where({
+    app.put('(/api)?/desks/:id', function(req, res) {
+        var query = Desk.where({
             _id: req.params.id
         });
         query.update(JSON.parse(req.body), function(err) {
             if(err) {
                 res.status(500).send(err);
             } else {
-                res.set("Link", "</rooms/" + room._id + ">; rel=\"created-resource\"");
+                res.set("Link", "</api/desks/" + room._id + ">; rel=\"created-resource\"");
                 res.status(204).send();
             }
         });
     });
-    // internal
-    app.get('/rooms_add', function(req, res) {
-        var room = new Room({
-            name: "Test room",
-            deck: "Fibonacci",
-            active: true,
-            projectName: "UBS-WMA",
-            people: [{
-                upsaId: "4000625400000002447",
-                name: "Alexey Zadorozhny",
-                email: "alexey_zadorozhny@epam.com",
-                online: true
-            }, {
-                upsaId: "4060741400008484376",
-                name: "Volodymyr Hartsev",
-                email: "volodymyr_hartsev@epam.com",
-                online: false
-            }],
-            stories: [{
-                summary: "Story ABC",
-                estimate: 5,
-                active: false,
-                revealed: true,
-                votes: [{
-                    upsaId: "4060741400008484376",
-                    estimate: 5
-                }, {
-                    upsaId: "4000625400000002447",
-                    estimate: 8
-                }]
-            }, {
-                summary: "Story ABC",
-                estimate: 5,
-                active: true,
-                revealed: false,
-                votes: [{
-                    upsaId: "4060741400008484376",
-                    estimate: 3
-                }]
-            }, {
-                summary: "Story ABC",
-                estimate: -1,
-                active: false,
-                revealed: false,
-                votes: []
-            }],
+    app.get('(/api)?/send', function(req, res) {
+        var nodemailer = require('nodemailer');
+        var transporter = nodemailer.createTransport();
+        transporter.sendMail({
+            from: 'automailer@blackjack.e3s.com',
+            to: 'alexey_zadorozhny@epam.com,volodymyr_hartsev@epam.com',
+            subject: 'Please join planning poker session',
+            text: 'https://austria-pearl.codio.io:9500/desks/id'
         });
-        room.save(function(err) {
-            if(err) {
-                res.status(500).send(err);
-            } else {
-                res.set("Link", "</rooms/" + room._id + ">; rel=\"created-resource\"");
-                res.status(201).send("created");
-            }
-        });
-    });*/
+        res.status(200).end();
+    });
     app.listen(3334);
+    console.log("listening on 3334");
 }());
