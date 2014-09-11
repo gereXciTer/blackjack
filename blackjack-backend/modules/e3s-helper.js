@@ -22,6 +22,10 @@ exports.proxyE3SReq = function(req, res, pathTemplate, params, successCallback, 
     }, errorCallback || function(e) {
         var err = JSON.stringify(e);
         console.log("default error callback: " + err);
-        res.status(500).send(err);
+        res.status(500).send({
+            errorCode: 500,
+            errorMessage: "internal server error",
+            innerError: err
+        });
     });
 };

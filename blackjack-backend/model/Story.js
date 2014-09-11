@@ -4,7 +4,7 @@ exports.make = function (Schema, mongoose) {
 		estimate: String,
 		active: Boolean,
 		revealed: Boolean,
-        roomId: String
+        deskId: String
     });
     return mongoose.model('Story', Story);
 };
