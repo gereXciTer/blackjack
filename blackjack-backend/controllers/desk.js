@@ -10,6 +10,7 @@ exports.init = function(app) {
     mongoose.connect('mongodb://blackjackapp:pAssword1!@ds035740.mongolab.com:35740/blackjack');
     var Desk = require('./../model/Desk.js').make(mongoose.Schema, mongoose);
     app.get('(/api)?/desks', function(req, res) {
+        console.log('querying all desks');
         var query = req.query.query ? Desk.where(JSON.parse(req.query.query)) : Desk.where();
         query.find(function(err, desks) {
             if(err) {
@@ -39,6 +40,8 @@ exports.init = function(app) {
     });
     app.post('(/api)?/desks', function(req, res) {
         console.log('create desk: ' + JSON.stringify(req.body));
+        console.log("Referer: " + req.get("Referer"));
+        console.log("Origin: " + req.get("Origin"));
         var desk = new Desk(req.body);
         desk.save(function(err) {
             if(err) {
@@ -49,6 +52,7 @@ exports.init = function(app) {
                 res.status(201).send({
                     deskId: desk._id
                 });
+                sendInvites(req, desk);
             }
         });
     });
@@ -72,5 +76,25 @@ exports.init = function(app) {
     function handleError(req, res, err) {
         console.log('error: ' + JSON.stringify(err));
         res.status(500).send(err);
+    }
+    var nodemailer = require('nodemailer');
+    var transporter = nodemailer.createTransport();
+
+    function sendInvites(req, desk) {
+        var recipients = desk.participant.join(',') + ',' + desk.guest.join(',');
+        console.log("sending invite to: " + recipients);
+        var origin = req.get("Origin");
+        if(!origin) {
+            origin = "https://austria-pearl.codio.io:9500";
+            console.log("header Origin not provided, defaulting to " + origin);
+        }
+        var url = origin + "/desks/" + desk._id;
+        console.log("sending url " + url);
+        transporter.sendMail({
+            from: "automailer@blackjack.e3s.epam.com",
+            to: recipients,
+            subject: "Please join planning poker session '" + desk.deskName + "'",
+            text: url
+        });
     }
 };
