@@ -25,6 +25,17 @@ exports.buildHttpOptions = function(host, port, basicAuth, pathTemplate, params)
 };
 exports.sendHttps = function(options, successCallback, errorCallback) {
     https.get(options, function(resp) {
+        if(resp.statusCode != 200) {
+            console.log("remote server returned not expected status " + resp.statusCode);
+            errorCallback({errorCode:502,errorMessage:"remote server returned not expected status " + resp.statusCode});
+            return;
+        }
+        var type = resp.headers["content-type"];
+        if(!type || type.indexOf("json") == -1) {
+        	console.log("remote server returned not supported content-type " + type);
+            errorCallback({errorCode:502,errorMessage:"remote server returned not supported content-type " + type});
+            return;
+        }
         var body = "";
         resp.on('data', function(chunk) {
             body += chunk;

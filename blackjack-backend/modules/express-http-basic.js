@@ -26,7 +26,8 @@ exports.basic = function(req, res, next) {
         	console.log("authentication failed for " + req.user.name);
             res.status(403).send({
                 errorCode: 403,
-                errorMessage: "Provided credentials are not valid"
+                errorMessage: "Provided credentials are not valid",
+                innerError: err
             });
         });
     }
