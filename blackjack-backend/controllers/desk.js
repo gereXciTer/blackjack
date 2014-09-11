@@ -14,6 +14,12 @@ exports.init = function(app, mongoose) {
         query.find(function(err, desks) {
             if(err) {
                 handleError(req, res, err);
+            } else if(desks == null) {
+                console.log("internal server error when querying desks");
+                res.status(500).send({
+                    errorCode: 500,
+                    errorMessage: "internal server error when querying desks"
+                });
             } else {
                 console.log('found: ' + JSON.stringify(desks));
                 res.set("Content-type", "application/json");
@@ -30,6 +36,12 @@ exports.init = function(app, mongoose) {
         query.findOne(function(err, desk) {
             if(err) {
                 handleError(req, res, err);
+            } else if(desk == null) {
+                console.log("desk " + id + " not found");
+                res.status(404).send({
+                    errorCode: 404,
+                    errorMessage: "desk " + id + " not found"
+                });
             } else {
                 console.log('found: ' + JSON.stringify(desk));
                 var invitees = desk.participant.concat(desk.guest);
@@ -56,17 +68,32 @@ exports.init = function(app, mongoose) {
         console.log('create desk: ' + JSON.stringify(req.body));
         console.log("Referer: " + req.get("Referer"));
         console.log("Origin: " + req.get("Origin"));
-        var desk = new Desk(req.body);
-        desk.save(function(err) {
+        var newDesk = new Desk(req.body);
+        var query = Desk.where({
+            deskName: newDesk.deskName
+        });
+        query.findOne(function(err, desk) {
             if(err) {
                 handleError(req, res, err);
-            } else {
-                console.log('created with id: ' + desk._id);
-                res.set("Link", "</api/desks/" + desk._id + ">; rel=\"created-resource\"");
-                res.status(201).send({
-                    deskId: desk._id
+            } else if(desk != null) {
+                console.log("desk " + desk.deskName + " already exists");
+                res.status(400).send({
+                    errorCode: 400,
+                    errorMessage: "desk " + desk.deskName + " already exists"
                 });
-                sendInvites(req, desk);
+            } else {
+                newDesk.save(function(err) {
+                    if(err) {
+                        handleError(req, res, err);
+                    } else {
+                        console.log('created with id: ' + newDesk._id);
+                        res.set("Link", "</api/desks/" + newDesk._id + ">; rel=\"created-resource\"");
+                        res.status(201).send({
+                            deskId: newDesk._id
+                        });
+                        sendInvites(req, newDesk);
+                    }
+                });
             }
         });
     });
@@ -86,6 +113,9 @@ exports.init = function(app, mongoose) {
         var recipients =
         //             desk.participant.join(',') + ',' + 
         desk.guest.join(',');
+        if(recipients.indexOf(desk.owner)==-1){
+            recipients = recipients + "," + desk.owner;
+        }
         console.log("sending invite to: " + recipients);
         var origin = req.get("Origin");
         if(!origin) {

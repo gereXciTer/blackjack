@@ -16,6 +16,12 @@ exports.init = function(app, mongoose) {
         query.find(function(err, stories) {
             if(err) {
                 handleError(req, res, err);
+            } else if(stories == null) {
+                console.log("internal server error when querying stories for desk " + deskId);
+                res.status(500).send({
+                    errorCode: 500,
+                    errorMessage: "internal server error when querying stories for desk " + deskId
+                });
             } else {
                 console.log('found: ' + JSON.stringify(stories));
                 res.set("Content-type", "application/json");
@@ -23,9 +29,11 @@ exports.init = function(app, mongoose) {
             }
         });
     });
-    app.get('(/api)?/desks/:deskId/stories/:storyId', function(req, res) {
-        var deskId = req.params[0];
-        var storyId = req.params[1];
+    app.get('(/api)?/desks/:0/stories/:1', function(req, res) {
+		console.log(req.params); 
+        console.log("weird body-parser defect screws up params =(");
+        var deskId = req.params[1];
+        var storyId = req.params[0];
         console.log('querying story: ' + storyId + ' for desk: ' + deskId);
         var query = Story.where({
             _id: storyId,
@@ -34,6 +42,12 @@ exports.init = function(app, mongoose) {
         query.findOne(function(err, story) {
             if(err) {
                 handleError(req, res, err);
+            } else if(story == null) {
+                console.log("story " + deskId + " not found in desk " + storyId);
+                res.status(404).send({
+                    errorCode: 404,
+                    errorMessage: "story " + deskId + " not found in desk " + storyId
+                });
             } else {
                 console.log('found: ' + JSON.stringify(story));
                 res.set("Content-type", "application/json");
