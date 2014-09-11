@@ -21,4 +21,5 @@ exports.init = function(app, mongoose) {
             });
         });
     });
+    console.log("e3s controller initialized");
 };

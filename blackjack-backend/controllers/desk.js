@@ -44,7 +44,9 @@ exports.init = function(app, mongoose) {
                 });
             } else {
                 console.log('found: ' + JSON.stringify(desk));
-                var invitees = desk.participant.concat(desk.guest);
+                var invitees = desk.participant.concat(desk.guest).map(function(item) {
+                    return item.email;
+                });
                 invitees.push(desk.owner);
                 if(invitees.indexOf(req.user.name) == -1) {
                     console.log('user : ' + req.user.name + ' not among invitees: ' + JSON.stringify(invitees));
@@ -110,14 +112,15 @@ exports.init = function(app, mongoose) {
     var transporter = nodemailer.createTransport();
 
     function sendInvites(req, desk) {
-        var recipients = desk.participant.map(function(item){
-          return item.email;
-        });
-//         		+ ',' + desk.guest.join(',');
-//         if(recipients.indexOf(desk.owner)==-1){
-//             recipients = recipients + "," + desk.owner;
-//         }
-        console.log("sending invite to: ",recipients);
+        console.log("sending invite");
+        var recipients = "";
+        /*desk.participant.map(function(item) {
+            return item.email;
+        }).join(',');*/
+        if(recipients.indexOf(desk.owner) == -1) {
+            recipients = recipients + "," + desk.owner;
+        }
+        console.log("recipients: ", recipients);
         var origin = req.get("Origin");
         if(!origin) {
             origin = "https://austria-pearl.codio.io:9500";
@@ -125,11 +128,12 @@ exports.init = function(app, mongoose) {
         }
         var url = origin + "/desk/" + desk._id;
         console.log("sending url " + url);
-//         transporter.sendMail({
-//             from: "automailer@blackjack.e3s.epam.com",
-//             to: recipients,
-//             subject: "Please join planning poker session '" + desk.deskName + "'",
-//             text: url
-//         });
+        transporter.sendMail({
+            from: "automailer@blackjack.e3s.epam.com",
+            to: recipients,
+            subject: "Please join planning poker session '" + desk.deskName + "'",
+            text: url
+        });
     }
+    console.log("desk controller initialized");
 };
