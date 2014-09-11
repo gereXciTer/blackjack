@@ -1,17 +1,18 @@
 /**
-* Created with blackjack.
-* User: alexzad
-* Date: 2014-09-11
-* Time: 02:35 PM
-* To change this template use Tools | Templates.
-*/
+ * Created with blackjack.
+ * User: alexzad
+ * Date: 2014-09-11
+ * Time: 02:35 PM
+ * To change this template use Tools | Templates.
+ */
 exports.init = function(app, mongoose) {
     var Story = require('./../model/Story.js').make(mongoose.Schema, mongoose);
     app.get('(/api)?/desks/:deskId/stories', function(req, res) {
         var deskId = req.params[0];
         console.log('querying all stories for desk: ' + deskId);
-        console.log('query is ' + req.query.query);
-        var query = req.query.query ? Story.where(JSON.parse(req.query.query)) : Story.where();
+        var queryText = "{\"$and\":[{\"deskId\":\"" + deskId + "\"}," + (req.query.query || "{}") + "]}";
+        console.log('query is ' + queryText);
+        var query = Story.where(JSON.parse(queryText));
         query.find(function(err, stories) {
             if(err) {
                 handleError(req, res, err);
@@ -44,6 +45,30 @@ exports.init = function(app, mongoose) {
         var deskId = req.params[0];
         console.log('create story: ' + JSON.stringify(req.body) + ' in desk: ' + deskId);
         var story = new Story(req.body);
+        story.deskId = deskId;
+        story.save(function(err) {
+            if(err) {
+                handleError(req, res, err);
+            } else {
+                console.log('story created with id: ' + story._id);
+                res.set("Link", "</api/desks/" + deskId + "/" + story._id + ">; rel=\"created-resource\"");
+                res.status(201).send({
+                    storyId: story._id
+                });
+            }
+        });
+    });
+    app.get('(/api)?/desks/:deskId/_stories_add', function(req, res) {
+        var deskId = req.params[0];
+        var data = {
+            "summary": "test story2",
+            "estimate": "-1",
+            "active": "false",
+            "revealed": "false",
+            "deskId": deskId
+        };
+        console.log('create story: ' + JSON.stringify(data) + ' in desk: ' + deskId);
+        var story = new Story(data);
         story.deskId = deskId;
         story.save(function(err) {
             if(err) {
