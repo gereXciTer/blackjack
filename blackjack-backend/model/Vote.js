@@ -1,6 +1,6 @@
 exports.make = function (Schema, mongoose) {
     Vote = new Schema({
-		upsaId: String,
+		email: String,
         storyId: String,
     	estimate: String
     });

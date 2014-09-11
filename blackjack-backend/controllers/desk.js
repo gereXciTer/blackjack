@@ -131,4 +131,5 @@ exports.init = function(app, mongoose) {
             text: url
         });
     }
+    console.log("desk controller initialized");
 };
