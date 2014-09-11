@@ -2,7 +2,7 @@
 * Created with BlackJack.
 * User: exciter
 * Date: 2014-09-11
-* Time: 06:04 PM
+* Time: 07:25 PM
 * To change this template use Tools | Templates.
 */
 
@@ -15,22 +15,10 @@ module.exports = Collection.extend({
     this.options = options;
   },
   url: function(){
-    var term = this.options.term;
-    var email = Application.userModel.attributes[0].emailSum;
-    var rootUrl = '/api/desks/';
+    var rootUrl = '/api/stories/';
     var query = '?query=' + JSON.stringify({
-      "and": [
-        {
-          "deskName": {"regex": term + ".*"}
-        },
-        {
-          "or": [
-            { "participant": email },
-            { "owner": email },
-            { "guest": email }
-          ]
-        }
-      ]});
+      "deskId": this.options.deskId
+    });
     var url = rootUrl + query;
     return url;
   }

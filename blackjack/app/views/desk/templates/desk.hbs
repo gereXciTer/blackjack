@@ -7,31 +7,18 @@
 
     <ul>
       {{#each participant}}
-        <li data-id="{{this}}">
-          {{this}}
+        <li data-id="{{email}}">
+          {{name}}
         </li>
       {{/each}}
       {{#each guest}}
-        <li data-id="{{this}}">
-          {{this}}
+        <li data-id="{{email}}">
+          {{name}}
         </li>
       {{/each}}
     </ul>
   </div>
   
 </section>
-<section>
-
-	<div class="story active">
-  	<div class="votes">
-    </div>
-  	<ul class="cards">
-      {{#each cards}}
-        <li>
-          <img src="images/decks/{{img}}" />
-        </li>
-      {{/each}}
-    </ul>
-  </div>
-	
+<section id="stories">
 </section>

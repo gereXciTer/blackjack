@@ -1,0 +1,12 @@
+<h4>{{summary}} {{#compare estimate 0 operator=">="}} ({{estimate}}) {{/compare}}</h4>
+	{{#if active}}
+  	<div class="votes">
+    </div>
+  	<ul class="cards">
+      {{#each cards}}
+        <li>
+          <img src="images/decks/{{img}}" />
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}

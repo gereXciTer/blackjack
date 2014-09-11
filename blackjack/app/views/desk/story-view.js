@@ -1,8 +1,8 @@
 /**
 * Created with BlackJack.
 * User: exciter
-* Date: 2014-09-09
-* Time: 11:36 PM
+* Date: 2014-09-11
+* Time: 07:18 PM
 * To change this template use Tools | Templates.
 */
 
@@ -10,10 +10,10 @@ var View = require('views/base/view');
 
 module.exports = View.extend({
   autoRender: true,
-  className: 'desk-view',
-  template: require('./templates/desk'),
+  className: 'story',
+  template: require('./templates/story'),
   regions: {
-    stories: '#stories'
+    cards: '.cards'
   },
   attach: function(args){
     this.constructor.__super__.attach.apply(this, arguments);
