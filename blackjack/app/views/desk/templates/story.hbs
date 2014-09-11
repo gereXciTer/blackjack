@@ -1,0 +1,15 @@
+<h4>
+	{{summary}} {{#compare estimate 0 operator=">="}} ({{estimate}}) {{/compare}}
+  {{#isowner}}<a href="#" class="btn" data-id="{{_id}}">Activate</a>{{/isowner}}
+</h4>
+{{#if active}}
+	<div class="votes">
+  </div>
+  <ul class="cards">
+    {{#each cards}}
+      <li>
+        <img src="images/decks/{{img}}" />
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}
