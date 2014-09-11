@@ -44,7 +44,9 @@ exports.init = function(app, mongoose) {
                 });
             } else {
                 console.log('found: ' + JSON.stringify(desk));
-                var invitees = desk.participant.concat(desk.guest);
+                var invitees = desk.participant.concat(desk.guest).map(function(item) {
+                    return item.email;
+                });
                 invitees.push(desk.owner);
                 if(invitees.indexOf(req.user.name) == -1) {
                     console.log('user : ' + req.user.name + ' not among invitees: ' + JSON.stringify(invitees));
@@ -111,7 +113,8 @@ exports.init = function(app, mongoose) {
 
     function sendInvites(req, desk) {
         console.log("sending invite");
-        var recipients = "";/*desk.participant.map(function(item) {
+        var recipients = "";
+        /*desk.participant.map(function(item) {
             return item.email;
         }).join(',');*/
         if(recipients.indexOf(desk.owner) == -1) {
