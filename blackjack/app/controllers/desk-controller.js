@@ -14,6 +14,8 @@ var Poller = require('lib/poller');
 var DeskModel = require('models/desk');
 var StoryModel = require('models/story');
 
+var ErrorView = require('views/home/error404-view');
+
 var HeaderView = require('views/home/header-view');
 var DeskView = require('views/desk/desk-view');
 var StoriesCollectionView = require('views/desk/stories-collection');
@@ -77,7 +79,10 @@ module.exports = Controller.extend({
     });
         
     deskModel.fetch({
-      success: showDesk
+      success: showDesk,
+      error: function(){
+        Chaplin.utils.redirectTo('home#error404');
+      }
     });
     
   },

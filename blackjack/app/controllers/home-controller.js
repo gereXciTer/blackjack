@@ -1,6 +1,7 @@
 var Controller = require('controllers/base/controller');
 var Model = require('models/base/model');
 var User = require('models/user');
+var DeskSearchResults = require('models/desk-search-results');
 
 var ErrorView = require('views/home/error404-view');
 
@@ -10,6 +11,8 @@ var NewDeskView = require('views/home/new-desk-view');
 
 var LoginView = require('views/home/login-view');
 var SelectProjectView = require('views/home/select-project-view');
+
+var SearchResults = require('views/home/search-results');
 
 module.exports = Controller.extend({
   beforeAction: function() {
@@ -28,14 +31,6 @@ module.exports = Controller.extend({
       Application.userModel.fetch({
         success: function(data){
           _this.view = new HomePageView({region: 'main'});
-					var DeskSearchResults = require('models/desk-search-results');
-          Chaplin.mediator.unsubscribe('desksSearch');
-          Chaplin.mediator.subscribe('desksSearch', function(el){
-            if(el.val() && el.val().length > 2){
-              var deskSearch = new DeskSearchResults({term: el.val()});
-              deskSearch.fetch();
-            }
-          });
         },
         error: function(xhr, status){
           console.log(arguments);
@@ -43,6 +38,21 @@ module.exports = Controller.extend({
         }
       });
     }
+
+    Chaplin.mediator.unsubscribe('desksSearch');
+    Chaplin.mediator.subscribe('desksSearch', function(el){
+      if(el.val() && el.val().length > 2){
+        var deskSearch = new DeskSearchResults({term: el.val()});
+        deskSearch.fetch({
+          success: function(collection){
+            _this.view.subview('searchresults', new SearchResults({
+              region: 'searchresults',
+              collection: collection
+            }));
+          }
+        });
+      }
+    });
   },
   
   error404: function(){
