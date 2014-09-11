@@ -13,7 +13,7 @@ exports.buildHttpOptions = function(host, port, basicAuth, pathTemplate, params)
     params.colon2 = ":";
     params.colon3 = ":";
     params.colon5 = ":";
-    console.log("providing Authorization " + basicAuth.substring(0,15) + "[omitted...]");
+    console.log("sending Authorization " + basicAuth.substring(0,15) + "[omitted...]");
     return {
         host: host,
         port: port,

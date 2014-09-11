@@ -8,9 +8,8 @@
 exports.init = function(app) {
     var e3s = require('./../modules/e3s-helper.js')
     app.get('(/api)?/employee', function(req, res) {
-        e3s.proxyE3SReq(req, res, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum,emailSum&query={%22email%22:colon%22:email%22}', {
-            "email": req.user.name
-        });
+        res.set("Content-type", "application/json");
+        res.status(200).send(req.user.profile);
     });
     app.get('(/api)?/project', function(req, res) {
         e3s.proxyE3SReq(req, res, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.project.api.data.ProjectProjectionEntity&query={%22name%22:colon%22:query%22}&fields=teamUpsaIds', {

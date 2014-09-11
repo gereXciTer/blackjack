@@ -33,8 +33,23 @@ exports.init = function(app) {
                 handleError(req, res, err);
             } else {
                 console.log('found: ' + JSON.stringify(desk));
-                res.set("Content-type", "application/json");
-                res.status(200).send(desk);
+                var invitees = desk.participant.concat(desk.guest);
+                invitees.push(desk.owner);
+                if(invitees.indexOf(req.user.name) == -1) {
+                    console.log('user : ' + req.user.name + ' not among invitees: ' + JSON.stringify(invitees));
+                    res.status(403).send({
+                        errorCode: 403,
+                        errorMessage: "You are not invited to this desk"
+                    });
+                } else {
+                    if(req.user.name == desk.owner) {
+                        desk.isOwner = true;
+                        console.log('user : ' + req.user.name + ' is the owner');
+                    }
+                    console.log('returning the desk');
+                    res.set("Content-type", "application/json");
+                    res.status(200).send(desk);
+                }
             }
         });
     });
@@ -56,22 +71,6 @@ exports.init = function(app) {
             }
         });
     });
-    app.put('(/api)?/desks/:id', function(req, res) {
-        var id = req.params[0];
-        console.log('updating desk: ' + id);
-        var query = Desk.where({
-            _id: id
-        });
-        console.log('with: ' + JSON.stringify(req.body));
-        query.update(req.body, function(err) {
-            if(err) {
-                handleError(req, res, err);
-            } else {
-                console.log('updated successfully');
-                res.status(204).end();
-            }
-        });
-    });
 
     function handleError(req, res, err) {
         console.log('error: ' + JSON.stringify(err));
@@ -81,9 +80,9 @@ exports.init = function(app) {
     var transporter = nodemailer.createTransport();
 
     function sendInvites(req, desk) {
-        var recipients = 
-//             desk.participant.join(',') + ',' + 
-            desk.guest.join(',');
+        var recipients =
+        //             desk.participant.join(',') + ',' + 
+        desk.guest.join(',');
         console.log("sending invite to: " + recipients);
         var origin = req.get("Origin");
         if(!origin) {
