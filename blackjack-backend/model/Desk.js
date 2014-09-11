@@ -5,7 +5,12 @@ exports.make = function(Schema, mongoose) {
       	owner: String,
         active: Boolean,
         project: String,
-        participant: [String],
+        participant: [
+          {
+            email: String,
+            name: String
+          }
+        ],
         guest: [String]
     });
     return mongoose.model('Desk', Desk);
