@@ -19,15 +19,15 @@ module.exports = Collection.extend({
     var email = Application.userModel.attributes[0].emailSum;
     var rootUrl = '/api/desks/';
     var query = '?query=' + JSON.stringify({
-      "and": [
+      "$and": [
         {
-          "deskName": {"regex": term + ".*"}
+          "deskName": {"$regex": term + ""}
         },
         {
-          "or": [
-            { "participant": email },
+          "$or": [
             { "owner": email },
-            { "guest": email }
+            { "participant.email": email },
+            { "guest.email": email }
           ]
         }
       ]});
