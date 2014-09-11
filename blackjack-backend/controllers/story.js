@@ -49,27 +49,44 @@ exports.init = function(app, mongoose) {
         var query = Story.where({
             _id: id
         });
-        var newVal = {};
-        if(req.body.estimate) {
-            newVal.estimate = req.body.estimate;
-        }
-        if(req.body.active) {
-            newVal.active = req.body.active;
-        }
-        if(req.body.revealed) {
-            newVal.revealed = req.body.revealed;
-        }
+        var newVal = req.body;
         query.findOne(function(err, story) {
             if(err) {
                 handleError(req, res, err);
-            } else if(desk == null) {
+            } else if(story == null) {
                 console.log("story " + id + " not found");
                 res.status(404).send({
                     errorCode: 404,
                     errorMessage: "story " + id + " not found"
                 });
             } else {
+                var deskId = newVal.deskId;
                 console.log('found: ' + JSON.stringify(story));
+                console.log('newVal.active: ' + newVal.active);
+                console.log('newVal.active == true: ' + (newVal.active == "true"));
+                console.log('story.active != newVal.active: ' + (story.active != newVal.active));
+                if(newVal.active && newVal.active == "true" && story.active != newVal.active) {
+                    console.log("requested to activate story: " + id + ", resetting other stories in desk: " + deskId);
+                    Story.update({
+                        deskId: deskId
+                    }, {
+                        active: false
+                    }, function(err) {
+                        if(err) {
+                            console.log("failed to reset stories, error: " + JSON.stringify(err));
+                            res.status(500).send({
+                                errorCode: 500,
+                                errorMessage: "failed to reset stories",
+                                innerError: err
+                            });
+                            return;
+                        } else {
+                            console.log("all stories in desk: " + deskId + " deactivated");
+                        }
+                    });
+                }
+                delete newVal["_id"];
+                delete newVal["deskId"];
                 Story.update({
                     _id: id
                 }, newVal, function(err) {
