@@ -9,6 +9,8 @@
 var Controller = require('controllers/base/controller');
 var Model = require('models/base/model');
 
+var DeskModel = require('models/desk');
+
 var HeaderView = require('views/home/header-view');
 var DeskView = require('views/desk/desk-view');
 
@@ -17,22 +19,20 @@ module.exports = Controller.extend({
   viewdesk: function(params){
     this.reuse('header', HeaderView, {region: 'header'});
     
-    var self = this;
+    var _this = this;
     
-    var deskModel = new Model();
+    var deskModel = new DeskModel({id: params.id});
     
-    var showDesk = function(){
-      self.view = new DeskView({
+    var showDesk = function(model){
+      _this.view = new DeskView({
         region: 'main',
-        model: deskModel
+        model: model
       });
-
     };
     
-    showDesk();
-//     deskModel.fetch({
-//       success: showDesk
-//     });
+    deskModel.fetch({
+      success: showDesk
+    });
 
     
   }

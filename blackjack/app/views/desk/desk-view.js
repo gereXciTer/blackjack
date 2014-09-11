@@ -10,7 +10,7 @@ var View = require('views/base/view');
 
 module.exports = View.extend({
   autoRender: true,
-  className: 'new-desk',
+  className: 'desk-view',
   template: require('./templates/desk'),
   regions: {
 		

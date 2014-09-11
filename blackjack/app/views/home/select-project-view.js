@@ -34,10 +34,16 @@ module.exports = View.extend({
         name: _this.$el.find('#selectedProject').val()
       },
       success: function(data){
-        
+        var participants = [];
+//         _.each(data.attributes, function(item){
+//           if(item.emailSum !== Application.userModel.attributes[0].emailSum){
+//             participants.push(item);
+//           }
+//         });
+        participants = data.attributes;
         Chaplin.mediator.publish('deskWizardGoForward', {
           step:3, 
-          model: new Model({participants: data.attributes}), 
+          model: new Model({participants: participants, owner: Application.userModel.attributes[0].emailSum}), 
           el:  _this.$el,
           view: SelectParticipantsView
         });

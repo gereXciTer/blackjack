@@ -26,6 +26,7 @@ module.exports = Controller.extend({
       Application.userModel.fetch({
         success: function(data){
           _this.view = new HomePageView({region: 'main'});
+    console.log(Application.userModel.attributes[0].emailSum)
         },
         error: function(xhr, status){
           console.log(arguments);

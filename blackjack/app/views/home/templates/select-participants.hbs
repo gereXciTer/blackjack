@@ -1,8 +1,9 @@
 Select participants
 <ul>
+<input type="hidden" name="owner" value="{{owner}}" />
 {{#each participants}}
   <li>
-    <label><input type="checkbox" name="participant" value="{{upsaidSum}}" /> {{fullNameSum.full}}</label>
+    <label><input type="checkbox" name="participant" value="{{emailSum}}" /> {{fullNameSum.full}}</label>
   </li>
 {{/each}}
 </ul>

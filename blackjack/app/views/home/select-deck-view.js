@@ -33,8 +33,8 @@ module.exports = View.extend({
         data: JSON.stringify(formData),
         contentType: "application/json; charset=utf-8",
         success: function(data){
-          var deskId = JSON.parse(data).deskId;
-			    Chaplin.utils.redirectTo('desk#viewdesk', {id: deskId});
+          console.log(data);
+			    Chaplin.utils.redirectTo('desk#viewdesk', {id: data.deskId});
         },
         error: function(){
           console.log('New desk saving error');

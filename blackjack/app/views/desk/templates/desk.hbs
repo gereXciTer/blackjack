@@ -1,1 +1,25 @@
-Desk
+<section class="info">
+
+  <h3 class="desk-name">[{{project}}] {{deskName}}</h3>
+
+  <div class="participants">
+    Participants:
+
+    <ul>
+      {{#each participant}}
+        <li data-id="{{this}}">
+          {{this}}
+        </li>
+      {{/each}}
+      {{#each guest}}
+        <li data-id="{{this}}">
+          {{this}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  
+</section>
+<section>
+	
+</section>
