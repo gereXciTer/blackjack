@@ -11,6 +11,7 @@ exports.init = function(app) {
     var Desk = require('./../model/Desk.js').make(mongoose.Schema, mongoose);
     app.get('(/api)?/desks', function(req, res) {
         console.log('querying all desks');
+        console.log('query is ' + req.query.query);
         var query = req.query.query ? Desk.where(JSON.parse(req.query.query)) : Desk.where();
         query.find(function(err, desks) {
             if(err) {
@@ -74,7 +75,11 @@ exports.init = function(app) {
 
     function handleError(req, res, err) {
         console.log('error: ' + JSON.stringify(err));
-        res.status(500).send(err);
+        res.status(500).send({
+            errorCode: 500,
+            errorMessage: "internal server error",
+            innerError: err
+        });
     }
     var nodemailer = require('nodemailer');
     var transporter = nodemailer.createTransport();
