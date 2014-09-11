@@ -24,21 +24,35 @@ module.exports = View.extend({
     var _this = this;
 		e.preventDefault();
     var formData = $('#newDeskForm').serializeObject();
-    if(!_.isArray(formData.participant)){
+    if(formData.participant && !_.isArray(formData.participant)){
       formData.participant = [formData.participant];
     }
-    formData.participant = _.map(formData.participant, function(item){
-      var user = _.find(_this.params.parentView.subview('step3').model.get('participants'), function(el){ return el.emailSum == item; });
-      item = {
-        email: item,
-        name: user.fullNameSum.full
-      };
-      return item;
-    });
-
-    if(!formData.deskName){
-      $('#deskName').addClass('error');
+    if(formData.participant){
+      formData.participant = _.map(formData.participant, function(item){
+        var user = _.find(_this.params.parentView.subview('step3').model.get('participants'), function(el){ return el.emailSum == item; });
+        item = {
+          email: item,
+          name: user.fullNameSum.full
+        };
+        return item;
+      });
     }else{
+      formData.participant = [];
+    }
+    formData.participant.push({
+      email: Application.userModel.attributes[0].emailSum,
+      name: Application.userModel.attributes[0].fullNameSum.full
+    });
+    
+
+    if(!formData.deskName || formData.deck == undefined){
+      if(formData.deck == undefined){
+        this.$el.find('.decks').addClass('error');
+      }
+      if(!formData.deskName){
+	      $('#deskName').addClass('error');
+      }
+    }else {
       $.ajax({
         type: 'POST',
         url:'/api/desks/',
@@ -47,8 +61,13 @@ module.exports = View.extend({
         success: function(data){
 			    Chaplin.utils.redirectTo('desk#viewdesk', {id: data.deskId});
         },
-        error: function(){
-          console.log('New desk saving error');
+        error: function(xhr){
+          var error = JSON.parse(xhr.responseText);
+          if(error.errorCode == '400'){
+            alert(error.errorMessage);
+          }else{
+	          console.log('New desk saving error');
+          }
         }
       });
     }

@@ -110,21 +110,14 @@ exports.init = function(app, mongoose) {
     var transporter = nodemailer.createTransport();
 
     function sendInvites(req, desk) {
-<<<<<<< HEAD
         var recipients = desk.participant.map(function(item){
           return item.email;
         });
 //         		+ ',' + desk.guest.join(',');
+//         if(recipients.indexOf(desk.owner)==-1){
+//             recipients = recipients + "," + desk.owner;
+//         }
         console.log("sending invite to: ",recipients);
-=======
-        var recipients =
-        //             desk.participant.join(',') + ',' + 
-        desk.guest.join(',');
-        if(recipients.indexOf(desk.owner)==-1){
-            recipients = recipients + "," + desk.owner;
-        }
-        console.log("sending invite to: " + recipients);
->>>>>>> origin/master
         var origin = req.get("Origin");
         if(!origin) {
             origin = "https://austria-pearl.codio.io:9500";

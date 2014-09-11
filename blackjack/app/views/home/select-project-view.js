@@ -35,12 +35,13 @@ module.exports = View.extend({
       },
       success: function(data){
         var participants = [];
-//         _.each(data.attributes, function(item){
-//           if(item.emailSum !== Application.userModel.attributes[0].emailSum){
-//             participants.push(item);
-//           }
-//         });
-        participants = data.attributes;
+        _.each(data.attributes, function(item){
+          console.log(Application.userModel.attributes[0].emailSum, item.emailSum);
+          if(item.emailSum !== Application.userModel.attributes[0].emailSum){
+            participants.push(item);
+          }
+        });
+
         Chaplin.mediator.publish('deskWizardGoForward', {
           step:3, 
           model: new Model({participants: participants, owner: Application.userModel.attributes[0].emailSum}), 
