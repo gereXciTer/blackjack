@@ -2,6 +2,8 @@ var Controller = require('controllers/base/controller');
 var Model = require('models/base/model');
 var User = require('models/user');
 
+var ErrorView = require('views/home/error404-view');
+
 var HeaderView = require('views/home/header-view');
 var HomePageView = require('views/home/home-page-view');
 var NewDeskView = require('views/home/new-desk-view');
@@ -26,14 +28,25 @@ module.exports = Controller.extend({
       Application.userModel.fetch({
         success: function(data){
           _this.view = new HomePageView({region: 'main'});
-    console.log(Application.userModel.attributes[0].emailSum)
+					var DeskSearchResults = require('models/desk-search-results');
+          Chaplin.mediator.unsubscribe('desksSearch');
+          Chaplin.mediator.subscribe('desksSearch', function(el){
+            if(el.val() && el.val().length > 2){
+              var deskSearch = new DeskSearchResults({term: el.val()});
+              deskSearch.fetch();
+            }
+          });
         },
         error: function(xhr, status){
           console.log(arguments);
-          Chaplin.utils.redirectTo('home#index');
+          Chaplin.utils.redirectTo('home#error404');
         }
       });
     }
+  },
+  
+  error404: function(){
+    this.view = new ErrorView({region: 'main'});
   },
   
   newdesk: function(){
