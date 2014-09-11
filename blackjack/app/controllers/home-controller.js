@@ -17,17 +17,22 @@ module.exports = Controller.extend({
 
   index: function() {
     var _this = this;
-    var userModel = new User();
+    
+    if(Application.userModel){
+      this.view = new HomePageView({region: 'main'});
+    }else{
+      Application.userModel = new User();
 
-    userModel.fetch({
-      success: function(data){
-    		_this.view = new HomePageView({region: 'main'});
-      },
-      error: function(xhr, status){
-        console.log(arguments);
-        Chaplin.utils.redirectTo('home#index');
-      }
-    });
+      Application.userModel.fetch({
+        success: function(data){
+          _this.view = new HomePageView({region: 'main'});
+        },
+        error: function(xhr, status){
+          console.log(arguments);
+          Chaplin.utils.redirectTo('home#index');
+        }
+      });
+    }
   },
   
   newdesk: function(){
@@ -37,25 +42,32 @@ module.exports = Controller.extend({
     this.reuse('header', HeaderView, {region: 'header'});
     this.view = new NewDeskView({region: 'main'});
             
-    userModel.fetch({
-      success: function(data){
-        var projects = data.attributes[0].projectall.split(' '),
-            projarray = [];
-        for(var i = 0; i<projects.length; i++){
-          projarray.push({name: projects[i]});
-        }
-        
-        _this.view.subview('step2', new SelectProjectView({
-          region: 'step2',
-          parentView: _this.view,
-          model: new Model({projects: projarray})
-        }));
-      },
-      error: function(xhr, status){
-        console.log(arguments);
-        Chaplin.utils.redirectTo('home#index');
+    var newDesk = function(data){
+      var projects = data.attributes[0].projectall.split(' '),
+          projarray = [];
+      for(var i = 0; i<projects.length; i++){
+        projarray.push({name: projects[i]});
       }
-    });
+
+      _this.view.subview('step2', new SelectProjectView({
+        region: 'step2',
+        parentView: _this.view,
+        model: new Model({projects: projarray})
+      }));
+    };
+    
+    if(Application.userModel){
+	    newDesk(Application.userModel);
+    }else{
+      Application.userModel = new User();
+      Application.userModel.fetch({
+        success: newDesk,
+        error: function(xhr, status){
+          console.log(arguments);
+          Chaplin.utils.redirectTo('home#index');
+        }
+      });
+    }
 		
     Chaplin.mediator.unsubscribe('deskWizardGoBack');
     Chaplin.mediator.subscribe('deskWizardGoBack',function(step){
