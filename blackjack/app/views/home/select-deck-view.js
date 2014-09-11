@@ -21,8 +21,20 @@ module.exports = View.extend({
     this.params = args;
   },
   goNext: function(e){
+    var _this = this;
 		e.preventDefault();
     var formData = $('#newDeskForm').serializeObject();
+    if(!_.isArray(formData.participant)){
+      formData.participant = [formData.participant];
+    }
+    formData.participant = _.map(formData.participant, function(item){
+      var user = _.find(_this.params.parentView.subview('step3').model.get('participants'), function(el){ return el.emailSum == item; });
+      item = {
+        email: item,
+        name: user.fullNameSum.full
+      };
+      return item;
+    });
 
     if(!formData.deskName){
       $('#deskName').addClass('error');
@@ -33,7 +45,6 @@ module.exports = View.extend({
         data: JSON.stringify(formData),
         contentType: "application/json; charset=utf-8",
         success: function(data){
-          console.log(data);
 			    Chaplin.utils.redirectTo('desk#viewdesk', {id: data.deskId});
         },
         error: function(){

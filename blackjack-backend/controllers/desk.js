@@ -81,10 +81,11 @@ exports.init = function(app) {
     var transporter = nodemailer.createTransport();
 
     function sendInvites(req, desk) {
-        var recipients = 
-//             desk.participant.join(',') + ',' + 
-            desk.guest.join(',');
-        console.log("sending invite to: " + recipients);
+        var recipients = desk.participant.map(function(item){
+          return item.email;
+        });
+//         		+ ',' + desk.guest.join(',');
+        console.log("sending invite to: ",recipients);
         var origin = req.get("Origin");
         if(!origin) {
             origin = "https://austria-pearl.codio.io:9500";
@@ -92,11 +93,11 @@ exports.init = function(app) {
         }
         var url = origin + "/desk/" + desk._id;
         console.log("sending url " + url);
-        transporter.sendMail({
-            from: "automailer@blackjack.e3s.epam.com",
-            to: recipients,
-            subject: "Please join planning poker session '" + desk.deskName + "'",
-            text: url
-        });
+//         transporter.sendMail({
+//             from: "automailer@blackjack.e3s.epam.com",
+//             to: recipients,
+//             subject: "Please join planning poker session '" + desk.deskName + "'",
+//             text: url
+//         });
     }
 };
