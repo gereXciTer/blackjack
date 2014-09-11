@@ -25,6 +25,10 @@ register('url', function(routeName) {
   return utils.reverse(routeName, params);
 });
 
+register('isowner', function() {
+  return Application.deskOwner;
+});
+
 register('compare', function(lvalue, rvalue, options) {
 
     if (arguments.length < 3)

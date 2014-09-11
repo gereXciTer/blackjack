@@ -36,6 +36,7 @@ module.exports = Controller.extend({
     });
 
     var showDesk = function(model){
+      Application.deskOwner = true;
       model.set('cards', DecksCollection.at(model.get('deck')).get('cards'));
       _this.view = new DeskView({
         region: 'main',
