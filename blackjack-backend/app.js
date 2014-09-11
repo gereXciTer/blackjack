@@ -12,10 +12,15 @@
     var bodyParser = require('body-parser');
     app.use(bodyParser.json());
     console.log("http basic auth enabled");
-    var e3sController = require('./controllers/e3s.js').init(app);
+    var mongoose = require('mongoose');
+    mongoose.connect('mongodb://blackjackapp:pAssword1!@ds035740.mongolab.com:35740/blackjack');
+    console.log("db connection established");
+    var e3sController = require('./controllers/e3s.js').init(app, mongoose);
     console.log("e3s controller initialized");
-    var deskController = require('./controllers/desk.js').init(app);
+    var deskController = require('./controllers/desk.js').init(app, mongoose);
     console.log("desk controller initialized");
+    var storyController = require('./controllers/story.js').init(app, mongoose);
+    console.log("story controller initialized");
     app.listen(3334);
     console.log("listening on :3334");
 }());

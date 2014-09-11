@@ -5,9 +5,7 @@
  * Time: 11:53 PM
  * To change this template use Tools | Templates.
  */
-exports.init = function(app) {
-    var mongoose = require('mongoose');
-    mongoose.connect('mongodb://blackjackapp:pAssword1!@ds035740.mongolab.com:35740/blackjack');
+exports.init = function(app, mongoose) {
     var Desk = require('./../model/Desk.js').make(mongoose.Schema, mongoose);
     app.get('(/api)?/desks', function(req, res) {
         console.log('querying all desks');

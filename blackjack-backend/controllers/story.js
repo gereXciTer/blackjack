@@ -1,0 +1,69 @@
+/**
+* Created with blackjack.
+* User: alexzad
+* Date: 2014-09-11
+* Time: 02:35 PM
+* To change this template use Tools | Templates.
+*/
+exports.init = function(app, mongoose) {
+    var Story = require('./../model/Story.js').make(mongoose.Schema, mongoose);
+    app.get('(/api)?/desks/:deskId/stories', function(req, res) {
+        var deskId = req.params[0];
+        console.log('querying all stories for desk: ' + deskId);
+        console.log('query is ' + req.query.query);
+        var query = req.query.query ? Story.where(JSON.parse(req.query.query)) : Story.where();
+        query.find(function(err, stories) {
+            if(err) {
+                handleError(req, res, err);
+            } else {
+                console.log('found: ' + JSON.stringify(stories));
+                res.set("Content-type", "application/json");
+                res.status(200).send(stories);
+            }
+        });
+    });
+    app.get('(/api)?/desks/:deskId/stories/:storyId', function(req, res) {
+        var deskId = req.params[0];
+        var storyId = req.params[1];
+        console.log('querying story: ' + storyId + ' for desk: ' + deskId);
+        var query = Story.where({
+            _id: storyId,
+            deskId: deskId
+        });
+        query.findOne(function(err, story) {
+            if(err) {
+                handleError(req, res, err);
+            } else {
+                console.log('found: ' + JSON.stringify(story));
+                res.set("Content-type", "application/json");
+                res.status(200).send(story);
+            }
+        });
+    });
+    app.post('(/api)?/desks/:deskId/stories', function(req, res) {
+        var deskId = req.params[0];
+        console.log('create story: ' + JSON.stringify(req.body) + ' in desk: ' + deskId);
+        var story = new Story(req.body);
+        story.deskId = deskId;
+        story.save(function(err) {
+            if(err) {
+                handleError(req, res, err);
+            } else {
+                console.log('story created with id: ' + story._id);
+                res.set("Link", "</api/desks/" + deskId + "/" + story._id + ">; rel=\"created-resource\"");
+                res.status(201).send({
+                    storyId: story._id
+                });
+            }
+        });
+    });
+
+    function handleError(req, res, err) {
+        console.log('error: ' + JSON.stringify(err));
+        res.status(500).send({
+            errorCode: 500,
+            errorMessage: "internal server error",
+            innerError: err
+        });
+    }
+};

@@ -5,7 +5,7 @@
  * Time: 11:41 PM
  * To change this template use Tools | Templates.
  */
-exports.init = function(app) {
+exports.init = function(app, mongoose) {
     var e3s = require('./../modules/e3s-helper.js')
     app.get('(/api)?/employee', function(req, res) {
         res.set("Content-type", "application/json");
