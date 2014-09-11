@@ -14,6 +14,8 @@ var DeskModel = require('models/desk');
 var HeaderView = require('views/home/header-view');
 var DeskView = require('views/desk/desk-view');
 
+var DecksCollection = require('models/decks');
+
 module.exports = Controller.extend({
 
   viewdesk: function(params){
@@ -24,6 +26,7 @@ module.exports = Controller.extend({
     var deskModel = new DeskModel({id: params.id});
     
     var showDesk = function(model){
+      model.set('cards', DecksCollection.at(model.get('deck')).get('cards'));
       _this.view = new DeskView({
         region: 'main',
         model: model
