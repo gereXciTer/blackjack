@@ -13,10 +13,9 @@ exports.init = function(app) {
         var query = req.query.query ? Desk.where(JSON.parse(req.query.query)) : Desk.where();
         query.find(function(err, desks) {
             if(err) {
-        		console.log('error: ' + JSON.stringify(err));
-                res.set(500).send(err);
+                handleError(req, res, err);
             } else {
-        		console.log('found: ' + JSON.stringify(desks));
+                console.log('found: ' + JSON.stringify(desks));
                 res.set("Content-type", "application/json");
                 res.status(200).send(desks);
             }
@@ -30,10 +29,9 @@ exports.init = function(app) {
         });
         query.findOne(function(err, desk) {
             if(err) {
-        		console.log('error: ' + JSON.stringify(err));
-                res.set(500).send(err);
+                handleError(req, res, err);
             } else {
-        		console.log('found: ' + JSON.stringify(desk));
+                console.log('found: ' + JSON.stringify(desk));
                 res.set("Content-type", "application/json");
                 res.status(200).send(desk);
             }
@@ -44,26 +42,35 @@ exports.init = function(app) {
         var desk = new Desk(req.body);
         desk.save(function(err) {
             if(err) {
-        		console.log('error: ' + JSON.stringify(err));
-                res.status(500).send(err);
+                handleError(req, res, err);
             } else {
-        		console.log('created with id: ' + desk._id);
+                console.log('created with id: ' + desk._id);
                 res.set("Link", "</api/desks/" + desk._id + ">; rel=\"created-resource\"");
-                res.status(201).send();
+                res.status(201).send({
+                    deskId: desk._id
+                });
             }
         });
     });
     app.put('(/api)?/desks/:id', function(req, res) {
+        var id = req.params[0];
+        console.log('updating desk: ' + id);
         var query = Desk.where({
-            _id: req.params.id
+            _id: id
         });
-        query.update(JSON.parse(req.body), function(err) {
+        console.log('with: ' + JSON.stringify(req.body));
+        query.update(req.body, function(err) {
             if(err) {
-                res.status(500).send(err);
+                handleError(req, res, err);
             } else {
-                res.set("Link", "</api/desks/" + room._id + ">; rel=\"created-resource\"");
-                res.status(204).send();
+                console.log('updated successfully');
+                res.status(204).end();
             }
         });
     });
+
+    function handleError(req, res, err) {
+        console.log('error: ' + JSON.stringify(err));
+        res.status(500).send(err);
+    }
 };
