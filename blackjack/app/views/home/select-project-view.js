@@ -36,7 +36,6 @@ module.exports = View.extend({
       success: function(data){
         var participants = [];
         _.each(data.attributes, function(item){
-          console.log(Application.userModel.attributes[0].emailSum, item.emailSum);
           if(item.emailSum !== Application.userModel.attributes[0].emailSum){
             participants.push(item);
           }

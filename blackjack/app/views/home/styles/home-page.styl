@@ -52,8 +52,30 @@ body
   .hr
   	margin: 5em 0
 
-#desksSearchResult
-	display: none
+#desksSearch, #desksSearchResult
+	width: 200px
+  margin: 0 auto
+
+.search-list
+	display: block
+  margin: 0
+  padding: 0
+  list-style: none
+  li
+  	text-align: left
+    a
+    	display: block
+	    padding: 0.2em 0.5em
+    	text-decoration: none
+      color: black
+      &:hover
+      	background: #333
+        color: white
+
+.search-list
+	border: 1px solid #eee
+	li:nth-child(even)
+		background: #eee
   
 input[type="text"],input[type="password"]
 	padding: 0.2em

@@ -56,5 +56,25 @@ module.exports = new Collection([
         value: 5
       }
     ]
+  },
+  {
+    cards: [
+      {
+        img: '2/0.jpg',
+        value: 1
+      },
+      {
+        img: '2/1.jpg',
+        value: 2
+      },
+      {
+        img: '2/2.jpg',
+        value: 3
+      },
+      {
+        img: '2/3.jpg',
+        value: 5
+      }
+    ]
   }
 ]);
