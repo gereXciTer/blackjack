@@ -59,6 +59,7 @@ module.exports = View.extend({
         data: JSON.stringify(formData),
         contentType: "application/json; charset=utf-8",
         success: function(data){
+          Chaplin.mediator.publish('loader:show');
 			    Chaplin.utils.redirectTo('desk#viewdesk', {id: data.deskId});
         },
         error: function(xhr){

@@ -22,6 +22,7 @@ register('without', function(context, options) {
 register('url', function(routeName) {
   var params = [].slice.call(arguments, 1);
   var options = params.pop();
+  Chaplin.mediator.publish('loader:show');
   return utils.reverse(routeName, params);
 });
 
