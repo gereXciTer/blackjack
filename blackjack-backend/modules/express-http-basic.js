@@ -57,7 +57,7 @@ exports.basic = function(req, res, next) {
 };
 
 function skipAuth(auth, urlTemplate, params, success, error) {
-    error({
+    success({
         dummy: true
     });
 }
