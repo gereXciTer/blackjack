@@ -31,6 +31,8 @@ exports.init = function(app, mongoose) {
     app.post("(/api)?/votes", function(req, res) {
         var body = req.body;
         console.log("create or update vote: " + JSON.stringify(body));
+        body.email = req.user.name;
+        console.log("ensuring email: " + body.email + " is set to submitting user: " + req.user.name);
         var newVote = new Vote(body);
         var queryParams = {
             storyId: newVote.storyId,

@@ -5,26 +5,3 @@ desk controller initialized
 story controller initialized
 vote controller initialized
 listening on :3334
-provided credentials for alexey_zadorozhny@epam.com
-sending Authorization Basic YWxleGV5X[omitted...]
-sending request to e3s.epam.com:443/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum,emailSum&query={%22email%22%3A%22alexey_zadorozhny%40epam.com%22}
-authentication ok for alexey_zadorozhny@epam.com
-querying desk: 5412f69f0691e10e02fe0194
-found: {"project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"qwe","_id":"5412f69f0691e10e02fe0194","__v":0,"guest":[],"participant":[{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5412f69f0691e10e02fe0195"}]}
-user : alexey_zadorozhny@epam.com is the owner
-desk updated with isOwner flag:{"project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"qwe","_id":"5412f69f0691e10e02fe0194","__v":0,"guest":[],"participant":[{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5412f69f0691e10e02fe0195"}],"isOwner":true}
-returning the desk:{"project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"qwe","_id":"5412f69f0691e10e02fe0194","__v":0,"guest":[],"participant":[{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5412f69f0691e10e02fe0195"}],"isOwner":true}
-provided credentials for alexey_zadorozhny@epam.com
-sending Authorization Basic YWxleGV5X[omitted...]
-sending request to e3s.epam.com:443/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum,emailSum&query={%22email%22%3A%22alexey_zadorozhny%40epam.com%22}
-authentication ok for alexey_zadorozhny@epam.com
-querying desk: 54123d6302589a831ed3ce35
-found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"1","deskName":"another desk","_id":"54123d6302589a831ed3ce35","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"54123d6302589a831ed3ce36"}]}
-user : alexey_zadorozhny@epam.com not among invitees: ["volodymyr_hartsev@epam.com","volodymyr_hartsev@epam.com"]
-provided credentials for alexey_zadorozhny@epam.com
-sending Authorization Basic YWxleGV5X[omitted...]
-sending request to e3s.epam.com:443/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum,emailSum&query={%22email%22%3A%22alexey_zadorozhny%40epam.com%22}
-authentication ok for alexey_zadorozhny@epam.com
-querying desk: 54123d6302589a831ed3ce35
-found: {"_id":"54123d6302589a831ed3ce35","project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"1","deskName":"another desk","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"54123d6302589a831ed3ce36"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny"}]}
-returning the desk:{"_id":"54123d6302589a831ed3ce35","project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"1","deskName":"another desk","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"54123d6302589a831ed3ce36"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny"}]}
