@@ -111,22 +111,25 @@ module.exports = Controller.extend({
         });
       votesCollection.fetch({
         success: function(collection){
-
-          params.view.subview('votes', new VotesCollectionView({
+					
+          params.view.removeSubview('votes');
+          var subview = params.view.subview('votes', new VotesCollectionView({
             region: 'votes',
             collection: collection
           }));
+          console.log(params.view)
           if(params.callback){
             params.callback();
           }
           
-          Application.pollers.push(votesPoller.get(collection, {delay: 5000}).start());
-          collection.on('sync', function(collection){
-            params.view.subview('votes', new VotesCollectionView({
-              region: 'votes',
-              collection: collection
-            }));
-          });
+//           Application.pollers.push(votesPoller.get(collection, {delay: 5000}).start());
+//           collection.on('sync', function(collection){
+//             params.view.subview('votes', new VotesCollectionView({
+//               region: 'votes',
+//               collection: collection
+//             }));
+//           });
+          
         },
         error: function(){
           if(params.callback){
