@@ -70,7 +70,9 @@ exports.init = function(app, mongoose) {
                         deskId: story.deskId
                     }, {
                         active: false
-                    }, { multi: true }, function(err, numberAffected) {
+                    }, {
+                        multi: true
+                    }, function(err, numberAffected) {
                         if(err) {
                             console.log("failed to reset stories, error: " + JSON.stringify(err));
                             res.status(500).send({
@@ -81,12 +83,12 @@ exports.init = function(app, mongoose) {
                             return;
                         } else {
                             console.log(numberAffected + " stories in desk: " + story.deskId + " deactivated");
-		                    updateStory(req, res, id, newVal);
+                            updateStory(req, res, id, newVal);
                         }
                     });
                 } else {
                     updateStory(req, res, id, newVal);
-                }                
+                }
             }
         });
     });
