@@ -24,16 +24,8 @@ module.exports = CollectionView.extend({
     },
   }),
   animationDuration: 0,
-	autoRender: true,
+	autoRender: false,
 	className: 'votes-list-wrapper',
   tagName : 'ul',
-	className: 'votes-list',
-  initialize: function(attrs){
-		this.constructor.__super__.initialize.apply(this, arguments);
-    this.options = attrs; 
-    console.log(this.$el)
-  },
-	attach: function() {
-		this.constructor.__super__.attach.apply(this, arguments);
-	}
+	className: 'votes-list'
 });

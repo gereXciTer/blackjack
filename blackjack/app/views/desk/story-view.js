@@ -21,11 +21,11 @@ module.exports = View.extend({
     'change label.card': 'makeVote'
   },
   initialize: function(args){
+    this.constructor.__super__.initialize.apply(this, arguments);
     var _this = this;
     if(this.model.get('active')){
-	    Chaplin.mediator.publish('vote:refresh', {storyId: this.model.get('_id'), view: _this});
+	    Chaplin.mediator.publish('vote:refresh', {storyId: _this.model.get('_id'), view: _this});
     }
-    this.constructor.__super__.initialize.apply(this, arguments);
   },                            
 	activateStory: function(e){
     var _this = this;

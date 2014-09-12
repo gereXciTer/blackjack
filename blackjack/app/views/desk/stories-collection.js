@@ -32,8 +32,15 @@ module.exports = CollectionView.extend({
 		var _this = this;
 	},
   initItemView: function(model){
+		var _this = this;
+
     model.set('cards', DecksCollection.at(Application.desk.deck).get('cards'));
-    return new this.itemView({model: model, collection: this.collection});
+    var itemView = new this.itemView({model: model, collection: this.collection})
+
+//     if(model.get('active')){
+// 	    Chaplin.mediator.publish('vote:refresh', {storyId: model.get('_id'), view: itemView});
+//     }
+    return itemView;
   },
   submitNewStory: function(e){
     e.preventDefault();

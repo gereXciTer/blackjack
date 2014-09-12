@@ -109,17 +109,29 @@ module.exports = Controller.extend({
       var votesCollection = new VotesCollection({
           storyId: params.storyId
         });
+      testView = View.extend({
+        autoRender: true,
+        tagName : 'li',
+        className: 'vote',
+        template: require('/views/templates/vote'),
+        attach: function(args){
+          this.constructor.__super__.attach.apply(this, arguments);
+        },
+      });
+      params.view.subview('votes', new testView({
+            region: 'votes'
+          }));
       votesCollection.fetch({
         success: function(collection){
 					
-          params.view.removeSubview('votes');
+//           params.view.removeSubview('votes');
           var subview = params.view.subview('votes', new VotesCollectionView({
             region: 'votes',
             collection: collection
           }));
-          console.log(params.view)
+          console.log(params.view);
           if(params.callback){
-            params.callback();
+            params.callback(collection);
           }
           
 //           Application.pollers.push(votesPoller.get(collection, {delay: 5000}).start());
