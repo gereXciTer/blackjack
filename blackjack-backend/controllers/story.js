@@ -62,15 +62,16 @@ exports.init = function(app, mongoose) {
             } else {
                 console.log('found: ' + JSON.stringify(story));
                 console.log('newVal.active: ' + newVal.active);
-                console.log('newVal.active == true: ' + (newVal.active == "true"));
                 console.log('story.active != newVal.active: ' + (story.active != newVal.active));
-                if(newVal.active && newVal.active == "true" && story.active != newVal.active) {
+                if(newVal.active && story.active != newVal.active) {
                     console.log("requested to activate story: " + id + ", resetting other stories in desk: " + story.deskId);
                     Story.update({
                         deskId: story.deskId
                     }, {
                         active: false
-                    }, { multi: true }, function(err, numberAffected) {
+                    }, {
+                        multi: true
+                    }, function(err, numberAffected) {
                         if(err) {
                             console.log("failed to reset stories, error: " + JSON.stringify(err));
                             res.status(500).send({
@@ -81,12 +82,12 @@ exports.init = function(app, mongoose) {
                             return;
                         } else {
                             console.log(numberAffected + " stories in desk: " + story.deskId + " deactivated");
-		                    updateStory(req, res, id, newVal);
+                            updateStory(req, res, id, newVal);
                         }
                     });
                 } else {
                     updateStory(req, res, id, newVal);
-                }                
+                }
             }
         });
     });

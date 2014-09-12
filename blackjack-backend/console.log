@@ -1,0 +1,7 @@
+http basic auth enabled
+db connection established
+e3s controller initialized
+desk controller initialized
+story controller initialized
+vote controller initialized
+listening on :3334
