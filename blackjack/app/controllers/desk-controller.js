@@ -54,7 +54,7 @@ module.exports = Controller.extend({
         success: function(collection, models){
           _this.refreshStories(collection);
           Chaplin.mediator.publish('loader:hide');
-          Application.pollers.push(storiesPoller.get(collection, {delay: 5000}).start());
+//           Application.pollers.push(storiesPoller.get(collection, {delay: 5000}).start());
           
           var storiesCount = collection.length;
           var lastActiveStory = collection.findWhere({active: true}).get('_id');
@@ -109,11 +109,13 @@ module.exports = Controller.extend({
       var votesCollection = new VotesCollection({
           storyId: params.storyId
         });
-      testView = View.extend({
+			
+      var View = require('views/base/view');
+      var testView = View.extend({
         autoRender: true,
         tagName : 'li',
         className: 'vote',
-        template: require('/views/templates/vote'),
+        template: '123',
         attach: function(args){
           this.constructor.__super__.attach.apply(this, arguments);
         },
