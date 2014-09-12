@@ -55,14 +55,15 @@ exports.init = function(app, mongoose) {
                         errorMessage: "You are not invited to this desk"
                     });
                 } else {
-                    if(req.user.name == desk.owner) {
-                        desk.isOwner = true;
+                    var retVal = JSON.parse(JSON.stringify(desk));
+                    if(req.user.name == retVal.owner) {
+                        retVal.isOwner = true;
                         console.log('user : ' + req.user.name + ' is the owner');
-                    	console.log('desk updated with isOwner flag:' + JSON.stringify(desk));
+                    	console.log('desk updated with isOwner flag:' + JSON.stringify(retVal));
                     }
-                    console.log('returning the desk:' + JSON.stringify(desk));
+                    console.log('returning the desk:' + JSON.stringify(retVal));
                     res.set("Content-type", "application/json");
-                    res.status(200).send(desk);
+                    res.status(200).send(retVal);
                 }
             }
         });
