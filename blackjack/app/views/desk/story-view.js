@@ -10,6 +10,7 @@ var View = require('views/base/view');
 
 module.exports = View.extend({
   autoRender: true,
+  tagName: 'li',
   className: 'story',
   template: require('./templates/story'),
   regions: {

@@ -25,8 +25,12 @@ register('url', function(routeName) {
   return utils.reverse(routeName, params);
 });
 
-register('isowner', function() {
-  return Application.deskOwner;
+register('isowner', function(options) {
+  if( Application.deskOwner ) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+  }
 });
 
 register('compare', function(lvalue, rvalue, options) {
