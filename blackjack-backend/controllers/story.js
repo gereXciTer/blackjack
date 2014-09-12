@@ -60,18 +60,17 @@ exports.init = function(app, mongoose) {
                     errorMessage: "story " + id + " not found"
                 });
             } else {
-                var deskId = newVal.deskId;
                 console.log('found: ' + JSON.stringify(story));
                 console.log('newVal.active: ' + newVal.active);
                 console.log('newVal.active == true: ' + (newVal.active == "true"));
                 console.log('story.active != newVal.active: ' + (story.active != newVal.active));
                 if(newVal.active && newVal.active == "true" && story.active != newVal.active) {
-                    console.log("requested to activate story: " + id + ", resetting other stories in desk: " + deskId);
+                    console.log("requested to activate story: " + id + ", resetting other stories in desk: " + story.deskId);
                     Story.update({
-                        deskId: deskId
+                        deskId: story.deskId
                     }, {
                         active: false
-                    }, function(err) {
+                    }, { multi: true }, function(err, numberAffected) {
                         if(err) {
                             console.log("failed to reset stories, error: " + JSON.stringify(err));
                             res.status(500).send({
@@ -81,28 +80,34 @@ exports.init = function(app, mongoose) {
                             });
                             return;
                         } else {
-                            console.log("all stories in desk: " + deskId + " deactivated");
+                            console.log(numberAffected + " stories in desk: " + story.deskId + " deactivated");
+		                    updateStory(req, res, id, newVal);
                         }
                     });
-                }
-                delete newVal["_id"];
-                delete newVal["deskId"];
-                Story.update({
-                    _id: id
-                }, newVal, function(err) {
-                    if(err) {
-                        handleError(req, res, err);
-                    } else {
-                        console.log("story id: " + id + " updated with new values: " + JSON.stringify(newVal));
-                        res.set("Content-type", "application/json");
-                        res.status(200).send({
-                            storyId: id
-                        });
-                    }
-                });
+                } else {
+                    updateStory(req, res, id, newVal);
+                }                
             }
         });
     });
+
+    function updateStory(req, res, id, newVal) {
+        delete newVal["_id"];
+        delete newVal["deskId"];
+        Story.update({
+            _id: id
+        }, newVal, function(err) {
+            if(err) {
+                handleError(req, res, err);
+            } else {
+                console.log("story id: " + id + " updated with new values: " + JSON.stringify(newVal));
+                res.set("Content-type", "application/json");
+                res.status(200).send({
+                    storyId: id
+                });
+            }
+        });
+    }
 
     function handleError(req, res, err) {
         console.log("error: " + JSON.stringify(err));
