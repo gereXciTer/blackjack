@@ -5,3 +5,13 @@ desk controller initialized
 story controller initialized
 vote controller initialized
 listening on :3334
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: e5122e938a896d27afb9b0c70d33ebdd
+nothing in auth cache, going to e3s to authenticate
+authentication ok for: alexey_zadorozhny@epam.com
+deleting password before storing the object
+user object with no password: {"name":"alexey_zadorozhny@epam.com"}
+caching key: e5122e938a896d27afb9b0c70d33ebdd, user: {"name":"alexey_zadorozhny@epam.com","profile":{"dummy":true}}
+querying desk: 54123d6302589a831ed3ce35
+found: {"_id":"54123d6302589a831ed3ce35","project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"1","deskName":"another desk","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"54123d6302589a831ed3ce36"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny"}]}
+returning the desk:{"_id":"54123d6302589a831ed3ce35","project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"1","deskName":"another desk","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"54123d6302589a831ed3ce36"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny"}]}
