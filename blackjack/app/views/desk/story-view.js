@@ -18,6 +18,7 @@ module.exports = View.extend({
   },
   events: {
     'click a.activate': 'activateStory',
+    'click a.reveal': 'revealStory',
     'change label.card': 'makeVote'
   },
   initialize: function(args){
@@ -37,6 +38,17 @@ module.exports = View.extend({
       }
     });  
 	},
+  revealStory: function(e){
+    var _this = this;
+  	e.preventDefault();
+    this.model.urlRoot = '/api/stories';
+    Chaplin.mediator.publish('loader:show');
+    this.model.save({active: true, revealed: !this.model.get('revealed'), id: this.model.get('_id')}, {
+      success: function(){
+      	Chaplin.mediator.publish('story:refresh', _this.collection);
+      }
+    });  
+  },
   makeVote: function(e){
     var formData = this.$el.find('.cards').serializeObject();
 
