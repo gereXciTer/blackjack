@@ -14,9 +14,32 @@ module.exports = View.extend({
   className: 'story',
   template: require('./templates/story'),
   regions: {
-    cards: '.cards'
+    votes: '.votes'
   },
-  attach: function(args){
-    this.constructor.__super__.attach.apply(this, arguments);
+  events: {
+    'click a.activate': 'activateStory',
+    'change label.card': 'makeVote'
   },
+  initialize: function(args){
+    this.constructor.__super__.initialize.apply(this, arguments);
+    if(this.model.get('active')){
+	    Chaplin.mediator.publish('vote:refresh', {storyId: this.model.get('_id'), view: this});
+    }
+  },                            
+	activateStory: function(e){
+    var _this = this;
+  	e.preventDefault();
+    this.model.urlRoot = '/api/stories';
+    Chaplin.mediator.publish('loader:show');
+    this.model.save({active: true, id: this.model.get('_id')}, {
+      success: function(){
+      	Chaplin.mediator.publish('story:refresh', _this.collection);
+      }
+    });  
+	},
+  makeVote: function(e){
+    var formData = this.$el.find('.cards').serializeObject();
+
+    Chaplin.mediator.publish('vote:add', {estimate: formData.estimate, storyId: this.model.get('_id'), view: this});
+  }
 });

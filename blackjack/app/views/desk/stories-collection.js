@@ -13,6 +13,8 @@ var Collection = require('models/base/collection');
 var CollectionView = require('views/base/collection-view');
 var ItemView = require('./story-view');
 
+var DecksCollection = require('models/decks');
+
 module.exports = CollectionView.extend({
 	itemView: ItemView,
 	autoRender: true,
@@ -29,6 +31,10 @@ module.exports = CollectionView.extend({
 		this.constructor.__super__.attach.apply(this, arguments);
 		var _this = this;
 	},
+  initItemView: function(model){
+    model.set('cards', DecksCollection.at(Application.desk.deck).get('cards'));
+    return new this.itemView({model: model, collection: this.collection});
+  },
   submitNewStory: function(e){
     e.preventDefault();
     Chaplin.mediator.publish('story:add', this.$el.find('#newStory').val());

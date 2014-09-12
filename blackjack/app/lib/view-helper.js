@@ -1,4 +1,5 @@
 var utils = require('./utils');
+var DecksCollection = require('models/decks');
 
 var register = function(name, fn) {
   return Handlebars.registerHelper(name, fn);
@@ -25,8 +26,15 @@ register('url', function(routeName) {
   return utils.reverse(routeName, params);
 });
 
+register('cardimg', function(estimate) {
+  var card = _.find(DecksCollection.at(Application.desk.deck).get('cards'), function(cardItem){
+    return cardItem.value == estimate;
+  });
+  return card.img;
+});
+
 register('isowner', function(options) {
-  if( Application.deskOwner ) {
+  if(!Application.desk.isOwner) {
     return options.fn(this);
   } else {
     return options.inverse(this);
