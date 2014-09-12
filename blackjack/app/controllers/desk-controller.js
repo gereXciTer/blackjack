@@ -54,7 +54,7 @@ module.exports = Controller.extend({
         success: function(collection, models){
           _this.refreshStories(collection);
           Chaplin.mediator.publish('loader:hide');
-          Application.pollers.push(storiesPoller.get(collection, {delay: 5000}).start());
+//           Application.pollers.push(storiesPoller.get(collection, {delay: 5000}).start());
           
           var storiesCount = collection.length;
           var lastActiveStory = collection.findWhere({active: true}).get('_id');
@@ -109,24 +109,41 @@ module.exports = Controller.extend({
       var votesCollection = new VotesCollection({
           storyId: params.storyId
         });
+			
+      var View = require('views/base/view');
+      var testView = View.extend({
+        autoRender: true,
+        tagName : 'li',
+        className: 'vote',
+        template: '123',
+        attach: function(args){
+          this.constructor.__super__.attach.apply(this, arguments);
+        },
+      });
+      params.view.subview('votes', new testView({
+            region: 'votes'
+          }));
       votesCollection.fetch({
         success: function(collection){
-
-          params.view.subview('votes', new VotesCollectionView({
+					
+//           params.view.removeSubview('votes');
+          var subview = params.view.subview('votes', new VotesCollectionView({
             region: 'votes',
             collection: collection
           }));
+          console.log(params.view);
           if(params.callback){
-            params.callback();
+            params.callback(collection);
           }
           
-          Application.pollers.push(votesPoller.get(collection, {delay: 5000}).start());
-          collection.on('sync', function(collection){
-            params.view.subview('votes', new VotesCollectionView({
-              region: 'votes',
-              collection: collection
-            }));
-          });
+//           Application.pollers.push(votesPoller.get(collection, {delay: 5000}).start());
+//           collection.on('sync', function(collection){
+//             params.view.subview('votes', new VotesCollectionView({
+//               region: 'votes',
+//               collection: collection
+//             }));
+//           });
+          
         },
         error: function(){
           if(params.callback){
