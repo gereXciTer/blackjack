@@ -39,7 +39,7 @@ exports.basic = function(req, res, next) {
                 myCache.set(hash, req.user);
                 next();
             }, function(err) {
-                console.log("authentication failed for " + req.user.name);
+                console.log("authentication failed for " + user.name);
                 console.log("purging cache key: " + hash);
                 myCache.del(hash);
                 res.status(403).send({
@@ -57,5 +57,7 @@ exports.basic = function(req, res, next) {
 };
 
 function skipAuth(auth, urlTemplate, params, success, error) {
-    success({dummy:true});
+    error({
+        dummy: true
+    });
 }
