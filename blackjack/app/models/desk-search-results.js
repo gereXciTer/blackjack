@@ -16,7 +16,7 @@ module.exports = Collection.extend({
   },
   url: function(){
     var term = this.options.term;
-    var email = Application.userModel.attributes[0].emailSum;
+    var email = Application.userModel.attributes[0] ? Application.userModel.attributes[0].emailSum : '';
     var rootUrl = '/api/desks/';
     var query = '?query=' + JSON.stringify({
       "$and": [

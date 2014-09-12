@@ -6,8 +6,8 @@ module.exports = Chaplin.Controller.extend({
   beforeAction: function() {
     if(Application.pollers){
       for(var i = 0; i < Application.pollers.length; i++){
-        if(Application.pollers[i].stop){
-		    	Application.pollers[i].stop();
+        if(Application.pollers[i].poller.stop){
+		    	Application.pollers[i].poller.stop();
         }
       }
     }else{

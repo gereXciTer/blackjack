@@ -22,9 +22,8 @@ module.exports = View.extend({
   },
   initialize: function(args){
     this.constructor.__super__.initialize.apply(this, arguments);
-    var _this = this;
     if(this.model.get('active')){
-	    Chaplin.mediator.publish('vote:refresh', {storyId: _this.model.get('_id'), view: _this});
+	    Chaplin.mediator.publish('vote:refresh', {storyId: this.model.get('_id'), view: this});
     }
   },                            
 	activateStory: function(e){
