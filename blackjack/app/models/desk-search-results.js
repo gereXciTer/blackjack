@@ -18,19 +18,22 @@ module.exports = Collection.extend({
     var term = this.options.term;
     var email = Application.userModel.attributes[0] ? Application.userModel.attributes[0].emailSum : '';
     var rootUrl = '/api/desks/';
-    var query = '?query=' + JSON.stringify({
+    var queryObj = {
       "$and": [
         {
           "deskName": {"$regex": term + ""}
-        },
-        {
+        }
+      ]};
+    if(email){
+      queryObj.$and.push({
           "$or": [
             { "owner": email },
             { "participant.email": email },
             { "guest.email": email }
           ]
-        }
-      ]});
+        });
+    }
+    var query = '?query=' + JSON.stringify(queryObj);
     var url = rootUrl + query;
     return url;
   }
