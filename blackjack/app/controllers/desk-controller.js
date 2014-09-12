@@ -54,7 +54,7 @@ module.exports = Controller.extend({
         success: function(collection, models){
           _this.refreshStories(collection);
           Chaplin.mediator.publish('loader:hide');
-          storiesPoller.get(collection, {delay: 5000}).start();
+          Application.pollers.push(storiesPoller.get(collection, {delay: 5000}).start());
           
           var storiesCount = collection.length;
           var lastActiveStory = collection.findWhere({active: true}).get('_id');
@@ -112,7 +112,7 @@ module.exports = Controller.extend({
       votesCollection.fetch({
         success: function(collection){
 
-          params.view.subview('votes' + params.storyId, new VotesCollectionView({
+          params.view.subview('votes', new VotesCollectionView({
             region: 'votes',
             collection: collection
           }));
@@ -120,9 +120,9 @@ module.exports = Controller.extend({
             params.callback();
           }
           
-          votesPoller.get(collection, {delay: 5000}).start();
+          Application.pollers.push(votesPoller.get(collection, {delay: 5000}).start());
           collection.on('sync', function(collection){
-            params.view.subview('votes' + params.storyId, new VotesCollectionView({
+            params.view.subview('votes', new VotesCollectionView({
               region: 'votes',
               collection: collection
             }));
