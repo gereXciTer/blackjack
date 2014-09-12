@@ -62,9 +62,8 @@ exports.init = function(app, mongoose) {
             } else {
                 console.log('found: ' + JSON.stringify(story));
                 console.log('newVal.active: ' + newVal.active);
-                console.log('newVal.active == true: ' + (newVal.active == "true"));
                 console.log('story.active != newVal.active: ' + (story.active != newVal.active));
-                if(newVal.active && newVal.active == "true" && story.active != newVal.active) {
+                if(newVal.active && story.active != newVal.active) {
                     console.log("requested to activate story: " + id + ", resetting other stories in desk: " + story.deskId);
                     Story.update({
                         deskId: story.deskId
