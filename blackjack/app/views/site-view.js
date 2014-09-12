@@ -7,5 +7,15 @@ module.exports = View.extend({
     header: '#header-container',
     main: '#page-container'
   },
-  template: require('./templates/site')
+  template: require('./templates/site'),
+	listen: {
+		'loader:show mediator': 'showLoader',
+		'loader:hide mediator': 'hideLoader'
+	},
+	showLoader: function() {
+    $('#loader').addClass('loading');
+	},
+	hideLoader: function() {
+    $('#loader').removeClass('loading');
+	}
 });

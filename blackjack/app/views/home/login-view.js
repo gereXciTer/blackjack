@@ -26,6 +26,8 @@ module.exports = View.extend({
   goNext: function(e){
 		e.preventDefault();
     
+    Chaplin.mediator.publish('loader:show');
+
     var userModel = new UserModel();
     var _this = this;
             

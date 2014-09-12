@@ -49,6 +49,7 @@ module.exports = Controller.extend({
       storyCollection.fetch({
         success: function(collection, models){
           _this.refreshStories(collection);
+          Chaplin.mediator.publish('loader:hide');
           var poller = Poller();
           poller.get(collection, {delay: 5000}).start();
           var storiesCount = collection.length;
@@ -58,6 +59,10 @@ module.exports = Controller.extend({
               storiesCount = collection.length;
             }                
           });
+        },
+        error: function(){
+          console.log('Stories fetching error', arguments);
+// 			    Chaplin.mediator.publish('loader:show');
         }
       });
     };

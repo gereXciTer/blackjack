@@ -118,9 +118,6 @@ exports.init = function(app, mongoose) {
         /*desk.participant.map(function(item) {
             return item.email;
         }).join(',');*/
-        if(recipients.indexOf(desk.owner) == -1) {
-            recipients = recipients + "," + desk.owner;
-        }
         console.log("recipients: ", recipients);
         var origin = req.get("Origin");
         if(!origin) {

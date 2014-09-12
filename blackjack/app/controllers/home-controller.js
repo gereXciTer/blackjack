@@ -25,12 +25,14 @@ module.exports = Controller.extend({
     
     if(Application.userModel){
       this.view = new HomePageView({region: 'main'});
+			Chaplin.mediator.publish('loader:hide');
     }else{
       Application.userModel = new User();
 
       Application.userModel.fetch({
         success: function(data){
           _this.view = new HomePageView({region: 'main'});
+					Chaplin.mediator.publish('loader:hide');
         },
         error: function(xhr, status){
           console.log(arguments);
@@ -56,6 +58,7 @@ module.exports = Controller.extend({
   },
   
   error404: function(){
+    Chaplin.mediator.publish('loader:hide');
     this.view = new ErrorView({region: 'main'});
   },
   
@@ -78,6 +81,7 @@ module.exports = Controller.extend({
         parentView: _this.view,
         model: new Model({projects: projarray})
       }));
+      Chaplin.mediator.publish('loader:hide');
     };
     
     if(Application.userModel){
@@ -126,6 +130,7 @@ module.exports = Controller.extend({
         parentView: _this.view,
         model: params.model
       }));
+      Chaplin.mediator.publish('loader:hide');
     });
     
 
