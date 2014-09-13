@@ -22,8 +22,8 @@ module.exports = View.extend({
     'click a.estimate': 'estimateStory',
     'change label.card': 'makeVote'
   },
-  attach: function(args){
-    this.constructor.__super__.attach.apply(this, arguments);
+  initialize: function(args){
+    this.constructor.__super__.initialize.apply(this, arguments);
     if(this.model.get('active')){
       Chaplin.mediator.publish('vote:refresh', {storyId: this.model.get('_id'), view: this});
     }

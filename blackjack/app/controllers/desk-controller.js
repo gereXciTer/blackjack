@@ -144,13 +144,14 @@ module.exports = Controller.extend({
       });
     });
         
+    var votesCollection = new VotesCollection();
     Chaplin.mediator.unsubscribe('vote:refresh');
     Chaplin.mediator.subscribe('vote:refresh', function(params){
-      var votesCollection = new VotesCollection({
-          storyId: params.storyId
-        });
+      
+      votesCollection.options.storyId = params.storyId;
 			
-      var drawVotes = function(collection, container){
+      var drawVotes = function(collection){
+        var container = $('.story .votes');
         var isRevealed = container.data('revealed') || false;
         container = container.html('<ul class="votes-list"></ul>').find('.votes-list');
         var template = require('views/desk/templates/vote');
@@ -172,14 +173,7 @@ module.exports = Controller.extend({
       if(params.callback){
         params.callback(votesCollection);
       }
-      votesCollection.on('sync', function(collection){
-        if(collection.length){
-          var container = $('.story .votes');
-          if(collection.length){
-            drawVotes(collection, container);
-          }
-        }
-      });
+      votesCollection.off('sync', drawVotes).on('sync', drawVotes);
 
     });
 
