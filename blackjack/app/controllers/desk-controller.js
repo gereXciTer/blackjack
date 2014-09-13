@@ -20,7 +20,6 @@ var ErrorView = require('views/home/error404-view');
 var HeaderView = require('views/home/header-view');
 var DeskView = require('views/desk/desk-view');
 var StoriesCollectionView = require('views/desk/stories-collection');
-var VotesCollectionView = require('views/desk/votes-collection');
 
 var DecksCollection = require('models/decks');
 var StoryCollection = require('models/story-collection');
@@ -54,7 +53,14 @@ module.exports = Controller.extend({
         success: function(collection, models){
           _this.refreshStories(collection);
           Chaplin.mediator.publish('loader:hide');
-//           Application.pollers.push(storiesPoller.get(collection, {delay: 5000}).start());
+
+          var poller = _.find(Application.pollers, function(item){
+            return item == 'story';
+          });
+          if(poller && poller.stop){
+            poller.stop();
+          }
+          Application.pollers.push({name: 'story', poller: storiesPoller.get(collection, {delay: 5000}).start()});
           
           var storiesCount = collection.length;
           var lastActiveStory = collection.findWhere({active: true}).get('_id');
@@ -110,39 +116,39 @@ module.exports = Controller.extend({
           storyId: params.storyId
         });
 			
-      var View = require('views/base/view');
-      var testView = View.extend({
-        autoRender: true,
-        tagName : 'li',
-        className: 'vote',
-        template: '123',
-        attach: function(args){
-          this.constructor.__super__.attach.apply(this, arguments);
-        },
-      });
-      params.view.subview('votes', new testView({
-            region: 'votes'
-          }));
+      var drawVotes = function(collection, container){
+        container = container.html('<ul class="votes-list"></ul>').find('.votes-list');
+        var template = require('views/desk/templates/vote');
+        collection.each(function(item){
+          container.append('<li class="vote">' + template({estimate: item.get('estimate')}) + '</li>');
+        });
+      };
+
       votesCollection.fetch({
         success: function(collection){
-					
-//           params.view.removeSubview('votes');
-          var subview = params.view.subview('votes', new VotesCollectionView({
-            region: 'votes',
-            collection: collection
-          }));
-          console.log(params.view);
+          var container = params.view.$el.find('.votes');
+          console.log(collection.length)
+          if(collection.length){
+	          drawVotes(collection, container);
+          }
+          
           if(params.callback){
             params.callback(collection);
           }
           
-//           Application.pollers.push(votesPoller.get(collection, {delay: 5000}).start());
-//           collection.on('sync', function(collection){
-//             params.view.subview('votes', new VotesCollectionView({
-//               region: 'votes',
-//               collection: collection
-//             }));
-//           });
+          var poller = _.find(Application.pollers, function(item){
+            return item == 'vote';
+          });
+          if(poller && poller.stop){
+            poller.stop();
+          }
+          Application.pollers.push({name: 'vote', poller: votesPoller.get(collection, {delay: 5000}).start()});
+          
+          collection.on('sync', function(collection){
+            if(collection.length){
+              drawVotes(collection, container);
+            }
+          });
           
         },
         error: function(){

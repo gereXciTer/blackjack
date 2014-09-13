@@ -34,7 +34,7 @@ register('cardimg', function(estimate) {
 });
 
 register('isowner', function(options) {
-  if(!Application.desk.isOwner) {
+  if(Application.desk.isOwner) {
     return options.fn(this);
   } else {
     return options.inverse(this);

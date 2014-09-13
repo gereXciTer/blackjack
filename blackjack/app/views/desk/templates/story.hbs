@@ -1,20 +1,29 @@
 {{#isowner}}
-	{{#unless active}}
-  	{{#compare estimate 0 operator="<"}}
+  {{#compare estimate 0 operator="<"}}
+		{{#unless active}}
   		<a href="#" class="btn activate" data-id="{{_id}}">Activate</a>
-    {{/compare}}
-  {{/unless}}
+  	{{/unless}}
+		{{#if active}}
+  		<a href="#" class="btn reveal" data-id="{{_id}}">{{#if revealed}}UnReveal{{else}}Reveal{{/if}}</a>
+  	{{/if}}
+  {{/compare}}
 {{/isowner}}
 <h4>
 	{{summary}} {{#compare estimate 0 operator=">="}} ({{estimate}}) {{/compare}}
 </h4>
 {{#if active}}
 	Other estimates:
-	<div class="votes"></div>
-  Choose your estimate:
-  <form class="cards">
-      {{#each cards}}
-          <label style="background: url(/images/decks/{{img}}) 0 0 no-repeat;" class="card"><input type="radio" name="estimate" value="{{value}}"><span class="sel"></span></label>
-      {{/each}}
-  </form>
+	<div class="votes">
+    <div style="margin: 1em">
+      No estimates
+    </div>
+	</div>
+	{{#unless revealed}}
+    Choose your estimate:
+    <form class="cards">
+        {{#each cards}}
+            <label style="background: url(/images/decks/{{img}}) 0 0 no-repeat;" class="card"><input type="radio" name="estimate" value="{{value}}"><span class="sel"></span></label>
+        {{/each}}
+    </form>
+	{{/unless}}
 {{/if}}
