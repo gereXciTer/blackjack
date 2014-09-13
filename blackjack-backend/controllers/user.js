@@ -8,6 +8,7 @@
 exports.init = function(app, mongoose) {
     var User = require("./../model/User.js").make(mongoose.Schema, mongoose);
     app.get("(/api)?/desks/:0/users", function(req, res) {
+        var timeout = parseInt(req.query.timeout || "30");
         var Desk = mongoose.model("Desk");
         var deskId = req.params[0];
         console.log("querying user statuses for desk: " + deskId);
@@ -45,7 +46,7 @@ exports.init = function(app, mongoose) {
                             console.log("mapping access time to online status");
                             var timeDiff = Math.abs(new Date() - new Date(item.lastAccessTime));
                             console.log("for: " + item.email + " diff between now: " + new Date().toISOString() + " and lastAccessTime: " + item.lastAccessTime + " is: " + timeDiff + " ms")
-                            retVal[item.email] = timeDiff < (1000 * 30);
+                            retVal[item.email] = timeDiff < (1000 * timeout);
                         });
                     }
                     res.set("Content-type", "application/json");
