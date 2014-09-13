@@ -155,8 +155,21 @@ module.exports = Controller.extend({
         var isRevealed = container.data('revealed') || false;
         container = container.html('<ul class="votes-list"></ul>').find('.votes-list');
         var template = require('views/desk/templates/vote');
+        var average = 0;
+        var averageVal = 0;
+        var estimates = {};
         collection.each(function(item){
-          container.append('<li class="vote">' + template(_.extend(item.getAttributes(), {isRevealed: isRevealed})) + '</li>');          
+          estimates[item.get('estimate')] = estimates[item.get('estimate')] ? estimates[item.get('estimate')] + 1 : 1;
+        });
+        console.log(estimates)
+        for(var i in estimates){
+        	if(averageVal < estimates[i]){
+            averageVal = estimates[i];
+            average = i;
+          }
+        }
+        collection.each(function(item){
+          container.append('<li class="vote' + (item.get('estimate') !== average ? ' notaverage' : '') + '">' + template(_.extend(item.getAttributes(), {isRevealed: isRevealed})) + '</li>');          
         });
       };
 
