@@ -67,6 +67,7 @@ module.exports = Controller.extend({
 
       storyCollection.on('sync', function(collection){
         refreshed = false;
+        collection = storyCollection;
         var lastRevealedStory = collection.findWhere({active: true, revealed: true}) || false;
         if(storiesCount !== collection.length){
           _this.refreshStories(collection);
@@ -93,11 +94,7 @@ module.exports = Controller.extend({
     
     Chaplin.mediator.unsubscribe('story:refresh');
     Chaplin.mediator.subscribe('story:refresh', function(collection){
-      collection.fetch({
-        success: function(collection){
-			    _this.refreshStories(collection);
-        }
-      });
+      collection.fetch();
     });
 
     Chaplin.mediator.unsubscribe('story:add');
@@ -124,7 +121,7 @@ module.exports = Controller.extend({
         });
 			
       var drawVotes = function(collection, container){
-        var isRevealed = params.view.model.get('revealed');
+        var isRevealed = params.model.get('revealed');
         container = container.html('<ul class="votes-list"></ul>').find('.votes-list');
         var template = require('views/desk/templates/vote');
         collection.each(function(item){
