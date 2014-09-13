@@ -19,6 +19,7 @@ module.exports = View.extend({
   events: {
     'click a.activate': 'activateStory',
     'click a.reveal': 'revealStory',
+    'click a.estimate': 'estimateStory',
     'change label.card': 'makeVote'
   },
   initialize: function(args){
@@ -26,28 +27,28 @@ module.exports = View.extend({
     if(this.model.get('active')){
       Chaplin.mediator.publish('vote:refresh', {storyId: this.model.get('_id'), view: this, model: this.model});
     }
-  },                            
-	activateStory: function(e){
+  },
+  updateStory: function(params){
     var _this = this;
-  	e.preventDefault();
     this.model.urlRoot = '/api/stories';
     Chaplin.mediator.publish('loader:show');
-    this.model.save({active: true, id: this.model.get('_id')}, {
+    this.model.save(params, {
       success: function(){
       	Chaplin.mediator.publish('story:refresh', _this.collection);
       }
     });  
+  },
+	activateStory: function(e){
+  	e.preventDefault();
+    this.updateStory({active: true, id: this.model.get('_id')});
 	},
   revealStory: function(e){
-    var _this = this;
   	e.preventDefault();
-    this.model.urlRoot = '/api/stories';
-    Chaplin.mediator.publish('loader:show');
-    this.model.save({active: true, revealed: !this.model.get('revealed'), id: this.model.get('_id')}, {
-      success: function(){
-      	Chaplin.mediator.publish('story:refresh', _this.collection);
-      }
-    });  
+    this.updateStory({active: true, revealed: !this.model.get('revealed'), id: this.model.get('_id')});
+  },
+  estimateStory: function(e){
+  	e.preventDefault();
+    this.updateStory({active: false, revealed: true, estimate: $('#storyEstimate').val(), id: this.model.get('_id')});
   },
   makeVote: function(e){
     var formData = this.$el.find('.cards').serializeObject();

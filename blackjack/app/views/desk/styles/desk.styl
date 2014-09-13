@@ -18,8 +18,16 @@
     list-style: none
     li
       display: inline-block
-      padding: 0.2em
+      text-align: center
       margin-right: 1em
+      span
+      	display: block
+	      text-align: center
+	      padding: 0.2em 0.5em
+	      border-radius: 0.2em
+      &.online
+      	span
+      		background-color: #a7f2a7
 
 .stories-list-wrapper
 	position: relative
@@ -42,10 +50,17 @@
 .story
 	border: 1px solid #eee
   padding: 0.5em
-  .btn
-  	float: right
   h4
   	margin: 0.2em 0.5em
+  .btn
+  	float: right
+.story input.btn
+  font-weight: normal
+  width: 6em
+  margin-left: 1em
+  &:hover
+  	background: none
+    color: black
 
 .cards
 	margin: 0

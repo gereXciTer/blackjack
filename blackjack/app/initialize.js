@@ -20,7 +20,8 @@ $.fn.serializeObject = function()
 Application.pollerConfig = {
   frequencies: {
     'story': 1500000,
-    'vote': 500000
+    'vote': 500000,
+    'online': 5000
   },
   getFreq: function(name){
     return this.frequencies[name] || 5000;

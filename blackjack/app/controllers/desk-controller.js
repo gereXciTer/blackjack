@@ -24,6 +24,7 @@ var StoriesCollectionView = require('views/desk/stories-collection');
 var DecksCollection = require('models/decks');
 var StoryCollection = require('models/story-collection');
 var VotesCollection = require('models/votes-collection');
+var UsersOnline = require('models/users-online');
 
 module.exports = Controller.extend({
 
@@ -48,7 +49,31 @@ module.exports = Controller.extend({
         model: model
       });
       
-
+      var usersOnline = new UsersOnline({deskId: params.id});
+      
+      var poller = _.find(Application.pollers, function(item){
+        return item.name == 'online';
+      });
+      if(poller && poller.poller.stop){
+        poller.poller.stop();
+        poller.poller.start();
+      }else{
+        Application.pollers.push({name: 'online', poller: storiesPoller.get(usersOnline, {delay: Application.pollerConfig.getFreq('online')}).start()});
+      }
+      
+      usersOnline.on('sync', function(){
+        var users = _this.view.$el.find('.participants li[data-id]');
+        users.each(function(index, el){
+          el = $(el);
+					var found = usersOnline.find(function(item){
+            return item.get(el.data('id'));
+          });
+          if(found){
+            el.addClass('online');
+          }
+        });
+      });
+      
       var poller = _.find(Application.pollers, function(item){
         return item.name == 'story';
       });
@@ -73,7 +98,7 @@ module.exports = Controller.extend({
           _this.refreshStories(collection);
           refreshed = true;
         }else{
-          if(lastActiveStory !== collection.findWhere({active: true}).get('_id')){
+          if(lastActiveStory !== (collection.findWhere({active: true}) ? collection.findWhere({active: true}).get('_id') : '-1')){
             _this.refreshStories(collection);
           	refreshed = true;
           }else{
@@ -85,10 +110,12 @@ module.exports = Controller.extend({
         }
         if(refreshed){
           storiesCount = collection.length;
-          lastActiveStory = collection.findWhere({active: true}).get('_id');
+          lastActiveStory = collection.findWhere({active: true}) ? collection.findWhere({active: true}).get('_id') : '-1';
           lastRevealedStoryId = lastRevealedStory ? lastRevealedStory.get('_id') : false;
         }
       });
+
+			storyCollection.fetch();
 
     };
     
