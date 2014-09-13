@@ -13,181 +13,618 @@ authentication ok for: alexey_zadorozhny@epam.com
 deleting password before storing the object
 user object with no password: {"name":"alexey_zadorozhny@epam.com"}
 caching key: 28061ab5e9368cc5c89f90a0bf9d4f6b, user: {"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}
-user access logged: { __v: 0,
-  email: 'alexey_zadorozhny@epam.com',
-  lastAccessTime: '2014-09-13T20:41:34.615Z',
-  _id: 5414abfe427b3b8010048ecc }
-provided credentials for: alexey_zadorozhny@epam.com
-checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
-item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-querying all desks
-query is {"deskName":{"$regex":"^t","$options":"i"}}
-final query: {"$and":[{"participant.email":"alexey_zadorozhny@epam.com"},{"deskName":{"$regex":"^t","$options":"i"}}]}
-found: [{"_id":"5411ead257294242188fe8aa","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"Test 1","__v":0,"guest":[],"participant":[{"email":"oleg_khomutov@epam.com","name":"Oleg Khomutov","_id":"5411ead257294242188fe8ac"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5411ead257294242188fe8ab"}]},{"_id":"5411eb0357294242188fe8af","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"1","deskName":"test 2","__v":0,"guest":[],"participant":[{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5411eb0357294242188fe8b0"}]}]
 user access logged: { email: 'alexey_zadorozhny@epam.com',
-  lastAccessTime: '2014-09-13T20:41:44.455Z',
-  _id: 5414abfe427b3b8010048ecc,
-  __v: 0 }
-provided credentials for: oleg_khomutov@epam.com
-checking auth cache for key: 102140f33b0176145803d1e89da724f2
-nothing in auth cache, going to e3s to authenticate
-authentication ok for: oleg_khomutov@epam.com
-deleting password before storing the object
-user object with no password: {"name":"oleg_khomutov@epam.com"}
-caching key: 102140f33b0176145803d1e89da724f2, user: {"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}
-querying user statuses for desk: 5411ead257294242188fe8aa
-desk found
-participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
-found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0}]
-mapping access time to online status
-for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:46.850Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 2395 ms
-user access logged: { __v: 0,
-  email: 'oleg_khomutov@epam.com',
-  lastAccessTime: '2014-09-13T20:41:46.846Z',
-  _id: 5414ac0a427b3b8010048ecd }
-provided credentials for: oleg_khomutov@epam.com
-checking auth cache for key: 102140f33b0176145803d1e89da724f2
-item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-querying user statuses for desk: 5411ead257294242188fe8aa
-desk found
-participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
-found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:46.846Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
-mapping access time to online status
-for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:47.906Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 3450 ms
-mapping access time to online status
-for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:47.906Z and lastAccessTime: 2014-09-13T20:41:46.846Z is: 1060 ms
-user access logged: { email: 'oleg_khomutov@epam.com',
-  lastAccessTime: '2014-09-13T20:41:47.902Z',
-  _id: 5414ac0a427b3b8010048ecd,
-  __v: 0 }
-provided credentials for: oleg_khomutov@epam.com
-checking auth cache for key: 102140f33b0176145803d1e89da724f2
-item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-querying user statuses for desk: 5411ead257294242188fe8aa
-desk found
-participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
-found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:47.902Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
-mapping access time to online status
-for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:48.174Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 3719 ms
-mapping access time to online status
-for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:48.175Z and lastAccessTime: 2014-09-13T20:41:47.902Z is: 273 ms
-user access logged: { email: 'oleg_khomutov@epam.com',
-  lastAccessTime: '2014-09-13T20:41:48.170Z',
-  _id: 5414ac0a427b3b8010048ecd,
-  __v: 0 }
-provided credentials for: oleg_khomutov@epam.com
-checking auth cache for key: 102140f33b0176145803d1e89da724f2
-item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-querying user statuses for desk: 5411ead257294242188fe8aa
-desk found
-participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
-user access logged: { email: 'oleg_khomutov@epam.com',
-  lastAccessTime: '2014-09-13T20:41:49.028Z',
-  _id: 5414ac0a427b3b8010048ecd,
-  __v: 0 }
-found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:49.028Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
-mapping access time to online status
-for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:49.033Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 4578 ms
-mapping access time to online status
-for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:49.033Z and lastAccessTime: 2014-09-13T20:41:49.028Z is: 5 ms
-provided credentials for: oleg_khomutov@epam.com
-checking auth cache for key: 102140f33b0176145803d1e89da724f2
-item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-querying user statuses for desk: 5411ead257294242188fe8aa
-desk found
-participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
-found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:49.028Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
-mapping access time to online status
-for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:49.391Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 4936 ms
-mapping access time to online status
-for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:49.391Z and lastAccessTime: 2014-09-13T20:41:49.028Z is: 363 ms
-user access logged: { email: 'oleg_khomutov@epam.com',
-  lastAccessTime: '2014-09-13T20:41:49.387Z',
-  _id: 5414ac0a427b3b8010048ecd,
-  __v: 0 }
-provided credentials for: oleg_khomutov@epam.com
-checking auth cache for key: 102140f33b0176145803d1e89da724f2
-item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-querying user statuses for desk: 5411ead257294242188fe8aa
-desk found
-participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
-found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:49.387Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
-mapping access time to online status
-for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:49.590Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 5135 ms
-mapping access time to online status
-for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:49.590Z and lastAccessTime: 2014-09-13T20:41:49.387Z is: 203 ms
-user access logged: { email: 'oleg_khomutov@epam.com',
-  lastAccessTime: '2014-09-13T20:41:49.587Z',
-  _id: 5414ac0a427b3b8010048ecd,
-  __v: 0 }
-provided credentials for: oleg_khomutov@epam.com
-checking auth cache for key: 102140f33b0176145803d1e89da724f2
-item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-querying user statuses for desk: 5411ead257294242188fe8aa
-desk found
-participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
-found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:49.587Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
-mapping access time to online status
-for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:49.799Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 5344 ms
-mapping access time to online status
-for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:49.799Z and lastAccessTime: 2014-09-13T20:41:49.587Z is: 212 ms
-user access logged: { email: 'oleg_khomutov@epam.com',
-  lastAccessTime: '2014-09-13T20:41:49.795Z',
-  _id: 5414ac0a427b3b8010048ecd,
-  __v: 0 }
-provided credentials for: alexey_zadorozhny@epam.com
-checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
-item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-querying all desks
-query is {"deskName":{"$regex":"^t","$options":"i"}}
-final query: {"$and":[{"participant.email":"alexey_zadorozhny@epam.com"},{"deskName":{"$regex":"^t","$options":"i"}}]}
-found: [{"_id":"5411ead257294242188fe8aa","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"Test 1","__v":0,"guest":[],"participant":[{"email":"oleg_khomutov@epam.com","name":"Oleg Khomutov","_id":"5411ead257294242188fe8ac"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5411ead257294242188fe8ab"}]},{"_id":"5411eb0357294242188fe8af","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"1","deskName":"test 2","__v":0,"guest":[],"participant":[{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5411eb0357294242188fe8b0"}]}]
-user access logged: { email: 'alexey_zadorozhny@epam.com',
-  lastAccessTime: '2014-09-13T20:41:51.874Z',
+  lastAccessTime: '2014-09-13T20:46:35.454Z',
   _id: 5414abfe427b3b8010048ecc,
   __v: 0 }
 provided credentials for: alexey_zadorozhny@epam.com
 checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
 item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
 user access logged: { email: 'alexey_zadorozhny@epam.com',
-  lastAccessTime: '2014-09-13T20:44:21.144Z',
+  lastAccessTime: '2014-09-13T20:47:05.341Z',
   _id: 5414abfe427b3b8010048ecc,
   __v: 0 }
 provided credentials for: alexey_zadorozhny@epam.com
 checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
 item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 541249839a17611909eb8d24
+found: {"_id":"541249839a17611909eb8d24","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"More 2","__v":0,"guest":[],"participant":[{"email":"miklos_kiss@epam.com","name":"Miklos Kiss","_id":"541249839a17611909eb8d28"},{"email":"oleg_khomutov@epam.com","name":"Oleg Khomutov","_id":"541249839a17611909eb8d27"},{"email":"roman_dzhadzha@epam.com","name":"Roman Dzhadzha","_id":"541249839a17611909eb8d26"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"541249839a17611909eb8d25"}]}
+user : alexey_zadorozhny@epam.com is the owner
+desk updated with isOwner flag:{"_id":"541249839a17611909eb8d24","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"More 2","__v":0,"guest":[],"participant":[{"email":"miklos_kiss@epam.com","name":"Miklos Kiss","_id":"541249839a17611909eb8d28"},{"email":"oleg_khomutov@epam.com","name":"Oleg Khomutov","_id":"541249839a17611909eb8d27"},{"email":"roman_dzhadzha@epam.com","name":"Roman Dzhadzha","_id":"541249839a17611909eb8d26"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"541249839a17611909eb8d25"}],"isOwner":true}
+returning the desk:{"_id":"541249839a17611909eb8d24","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"More 2","__v":0,"guest":[],"participant":[{"email":"miklos_kiss@epam.com","name":"Miklos Kiss","_id":"541249839a17611909eb8d28"},{"email":"oleg_khomutov@epam.com","name":"Oleg Khomutov","_id":"541249839a17611909eb8d27"},{"email":"roman_dzhadzha@epam.com","name":"Roman Dzhadzha","_id":"541249839a17611909eb8d26"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"541249839a17611909eb8d25"}],"isOwner":true}
 user access logged: { email: 'alexey_zadorozhny@epam.com',
-  lastAccessTime: '2014-09-13T20:44:39.914Z',
+  lastAccessTime: '2014-09-13T20:47:16.613Z',
   _id: 5414abfe427b3b8010048ecc,
   __v: 0 }
 provided credentials for: alexey_zadorozhny@epam.com
 checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
 item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-sending Authorization Basic YWxleGV5X[omitted...]
-sending request to e3s.epam.com:443/rest/e3s-app-logo-impl/v1/logo?uri=1
+querying all stories
+query is {"deskId":"541249839a17611909eb8d24"}
+found: [{"summary":"21323","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0},{"summary":"546546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0},{"summary":"456546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}]
 user access logged: { email: 'alexey_zadorozhny@epam.com',
-  lastAccessTime: '2014-09-13T20:44:42.891Z',
+  lastAccessTime: '2014-09-13T20:47:16.682Z',
   _id: 5414abfe427b3b8010048ecc,
   __v: 0 }
 provided credentials for: alexey_zadorozhny@epam.com
 checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
 item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
-sending Authorization Basic YWxleGV5X[omitted...]
-sending request to e3s.epam.com:443/rest/e3s-app-logo-impl/v1/logo?uri=
+create story: {"summary":"21323","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"5412498a9a17611909eb8d29"}
+found: {"summary":"21323","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0}
+newVal.active: true
+story.active != newVal.active: true
+requested to activate story: 5412498a9a17611909eb8d29, resetting other stories in desk: 541249839a17611909eb8d24
 user access logged: { email: 'alexey_zadorozhny@epam.com',
-  lastAccessTime: '2014-09-13T20:44:45.278Z',
+  lastAccessTime: '2014-09-13T20:47:20.948Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+3 stories in desk: 541249839a17611909eb8d24 deactivated
+story id: 5412498a9a17611909eb8d29 updated with new values: {"summary":"21323","estimate":"-1","active":true,"revealed":false,"__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"5412498a9a17611909eb8d29"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"541249839a17611909eb8d24"}
+found: []
+found: [{"summary":"21323","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0},{"summary":"546546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0},{"summary":"456546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:21.043Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:21.045Z',
   _id: 5414abfe427b3b8010048ecc,
   __v: 0 }
 provided credentials for: alexey_zadorozhny@epam.com
-checking auth cache for key: e5122e938a896d27afb9b0c70d33ebdd
-nothing in auth cache, going to e3s to authenticate
-authentication ok for: alexey_zadorozhny@epam.com
-deleting password before storing the object
-user object with no password: {"name":"alexey_zadorozhny@epam.com"}
-caching key: e5122e938a896d27afb9b0c70d33ebdd, user: {"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}
-sending Authorization Basic YWxleGV5X[omitted...]
-sending request to e3s.epam.com:443/rest/e3s-app-logo-impl/v1/logo?uri=
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498a9a17611909eb8d29","estimate":"3"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498a9a17611909eb8d29","email":"alexey_zadorozhny@epam.com"}
+creating new vote
 user access logged: { email: 'alexey_zadorozhny@epam.com',
-  lastAccessTime: '2014-09-13T20:44:52.244Z',
+  lastAccessTime: '2014-09-13T20:47:22.514Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote created with id: 5414ad5a7aa4150611cd01d2
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"3","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:22.561Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498a9a17611909eb8d29","estimate":"2"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498a9a17611909eb8d29","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad5a7aa4150611cd01d2, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:24.596Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad5a7aa4150611cd01d2 updated with new estimate: 2
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:24.641Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498a9a17611909eb8d29","estimate":"1"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498a9a17611909eb8d29","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad5a7aa4150611cd01d2, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:25.507Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad5a7aa4150611cd01d2 updated with new estimate: 1
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"1","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:25.549Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498a9a17611909eb8d29","estimate":"5"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498a9a17611909eb8d29","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad5a7aa4150611cd01d2, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:26.584Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad5a7aa4150611cd01d2 updated with new estimate: 5
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"5","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:26.636Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498a9a17611909eb8d29","estimate":"2"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498a9a17611909eb8d29","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad5a7aa4150611cd01d2, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:28.874Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad5a7aa4150611cd01d2 updated with new estimate: 2
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:28.935Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create story: {"summary":"546546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"5412498f9a17611909eb8d2a"}
+found: {"summary":"546546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0}
+newVal.active: true
+story.active != newVal.active: true
+requested to activate story: 5412498f9a17611909eb8d2a, resetting other stories in desk: 541249839a17611909eb8d24
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:32.045Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+3 stories in desk: 541249839a17611909eb8d24 deactivated
+story id: 5412498f9a17611909eb8d2a updated with new values: {"summary":"546546","estimate":"-1","active":true,"revealed":false,"__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"5412498f9a17611909eb8d2a"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"541249839a17611909eb8d24"}
+found: [{"summary":"21323","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0},{"summary":"546546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0},{"summary":"456546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:32.088Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:32.132Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498f9a17611909eb8d2a","estimate":"2"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498f9a17611909eb8d2a","email":"alexey_zadorozhny@epam.com"}
+creating new vote
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:33.825Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote created with id: 5414ad657aa4150611cd01d7
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:33.880Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498f9a17611909eb8d2a","estimate":"3"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498f9a17611909eb8d2a","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad657aa4150611cd01d7, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:34.611Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad657aa4150611cd01d7 updated with new estimate: 3
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:34.662Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498f9a17611909eb8d2a","estimate":"5"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498f9a17611909eb8d2a","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad657aa4150611cd01d7, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:36.039Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad657aa4150611cd01d7 updated with new estimate: 5
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:36.868Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498f9a17611909eb8d2a","estimate":"1"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498f9a17611909eb8d2a","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad657aa4150611cd01d7, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:36.992Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad657aa4150611cd01d7 updated with new estimate: 1
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:37.069Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"5412498f9a17611909eb8d2a","estimate":"2"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"5412498f9a17611909eb8d2a","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad657aa4150611cd01d7, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:37.764Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad657aa4150611cd01d7 updated with new estimate: 2
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:37.866Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create story: {"summary":"456546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b"}
+found: {"summary":"456546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}
+newVal.active: true
+story.active != newVal.active: true
+requested to activate story: 541249929a17611909eb8d2b, resetting other stories in desk: 541249839a17611909eb8d24
+3 stories in desk: 541249839a17611909eb8d24 deactivated
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:39.663Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+story id: 541249929a17611909eb8d2b updated with new values: {"summary":"456546","estimate":"-1","active":true,"revealed":false,"__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"541249839a17611909eb8d24"}
+found: [{"summary":"21323","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0},{"summary":"546546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0},{"summary":"456546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:39.706Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:39.751Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"541249929a17611909eb8d2b","estimate":"2"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"541249929a17611909eb8d2b","email":"alexey_zadorozhny@epam.com"}
+creating new vote
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:40.773Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote created with id: 5414ad6c7aa4150611cd01dc
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:40.832Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"541249929a17611909eb8d2b","estimate":"5"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"541249929a17611909eb8d2b","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad6c7aa4150611cd01dc, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:41.656Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad6c7aa4150611cd01dc updated with new estimate: 5
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:41.757Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create or update vote: {"storyId":"541249929a17611909eb8d2b","estimate":"3"}
+ensuring email: alexey_zadorozhny@epam.com is set to submitting user: alexey_zadorozhny@epam.com
+query vote: {"storyId":"541249929a17611909eb8d2b","email":"alexey_zadorozhny@epam.com"}
+vote found: 5414ad6c7aa4150611cd01dc, updating
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:42.383Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+vote id: 5414ad6c7aa4150611cd01dc updated with new estimate: 3
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:42.434Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create story: {"summary":"456546","estimate":"-1","active":true,"revealed":true,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b"}
+found: {"summary":"456546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}
+newVal.active: true
+story.active != newVal.active: false
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:46.175Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+story id: 541249929a17611909eb8d2b updated with new values: {"summary":"456546","estimate":"-1","active":true,"revealed":true,"__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"541249839a17611909eb8d24"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+found: [{"summary":"21323","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0},{"summary":"546546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0},{"summary":"456546","estimate":"-1","active":true,"revealed":true,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:46.228Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:46.229Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create story: {"summary":"546546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"5412498f9a17611909eb8d2a"}
+found: {"summary":"546546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0}
+newVal.active: true
+story.active != newVal.active: true
+requested to activate story: 5412498f9a17611909eb8d2a, resetting other stories in desk: 541249839a17611909eb8d24
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:48.705Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+3 stories in desk: 541249839a17611909eb8d24 deactivated
+story id: 5412498f9a17611909eb8d2a updated with new values: {"summary":"546546","estimate":"-1","active":true,"revealed":false,"__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"5412498f9a17611909eb8d2a"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"541249839a17611909eb8d24"}
+found: [{"summary":"21323","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0},{"summary":"546546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0},{"summary":"456546","estimate":"-1","active":false,"revealed":true,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:48.785Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:48.832Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create story: {"summary":"456546","estimate":"-1","active":true,"revealed":true,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b"}
+found: {"summary":"456546","estimate":"-1","active":false,"revealed":true,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}
+newVal.active: true
+story.active != newVal.active: true
+requested to activate story: 541249929a17611909eb8d2b, resetting other stories in desk: 541249839a17611909eb8d24
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:50.990Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+3 stories in desk: 541249839a17611909eb8d24 deactivated
+story id: 541249929a17611909eb8d2b updated with new values: {"summary":"456546","estimate":"-1","active":true,"revealed":true,"__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"541249839a17611909eb8d24"}
+found: [{"summary":"21323","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0},{"summary":"546546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0},{"summary":"456546","estimate":"-1","active":true,"revealed":true,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}]
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:51.039Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:51.044Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:51.053Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:51.158Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create story: {"summary":"456546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b"}
+found: {"summary":"456546","estimate":"-1","active":true,"revealed":true,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}
+newVal.active: true
+story.active != newVal.active: false
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:53.577Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+story id: 541249929a17611909eb8d2b updated with new values: {"summary":"456546","estimate":"-1","active":true,"revealed":false,"__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:53.885Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"541249839a17611909eb8d24"}
+found: [{"summary":"21323","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0},{"summary":"546546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0},{"summary":"456546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:54.639Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+create story: {"summary":"456546","estimate":"-1","active":true,"revealed":true,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b","storyId":"541249929a17611909eb8d2b"}
+found: {"summary":"456546","estimate":"-1","active":true,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}
+newVal.active: true
+story.active != newVal.active: false
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:55.594Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+story id: 541249929a17611909eb8d2b updated with new values: {"summary":"456546","estimate":"-1","active":true,"revealed":true,"__v":0,"cards":[{"img":"2/0.jpg","value":1},{"img":"2/1.jpg","value":2},{"img":"2/2.jpg","value":3},{"img":"2/3.jpg","value":5}],"id":"541249929a17611909eb8d2b","storyId":"541249929a17611909eb8d2b"}
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"541249839a17611909eb8d24"}
+found: [{"summary":"21323","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498a9a17611909eb8d29","__v":0},{"summary":"546546","estimate":"-1","active":false,"revealed":false,"deskId":"541249839a17611909eb8d24","_id":"5412498f9a17611909eb8d2a","__v":0},{"summary":"456546","estimate":"-1","active":true,"revealed":true,"deskId":"541249839a17611909eb8d24","_id":"541249929a17611909eb8d2b","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:55.675Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:47:55.744Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412498a9a17611909eb8d29"}
+found: [{"storyId":"5412498a9a17611909eb8d29","estimate":"2","email":"alexey_zadorozhny@epam.com","_id":"5414ad5a7aa4150611cd01d2","__v":0}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:56:16.553Z',
   _id: 5414abfe427b3b8010048ecc,
   __v: 0 }
