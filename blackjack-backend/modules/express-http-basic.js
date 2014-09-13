@@ -21,50 +21,13 @@ exports.basic = function(mongoose) {
             res.set("WWW-Authenticate", "Basic realm=\"blackjack\"");
             res.status(401).end();
         } else {
-            var User = mongoose.model("User");
-            var query = User.where({
-                email: user.name
-            });
-            var now = (new Date()).toISOString();
-            query.findOne(function(err, existingUser) {
-                if(err) {
-                    handleError(req, res, err);
-                } else if(existingUser == null) {
-                    var newUser = new User({
-                        email: user.name,
-                        lastAccessTime: now
-                    });
-                    newUser.save(function(err) {
-                        if(err) {
-                            handleError(req, res, err);
-                        } else {
-                            console.log('user access logged: ' + newUser);
-                        }
-                    });
-                } else {
-                    existingUser.lastAccessTime = now;
-                    User.update({
-                        email: user.name
-                    }, {
-                        lastAccessTime: now
-                    }, function(err, count) {
-                        if(count == 1) {
-                            console.log('user access logged: ' + existingUser);
-                        }
-                        else {
-                            console.log('error when logging user access: ' + err);
-                            console.log('rows updated: ' + count);
-                        }
-                    });
-                }
-            });
             console.log("provided credentials for: " + user.name);
             var hash = md5("!salt1234" + req.headers.authorization);
             console.log("checking auth cache for key: " + hash);
             var cached = myCache.get(hash);
             if(!Object.keys(cached).length) {
                 console.log("nothing in auth cache, going to e3s to authenticate");
-                skipAuth(req.headers.authorization, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=projectall,fullNameSum,upsaidSum,emailSum&query={%22email%22:colon%22:email%22}', {
+                skipAuth(req.headers.authorization, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=photosSum,projectall,fullNameSum,upsaidSum,emailSum&query={%22email%22:colon%22:email%22}', {
                     "email": user.name
                 }, function(body) {
                     console.log("authentication ok for: " + user.name);
@@ -91,12 +54,50 @@ exports.basic = function(mongoose) {
                 req.user = cached[hash];
                 next();
             }
+            var User = mongoose.model("User");
+            var query = User.where({
+                email: user.name
+            });
+            var now = (new Date()).toISOString();
+            query.findOne(function(err, existingUser) {
+                if(err) {
+                    handleError(req, res, err);
+                } else if(existingUser == null) {
+                    var newUser = new User({
+                        email: user.name,
+                        lastAccessTime: now,
+                    });
+                    newUser.save(function(err) {
+                        if(err) {
+                            handleError(req, res, err);
+                        } else {
+                            console.log('user access logged: ' + newUser);
+                        }
+                    });
+                } else {
+                    existingUser.lastAccessTime = now;
+                    User.update({
+                        email: user.name
+                    }, {
+                        lastAccessTime: now
+                    }, function(err, count) {
+                        if(count == 1) {
+                            console.log('user access logged: ' + existingUser);
+                        }
+                        else {
+                            console.log('error when logging user access: ' + err);
+                            console.log('rows updated: ' + count);
+                        }
+                    });
+                }
+            });            
         }
     }
 };
 
 function skipAuth(auth, urlTemplate, params, success, error) {
-    success({
-        dummy: true
-    });
+    success([{
+        dummy: true,
+        photosSum: ["dummy"]
+    }]);
 }

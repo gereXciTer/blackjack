@@ -33,7 +33,7 @@ exports.sendHttps = function(options, successCallback, errorCallback) {
             });
             return;
         }
-        var type = resp.headers["content-type"];
+        /*var type = resp.headers["content-type"];
         if(!type || type.indexOf("json") == -1) {
             console.log("remote server returned not supported content-type " + type);
             errorCallback({
@@ -41,7 +41,7 @@ exports.sendHttps = function(options, successCallback, errorCallback) {
                 errorMessage: "remote server returned not supported content-type " + type
             });
             return;
-        }
+        }*/
         var body = "";
         resp.on('data', function(chunk) {
             body += chunk;
