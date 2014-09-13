@@ -22,10 +22,10 @@ module.exports = View.extend({
     'click a.estimate': 'estimateStory',
     'change label.card': 'makeVote'
   },
-  initialize: function(args){
-    this.constructor.__super__.initialize.apply(this, arguments);
+  attach: function(args){
+    this.constructor.__super__.attach.apply(this, arguments);
     if(this.model.get('active')){
-      Chaplin.mediator.publish('vote:refresh', {storyId: this.model.get('_id'), view: this, model: this.model});
+      Chaplin.mediator.publish('vote:refresh', {storyId: this.model.get('_id'), view: this});
     }
   },
   updateStory: function(params){
@@ -34,7 +34,7 @@ module.exports = View.extend({
     Chaplin.mediator.publish('loader:show');
     this.model.save(params, {
       success: function(){
-      	Chaplin.mediator.publish('story:refresh', _this.collection);
+        _this.collection.fetch();
       }
     });  
   },
@@ -44,7 +44,8 @@ module.exports = View.extend({
 	},
   revealStory: function(e){
   	e.preventDefault();
-    this.updateStory({active: true, revealed: !this.model.get('revealed'), id: this.model.get('_id')});
+    var revealed = !this.model.get('revealed');
+    this.updateStory({active: true, revealed: revealed, id: this.model.get('_id')});
   },
   estimateStory: function(e){
   	e.preventDefault();

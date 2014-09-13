@@ -48,32 +48,7 @@ module.exports = Controller.extend({
         region: 'main',
         model: model
       });
-      
-      var usersOnline = new UsersOnline({deskId: params.id});
-      
-      var poller = _.find(Application.pollers, function(item){
-        return item.name == 'online';
-      });
-      if(poller && poller.poller.stop){
-        poller.poller.stop();
-        poller.poller.start();
-      }else{
-        Application.pollers.push({name: 'online', poller: storiesPoller.get(usersOnline, {delay: Application.pollerConfig.getFreq('online')}).start()});
-      }
-      
-      usersOnline.on('sync', function(){
-        var users = _this.view.$el.find('.participants li[data-id]');
-        users.each(function(index, el){
-          el = $(el);
-					var found = usersOnline.find(function(item){
-            return item.get(el.data('id'));
-          });
-          if(found){
-            el.addClass('online');
-          }
-        });
-      });
-      
+            
       var poller = _.find(Application.pollers, function(item){
         return item.name == 'story';
       });
@@ -119,6 +94,34 @@ module.exports = Controller.extend({
 
     };
     
+    Chaplin.mediator.unsubscribe('online:parse');
+    Chaplin.mediator.subscribe('online:parse', function(){
+      var usersOnline = new UsersOnline({deskId: params.id});
+      
+      var poller = _.find(Application.pollers, function(item){
+        return item.name == 'online';
+      });
+      if(poller && poller.poller.stop){
+        poller.poller.stop();
+        poller.poller.start();
+      }else{
+        Application.pollers.push({name: 'online', poller: storiesPoller.get(usersOnline, {delay: Application.pollerConfig.getFreq('online')}).start()});
+      }
+      
+      usersOnline.on('sync', function(){
+       	var users = $('.participants li[data-id]');
+        users.each(function(index, el){
+          el = $(el);
+					var found = usersOnline.find(function(item){
+            return item.get(el.data('id'));
+          });
+          if(found){
+            el.addClass('online');
+          }
+        });
+      });
+    });
+
     Chaplin.mediator.unsubscribe('story:refresh');
     Chaplin.mediator.subscribe('story:refresh', function(collection){
       collection.fetch();
@@ -148,7 +151,7 @@ module.exports = Controller.extend({
         });
 			
       var drawVotes = function(collection, container){
-        var isRevealed = params.model.get('revealed');
+        var isRevealed = container.data('revealed') || false;
         container = container.html('<ul class="votes-list"></ul>').find('.votes-list');
         var template = require('views/desk/templates/vote');
         collection.each(function(item){
@@ -171,7 +174,7 @@ module.exports = Controller.extend({
       }
       votesCollection.on('sync', function(collection){
         if(collection.length){
-          var container = _this.view.$el.find('.story .votes');
+          var container = $('.story .votes');
           if(collection.length){
             drawVotes(collection, container);
           }
@@ -215,7 +218,7 @@ module.exports = Controller.extend({
       region: 'stories',
       collection: collection
     });
-    _this.view.subview('stories', storiesCollectionView);
+    this.view.subview('stories', storiesCollectionView);
     Chaplin.mediator.publish('loader:hide');
   }
   
