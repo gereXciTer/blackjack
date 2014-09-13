@@ -161,7 +161,6 @@ module.exports = Controller.extend({
         collection.each(function(item){
           estimates[item.get('estimate')] = estimates[item.get('estimate')] ? estimates[item.get('estimate')] + 1 : 1;
         });
-        console.log(estimates)
         for(var i in estimates){
         	if(averageVal < estimates[i]){
             averageVal = estimates[i];
