@@ -43008,3 +43008,23 @@ item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","p
 querying votes
 query is {"storyId":"5412ed772eefbb3702e728f2"}
 found: [{"__v":0,"_id":"541365683a423abd098b37d2","email":"volodymyr_hartsev@epam.com","estimate":"2","storyId":"5412ed772eefbb3702e728f2"}]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":{"dummy":true}}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":{"dummy":true}}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"summary":"Story 1","estimate":"-1","active":false,"revealed":false,"deskId":"5412303705821775102a44ae","_id":"5412577aab8aeb4c04f2343c","__v":0},{"summary":"Story 2","estimate":"-1","active":true,"revealed":false,"deskId":"5412303705821775102a44ae","_id":"5412ed772eefbb3702e728f2","__v":0},{"summary":"Story 3","estimate":"-1","active":false,"revealed":false,"deskId":"5412303705821775102a44ae","_id":"5412f0c7868107fa037a2c71","__v":0}]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":{"dummy":true}}} found in auth cache, returning cached
+querying votes
+query is {"storyId":"5412ed772eefbb3702e728f2"}
+found: [{"__v":0,"_id":"541365683a423abd098b37d2","email":"volodymyr_hartsev@epam.com","estimate":"2","storyId":"5412ed772eefbb3702e728f2"}]
