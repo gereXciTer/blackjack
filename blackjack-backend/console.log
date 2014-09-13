@@ -6,6 +6,8 @@ story controller initialized
 vote controller initialized
 user controller initialized
 listening on :3334
+<<<<<<< HEAD
+=======
 provided credentials for: volodymyr_hartsev@epam.com
 checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
 nothing in auth cache, going to e3s to authenticate
@@ -1004,6 +1006,7 @@ user access logged: { email: 'volodymyr_hartsev@epam.com',
   lastAccessTime: '2014-09-13T21:01:24.087Z',
   _id: 5414ab76fa8d768614707a81,
   __v: 0 }
+<<<<<<< HEAD
 provided credentials for: volodymyr_hartsev@epam.com
 checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
 item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
@@ -2408,3 +2411,6 @@ user access logged: { email: 'volodymyr_hartsev@epam.com',
   lastAccessTime: '2014-09-13T21:08:22.125Z',
   _id: 5414ab76fa8d768614707a81,
   __v: 0 }
+=======
+>>>>>>> 9f9e21dd51fcc207a329bcf67961747ca011ab72
+>>>>>>> origin/master
