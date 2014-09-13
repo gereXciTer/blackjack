@@ -12,12 +12,182 @@ nothing in auth cache, going to e3s to authenticate
 authentication ok for: alexey_zadorozhny@epam.com
 deleting password before storing the object
 user object with no password: {"name":"alexey_zadorozhny@epam.com"}
-caching key: 28061ab5e9368cc5c89f90a0bf9d4f6b, user: {"name":"alexey_zadorozhny@epam.com","profile":{"dummy":true}}
+caching key: 28061ab5e9368cc5c89f90a0bf9d4f6b, user: {"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}
+user access logged: { __v: 0,
+  email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:41:34.615Z',
+  _id: 5414abfe427b3b8010048ecc }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
 querying all desks
-query is {"deskName":{"$regex":"^T","$options":"i"}}
-final query: {"$and":[{"participant.email":"alexey_zadorozhny@epam.com"},{"deskName":{"$regex":"^T","$options":"i"}}]}
+query is {"deskName":{"$regex":"^t","$options":"i"}}
+final query: {"$and":[{"participant.email":"alexey_zadorozhny@epam.com"},{"deskName":{"$regex":"^t","$options":"i"}}]}
 found: [{"_id":"5411ead257294242188fe8aa","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"Test 1","__v":0,"guest":[],"participant":[{"email":"oleg_khomutov@epam.com","name":"Oleg Khomutov","_id":"5411ead257294242188fe8ac"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5411ead257294242188fe8ab"}]},{"_id":"5411eb0357294242188fe8af","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"1","deskName":"test 2","__v":0,"guest":[],"participant":[{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5411eb0357294242188fe8b0"}]}]
 user access logged: { email: 'alexey_zadorozhny@epam.com',
-  lastAccessTime: '2014-09-13T19:46:53.633Z',
-  _id: 541493757addf4e504a7afc3,
+  lastAccessTime: '2014-09-13T20:41:44.455Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: oleg_khomutov@epam.com
+checking auth cache for key: 102140f33b0176145803d1e89da724f2
+nothing in auth cache, going to e3s to authenticate
+authentication ok for: oleg_khomutov@epam.com
+deleting password before storing the object
+user object with no password: {"name":"oleg_khomutov@epam.com"}
+caching key: 102140f33b0176145803d1e89da724f2, user: {"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:46.850Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 2395 ms
+user access logged: { __v: 0,
+  email: 'oleg_khomutov@epam.com',
+  lastAccessTime: '2014-09-13T20:41:46.846Z',
+  _id: 5414ac0a427b3b8010048ecd }
+provided credentials for: oleg_khomutov@epam.com
+checking auth cache for key: 102140f33b0176145803d1e89da724f2
+item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:46.846Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:47.906Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 3450 ms
+mapping access time to online status
+for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:47.906Z and lastAccessTime: 2014-09-13T20:41:46.846Z is: 1060 ms
+user access logged: { email: 'oleg_khomutov@epam.com',
+  lastAccessTime: '2014-09-13T20:41:47.902Z',
+  _id: 5414ac0a427b3b8010048ecd,
+  __v: 0 }
+provided credentials for: oleg_khomutov@epam.com
+checking auth cache for key: 102140f33b0176145803d1e89da724f2
+item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:47.902Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:48.174Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 3719 ms
+mapping access time to online status
+for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:48.175Z and lastAccessTime: 2014-09-13T20:41:47.902Z is: 273 ms
+user access logged: { email: 'oleg_khomutov@epam.com',
+  lastAccessTime: '2014-09-13T20:41:48.170Z',
+  _id: 5414ac0a427b3b8010048ecd,
+  __v: 0 }
+provided credentials for: oleg_khomutov@epam.com
+checking auth cache for key: 102140f33b0176145803d1e89da724f2
+item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+user access logged: { email: 'oleg_khomutov@epam.com',
+  lastAccessTime: '2014-09-13T20:41:49.028Z',
+  _id: 5414ac0a427b3b8010048ecd,
+  __v: 0 }
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:49.028Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:49.033Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 4578 ms
+mapping access time to online status
+for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:49.033Z and lastAccessTime: 2014-09-13T20:41:49.028Z is: 5 ms
+provided credentials for: oleg_khomutov@epam.com
+checking auth cache for key: 102140f33b0176145803d1e89da724f2
+item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:49.028Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:49.391Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 4936 ms
+mapping access time to online status
+for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:49.391Z and lastAccessTime: 2014-09-13T20:41:49.028Z is: 363 ms
+user access logged: { email: 'oleg_khomutov@epam.com',
+  lastAccessTime: '2014-09-13T20:41:49.387Z',
+  _id: 5414ac0a427b3b8010048ecd,
+  __v: 0 }
+provided credentials for: oleg_khomutov@epam.com
+checking auth cache for key: 102140f33b0176145803d1e89da724f2
+item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:49.387Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:49.590Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 5135 ms
+mapping access time to online status
+for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:49.590Z and lastAccessTime: 2014-09-13T20:41:49.387Z is: 203 ms
+user access logged: { email: 'oleg_khomutov@epam.com',
+  lastAccessTime: '2014-09-13T20:41:49.587Z',
+  _id: 5414ac0a427b3b8010048ecd,
+  __v: 0 }
+provided credentials for: oleg_khomutov@epam.com
+checking auth cache for key: 102140f33b0176145803d1e89da724f2
+item {"102140f33b0176145803d1e89da724f2":{"name":"oleg_khomutov@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T20:41:44.455Z","_id":"5414abfe427b3b8010048ecc","__v":0},{"email":"oleg_khomutov@epam.com","lastAccessTime":"2014-09-13T20:41:49.587Z","_id":"5414ac0a427b3b8010048ecd","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T20:41:49.799Z and lastAccessTime: 2014-09-13T20:41:44.455Z is: 5344 ms
+mapping access time to online status
+for: oleg_khomutov@epam.com diff between now: 2014-09-13T20:41:49.799Z and lastAccessTime: 2014-09-13T20:41:49.587Z is: 212 ms
+user access logged: { email: 'oleg_khomutov@epam.com',
+  lastAccessTime: '2014-09-13T20:41:49.795Z',
+  _id: 5414ac0a427b3b8010048ecd,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all desks
+query is {"deskName":{"$regex":"^t","$options":"i"}}
+final query: {"$and":[{"participant.email":"alexey_zadorozhny@epam.com"},{"deskName":{"$regex":"^t","$options":"i"}}]}
+found: [{"_id":"5411ead257294242188fe8aa","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"2","deskName":"Test 1","__v":0,"guest":[],"participant":[{"email":"oleg_khomutov@epam.com","name":"Oleg Khomutov","_id":"5411ead257294242188fe8ac"},{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5411ead257294242188fe8ab"}]},{"_id":"5411eb0357294242188fe8af","project":"UBS-WMA","owner":"alexey_zadorozhny@epam.com","deck":"1","deskName":"test 2","__v":0,"guest":[],"participant":[{"email":"alexey_zadorozhny@epam.com","name":"Alexey Zadorozhny","_id":"5411eb0357294242188fe8b0"}]}]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:41:51.874Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:44:21.144Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:44:39.914Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+sending Authorization Basic YWxleGV5X[omitted...]
+sending request to e3s.epam.com:443/rest/e3s-app-logo-impl/v1/logo?uri=1
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:44:42.891Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+sending Authorization Basic YWxleGV5X[omitted...]
+sending request to e3s.epam.com:443/rest/e3s-app-logo-impl/v1/logo?uri=
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:44:45.278Z',
+  _id: 5414abfe427b3b8010048ecc,
+  __v: 0 }
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: e5122e938a896d27afb9b0c70d33ebdd
+nothing in auth cache, going to e3s to authenticate
+authentication ok for: alexey_zadorozhny@epam.com
+deleting password before storing the object
+user object with no password: {"name":"alexey_zadorozhny@epam.com"}
+caching key: e5122e938a896d27afb9b0c70d33ebdd, user: {"name":"alexey_zadorozhny@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}
+sending Authorization Basic YWxleGV5X[omitted...]
+sending request to e3s.epam.com:443/rest/e3s-app-logo-impl/v1/logo?uri=
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T20:44:52.244Z',
+  _id: 5414abfe427b3b8010048ecc,
   __v: 0 }

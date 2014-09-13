@@ -55,6 +55,22 @@ exports.init = function(app, mongoose) {
             }
         });
     });
+    var e3s = require('./../modules/e3s-helper.js')
+    app.get("(/api)?/photo/", function(req, res) {
+        var id = req.query.id;
+        if(id == "dummy") {
+            res.sendFile('dummy.png', {
+                root: __dirname
+            });
+        } else {
+            e3s.proxyE3SReq(req, res, '/rest/e3s-app-logo-impl/v1/logo?uri=:id', {
+                id: id
+            }, function(body) {
+                res.set("Content-type", "image/png");
+                res.status(200).send(body);
+            });
+        }
+    });
 
     function handleError(req, res, err) {
         console.log("error: " + JSON.stringify(err));
