@@ -21,7 +21,7 @@ module.exports = Collection.extend({
     var queryObj = {
       "$and": [
         {
-          "deskName": {"$regex": term + ""}
+          "deskName": {"$regex": term + "", "$options":"i"}
         }
       ]};
     if(email){

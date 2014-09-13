@@ -73,7 +73,7 @@ module.exports = Controller.extend({
           _this.refreshStories(collection);
           refreshed = true;
         }else{
-          if(lastActiveStory !== collection.findWhere({active: true}).get('_id')){
+          if(lastActiveStory !== (collection.findWhere({active: true}) ? collection.findWhere({active: true}).get('_id') : '-1')){
             _this.refreshStories(collection);
           	refreshed = true;
           }else{
@@ -85,10 +85,12 @@ module.exports = Controller.extend({
         }
         if(refreshed){
           storiesCount = collection.length;
-          lastActiveStory = collection.findWhere({active: true}).get('_id');
+          lastActiveStory = collection.findWhere({active: true}) ? collection.findWhere({active: true}).get('_id') : '-1';
           lastRevealedStoryId = lastRevealedStory ? lastRevealedStory.get('_id') : false;
         }
       });
+
+			storyCollection.fetch();
 
     };
     

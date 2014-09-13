@@ -1,5 +1,8 @@
 {{#isowner}}
   {{#compare estimate 0 operator="<"}}
+    {{#if revealed}}
+    	<a href="#" class="btn estimate">Set</a><input id="storyEstimate" type="text" class="btn" placeholder="Estimate..." />
+    {{/if}}
 		{{#unless active}}
   		<a href="#" class="btn activate" data-id="{{_id}}">Activate</a>
   	{{/unless}}
