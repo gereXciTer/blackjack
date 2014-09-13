@@ -59,7 +59,7 @@ exports.init = function(app, mongoose) {
                     if(req.user.name == retVal.owner) {
                         retVal.isOwner = true;
                         console.log('user : ' + req.user.name + ' is the owner');
-                    	console.log('desk updated with isOwner flag:' + JSON.stringify(retVal));
+                        console.log('desk updated with isOwner flag:' + JSON.stringify(retVal));
                     }
                     console.log('returning the desk:' + JSON.stringify(retVal));
                     res.set("Content-type", "application/json");

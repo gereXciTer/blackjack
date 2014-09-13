@@ -1,7 +1,51 @@
-http basic auth enabled
 db connection established
+http basic auth enabled
 e3s controller initialized
 desk controller initialized
 story controller initialized
 vote controller initialized
+user controller initialized
 listening on :3334
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+nothing in auth cache, going to e3s to authenticate
+authentication ok for: alexey_zadorozhny@epam.com
+deleting password before storing the object
+user object with no password: {"name":"alexey_zadorozhny@epam.com"}
+caching key: 28061ab5e9368cc5c89f90a0bf9d4f6b, user: {"name":"alexey_zadorozhny@epam.com","profile":{"dummy":true}}
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T19:22:00.888Z',
+  _id: 541493757addf4e504a7afc3,
+  __v: 0 }
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T19:22:00.888Z","_id":"541493757addf4e504a7afc3","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T19:22:00.909Z and lastAccessTime: 2014-09-13T19:22:00.888Z is: 21
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":{"dummy":true}}} found in auth cache, returning cached
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T19:22:18.698Z',
+  _id: 541493757addf4e504a7afc3,
+  __v: 0 }
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T19:22:18.698Z","_id":"541493757addf4e504a7afc3","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T19:22:18.703Z and lastAccessTime: 2014-09-13T19:22:18.698Z is: 5
+provided credentials for: alexey_zadorozhny@epam.com
+checking auth cache for key: 28061ab5e9368cc5c89f90a0bf9d4f6b
+item {"28061ab5e9368cc5c89f90a0bf9d4f6b":{"name":"alexey_zadorozhny@epam.com","profile":{"dummy":true}}} found in auth cache, returning cached
+querying user statuses for desk: 5411ead257294242188fe8aa
+desk found
+participants are: ["oleg_khomutov@epam.com","alexey_zadorozhny@epam.com"]
+user access logged: { email: 'alexey_zadorozhny@epam.com',
+  lastAccessTime: '2014-09-13T19:22:58.863Z',
+  _id: 541493757addf4e504a7afc3,
+  __v: 0 }
+found statuses for: [{"email":"alexey_zadorozhny@epam.com","lastAccessTime":"2014-09-13T19:22:58.863Z","_id":"541493757addf4e504a7afc3","__v":0}]
+mapping access time to online status
+for: alexey_zadorozhny@epam.com diff between now: 2014-09-13T19:22:58.868Z and lastAccessTime: 2014-09-13T19:22:58.863Z is: 5
