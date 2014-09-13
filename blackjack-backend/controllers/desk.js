@@ -10,7 +10,15 @@ exports.init = function(app, mongoose) {
     app.get('(/api)?/desks', function(req, res) {
         console.log('querying all desks');
         console.log('query is ' + req.query.query);
-        var query = req.query.query ? Desk.where(JSON.parse(req.query.query)) : Desk.where();
+        var queryObj = {
+            "$and": [{
+                    "participant.email": req.user.name
+                },
+                (req.query.query ? JSON.parse(req.query.query) : {})
+            ]
+        };
+        console.log("final query: " + JSON.stringify(queryObj));
+        var query = Desk.where(queryObj);
         query.find(function(err, desks) {
             if(err) {
                 handleError(req, res, err);
@@ -59,7 +67,7 @@ exports.init = function(app, mongoose) {
                     if(req.user.name == retVal.owner) {
                         retVal.isOwner = true;
                         console.log('user : ' + req.user.name + ' is the owner');
-                    	console.log('desk updated with isOwner flag:' + JSON.stringify(retVal));
+                        console.log('desk updated with isOwner flag:' + JSON.stringify(retVal));
                     }
                     console.log('returning the desk:' + JSON.stringify(retVal));
                     res.set("Content-type", "application/json");
