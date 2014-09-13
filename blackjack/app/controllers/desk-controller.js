@@ -49,39 +49,46 @@ module.exports = Controller.extend({
       });
       
 
-      storyCollection.fetch({
-        success: function(collection, models){
-          _this.refreshStories(collection);
-          Chaplin.mediator.publish('loader:hide');
+      var poller = _.find(Application.pollers, function(item){
+        return item.name == 'story';
+      });
+      if(poller && poller.poller.stop){
+        poller.poller.stop();
+        poller.poller.start();
+      }else{
+        Application.pollers.push({name: 'story', poller: storiesPoller.get(storyCollection, {delay: Application.pollerConfig.getFreq('story')}).start()});
+      }
 
-          var poller = _.find(Application.pollers, function(item){
-            return item == 'story';
-          });
-          if(poller && poller.stop){
-            poller.stop();
-          }
-          Application.pollers.push({name: 'story', poller: storiesPoller.get(collection, {delay: 5000}).start()});
-          
-          var storiesCount = collection.length;
-          var lastActiveStory = collection.findWhere({active: true}).get('_id');
-          
-          
-          collection.on('sync', function(collection){
-            if(storiesCount !== collection.length){
+      var storiesCount = storyCollection.length;
+      var lastActiveStory = storyCollection.findWhere({active: true}) ? storyCollection.findWhere({active: true}).get('_id') : '-1';
+
+      var lastRevealedStory = storyCollection.findWhere({active: true, revealed: true}) || false;
+      var lastRevealedStoryId = lastRevealedStory ? lastRevealedStory.get('_id') : false;
+
+      storyCollection.on('sync', function(collection){
+        refreshed = false;
+        var lastRevealedStory = collection.findWhere({active: true, revealed: true}) || false;
+        if(storiesCount !== collection.length){
+          _this.refreshStories(collection);
+          refreshed = true;
+        }else{
+          if(lastActiveStory !== collection.findWhere({active: true}).get('_id')){
+            _this.refreshStories(collection);
+          	refreshed = true;
+          }else{
+            if(lastRevealedStoryId !== (lastRevealedStory ? lastRevealedStory.get('_id') : false)){
               _this.refreshStories(collection);
-              storiesCount = collection.length;
+          		refreshed = true;
             }              
-            if(lastActiveStory !== collection.findWhere({active: true}).get('_id')){
-              _this.refreshStories(collection);
-              lastActiveStory = collection.findWhere({active: true}).get('_id');
-            }              
-          });
-        },
-        error: function(){
-          console.log('Stories fetching error', arguments);
-// 			    Chaplin.mediator.publish('loader:show');
+          }              
+        }
+        if(refreshed){
+          storiesCount = collection.length;
+          lastActiveStory = collection.findWhere({active: true}).get('_id');
+          lastRevealedStoryId = lastRevealedStory ? lastRevealedStory.get('_id') : false;
         }
       });
+
     };
     
     Chaplin.mediator.unsubscribe('story:refresh');
@@ -117,47 +124,36 @@ module.exports = Controller.extend({
         });
 			
       var drawVotes = function(collection, container){
+        var isRevealed = params.view.model.get('revealed');
         container = container.html('<ul class="votes-list"></ul>').find('.votes-list');
         var template = require('views/desk/templates/vote');
         collection.each(function(item){
-          container.append('<li class="vote">' + template({estimate: item.get('estimate')}) + '</li>');
+          container.append('<li class="vote">' + template(_.extend(item.getAttributes(), {isRevealed: isRevealed})) + '</li>');          
         });
       };
 
-      votesCollection.fetch({
-        success: function(collection){
-          var container = params.view.$el.find('.votes');
-          console.log(collection.length)
+      var poller = _.find(Application.pollers, function(item){
+        return item.name == 'vote';
+      });
+      if(poller && poller.poller.stop){
+        poller.poller.stop();
+        poller.poller.start();
+      }else{
+        Application.pollers.push({name: 'vote', poller: votesPoller.get(votesCollection, {delay: Application.pollerConfig.getFreq('vote')}).start()});
+      }
+
+      if(params.callback){
+        params.callback(votesCollection);
+      }
+      votesCollection.on('sync', function(collection){
+        if(collection.length){
+          var container = _this.view.$el.find('.story .votes');
           if(collection.length){
-	          drawVotes(collection, container);
+            drawVotes(collection, container);
           }
-          
-          if(params.callback){
-            params.callback(collection);
-          }
-          
-          var poller = _.find(Application.pollers, function(item){
-            return item == 'vote';
-          });
-          if(poller && poller.stop){
-            poller.stop();
-          }
-          Application.pollers.push({name: 'vote', poller: votesPoller.get(collection, {delay: 5000}).start()});
-          
-          collection.on('sync', function(collection){
-            if(collection.length){
-              drawVotes(collection, container);
-            }
-          });
-          
-        },
-        error: function(){
-          if(params.callback){
-            params.callback();
-          }
-					console.log('Error fetching votes', arguments);          
         }
       });
+
     });
 
     Chaplin.mediator.unsubscribe('vote:add');
@@ -172,7 +168,7 @@ module.exports = Controller.extend({
           var callback = function(){
             Chaplin.mediator.publish('loader:hide');
           }
-	    		Chaplin.mediator.publish('vote:refresh', {storyId: params.storyId, view: params.view, callback: callback});
+	    		Chaplin.mediator.publish('vote:refresh', {storyId: params.storyId, view: params.view, callback: params.callback});
         },
         error: function(){
 					console.log('Error adding vote', arguments);          

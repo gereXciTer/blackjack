@@ -52,6 +52,8 @@ module.exports = View.extend({
   makeVote: function(e){
     var formData = this.$el.find('.cards').serializeObject();
 
-    Chaplin.mediator.publish('vote:add', {estimate: formData.estimate, storyId: this.model.get('_id'), view: this});
+    Chaplin.mediator.publish('vote:add', {estimate: formData.estimate, storyId: this.model.get('_id'), view: this, callback: function(){
+      Chaplin.mediator.publish('loader:hide');
+    }});
   }
 });
