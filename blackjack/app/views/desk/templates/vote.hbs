@@ -1,1 +1,7 @@
-<label style="background: url(/images/decks/{{cardimg estimate}}) 0 0 no-repeat;">{{estimate}}</label>
+{{#if isRevealed}}
+  <label style="background: url(/images/decks/{{cardimg estimate}}) 0 0 no-repeat;">{{estimate}}</label>
+  {{email}}
+{{else}}
+	<label style="background: url(/images/decks/cover.png) 0 0 no-repeat;"></label>
+  {{email}}
+{{/if}}

@@ -17,7 +17,15 @@ $.fn.serializeObject = function()
    });
    return o;
 };
-
+Application.pollerConfig = {
+  frequencies: {
+    'story': 1500000,
+    'vote': 500000
+  },
+  getFreq: function(name){
+    return this.frequencies[name] || 5000;
+  }
+};
 $(function() {
   return new Application({
     title: 'Brunch example application',
