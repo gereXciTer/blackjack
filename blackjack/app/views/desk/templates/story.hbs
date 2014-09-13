@@ -11,8 +11,10 @@
   	{{/if}}
   {{/compare}}
 {{/isowner}}
+
+{{#compare estimate 0 operator=">="}} <span class="estimation">{{estimate}}</span> {{/compare}}
 <h4>
-	{{summary}} {{#compare estimate 0 operator=">="}} ({{estimate}}) {{/compare}}
+	{{summary}}
 </h4>
 {{#if active}}
 	Other estimates:

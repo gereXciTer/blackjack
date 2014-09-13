@@ -1004,3 +1004,1407 @@ user access logged: { email: 'volodymyr_hartsev@epam.com',
   lastAccessTime: '2014-09-13T21:01:24.087Z',
   _id: 5414ab76fa8d768614707a81,
   __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:01:24.087Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:01:30.100Z and lastAccessTime: 2014-09-13T21:01:24.087Z is: 6013 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:01:30.097Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:01:30.097Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:01:36.094Z and lastAccessTime: 2014-09-13T21:01:30.097Z is: 5997 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:01:36.090Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:01:36.090Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:01:42.105Z and lastAccessTime: 2014-09-13T21:01:36.090Z is: 6015 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:01:42.101Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:01:48.118Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:01:48.118Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:01:48.123Z and lastAccessTime: 2014-09-13T21:01:48.118Z is: 5 ms
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:01:48.118Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:01:54.085Z and lastAccessTime: 2014-09-13T21:01:48.118Z is: 5967 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:01:54.082Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:01:54.082Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:00.788Z and lastAccessTime: 2014-09-13T21:01:54.082Z is: 6706 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:00.785Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:00.785Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:06.884Z and lastAccessTime: 2014-09-13T21:02:00.785Z is: 6099 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:06.880Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:06.880Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:12.089Z and lastAccessTime: 2014-09-13T21:02:06.880Z is: 5209 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:12.085Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:12.085Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:17.916Z and lastAccessTime: 2014-09-13T21:02:12.085Z is: 5831 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:17.909Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:21.241Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:21.493Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:21.494Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:21.494Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:21.538Z and lastAccessTime: 2014-09-13T21:02:21.494Z is: 44 ms
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:21.499Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:21.537Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:21.537Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:26.600Z and lastAccessTime: 2014-09-13T21:02:21.537Z is: 5063 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:26.597Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:26.597Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:31.646Z and lastAccessTime: 2014-09-13T21:02:26.597Z is: 5049 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:31.642Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:31.642Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:36.715Z and lastAccessTime: 2014-09-13T21:02:31.642Z is: 5073 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:36.712Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:36.712Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:42.096Z and lastAccessTime: 2014-09-13T21:02:36.712Z is: 5384 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:42.091Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:42.091Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:48.102Z and lastAccessTime: 2014-09-13T21:02:42.091Z is: 6011 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:48.098Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:48.098Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:02:54.091Z and lastAccessTime: 2014-09-13T21:02:48.098Z is: 5993 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:02:54.087Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:02:54.087Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:00.092Z and lastAccessTime: 2014-09-13T21:02:54.087Z is: 6005 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:00.088Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:00.088Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:06.089Z and lastAccessTime: 2014-09-13T21:03:00.088Z is: 6001 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:06.085Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:06.085Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:12.093Z and lastAccessTime: 2014-09-13T21:03:06.085Z is: 6008 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:12.088Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:12.088Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:18.085Z and lastAccessTime: 2014-09-13T21:03:12.088Z is: 5997 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:18.082Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:18.082Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:24.100Z and lastAccessTime: 2014-09-13T21:03:18.082Z is: 6018 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:24.096Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:24.096Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:30.092Z and lastAccessTime: 2014-09-13T21:03:24.096Z is: 5996 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:30.088Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:30.088Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:36.090Z and lastAccessTime: 2014-09-13T21:03:30.088Z is: 6002 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:36.084Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:36.084Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:42.100Z and lastAccessTime: 2014-09-13T21:03:36.084Z is: 6015 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:42.096Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:42.096Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:47.358Z and lastAccessTime: 2014-09-13T21:03:42.096Z is: 5262 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:47.354Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:48.857Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:49.294Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:49.294Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:49.497Z and lastAccessTime: 2014-09-13T21:03:49.294Z is: 203 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:49.493Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:49.520Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:49.711Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:49.711Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:03:54.560Z and lastAccessTime: 2014-09-13T21:03:49.711Z is: 4849 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:03:54.556Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:03:54.556Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:00.455Z and lastAccessTime: 2014-09-13T21:03:54.556Z is: 5899 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:00.451Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:00.451Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:06.296Z and lastAccessTime: 2014-09-13T21:04:00.451Z is: 5845 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:06.293Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:11.564Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:12.531Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:12.534Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:12.534Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:12.550Z and lastAccessTime: 2014-09-13T21:04:12.534Z is: 16 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:12.538Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:12.540Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:12.540Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:18.129Z and lastAccessTime: 2014-09-13T21:04:12.540Z is: 5589 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:18.125Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:18.125Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:23.201Z and lastAccessTime: 2014-09-13T21:04:18.125Z is: 5076 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:23.197Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:23.197Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:29.099Z and lastAccessTime: 2014-09-13T21:04:23.197Z is: 5902 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:29.094Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:29.094Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:35.787Z and lastAccessTime: 2014-09-13T21:04:29.094Z is: 6693 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:35.784Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:35.784Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:41.096Z and lastAccessTime: 2014-09-13T21:04:35.784Z is: 5312 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:41.091Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:41.091Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:47.097Z and lastAccessTime: 2014-09-13T21:04:41.091Z is: 6006 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:47.093Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:47.093Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:53.091Z and lastAccessTime: 2014-09-13T21:04:47.093Z is: 5998 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:53.085Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:53.085Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:04:59.106Z and lastAccessTime: 2014-09-13T21:04:53.085Z is: 6021 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:04:59.102Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:04:59.102Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:05.091Z and lastAccessTime: 2014-09-13T21:04:59.102Z is: 5989 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:05.088Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:05.088Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:11.125Z and lastAccessTime: 2014-09-13T21:05:05.088Z is: 6037 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:11.121Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:11.121Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:17.099Z and lastAccessTime: 2014-09-13T21:05:11.121Z is: 5978 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:17.095Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:17.095Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:23.096Z and lastAccessTime: 2014-09-13T21:05:17.095Z is: 6001 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:23.093Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:27.716Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:27.716Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:27.858Z and lastAccessTime: 2014-09-13T21:05:27.716Z is: 142 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:27.853Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:27.854Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:27.900Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:27.927Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:27.927Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:32.947Z and lastAccessTime: 2014-09-13T21:05:27.927Z is: 5020 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:32.943Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:32.943Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:38.024Z and lastAccessTime: 2014-09-13T21:05:32.943Z is: 5081 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:38.019Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:38.019Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:43.110Z and lastAccessTime: 2014-09-13T21:05:38.019Z is: 5091 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:43.106Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:49.107Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:43.106Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:49.113Z and lastAccessTime: 2014-09-13T21:05:43.106Z is: 6007 ms
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:51.192Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:51.368Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:51.368Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:51.454Z and lastAccessTime: 2014-09-13T21:05:51.368Z is: 86 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:51.449Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:51.454Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:51.460Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:05:51.460Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:05:57.087Z and lastAccessTime: 2014-09-13T21:05:51.460Z is: 5627 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:05:57.083Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:03.099Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:03.099Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:03.104Z and lastAccessTime: 2014-09-13T21:06:03.099Z is: 5 ms
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:09.161Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:09.421Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:09.421Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:09.493Z and lastAccessTime: 2014-09-13T21:06:09.421Z is: 72 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:09.485Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:09.488Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:09.491Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:09.491Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:15.103Z and lastAccessTime: 2014-09-13T21:06:09.491Z is: 5612 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:15.099Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:21.300Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:21.454Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:21.454Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:21.461Z and lastAccessTime: 2014-09-13T21:06:21.454Z is: 7 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:21.455Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:21.469Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:21.555Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:21.555Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:27.090Z and lastAccessTime: 2014-09-13T21:06:21.555Z is: 5535 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:27.087Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:30.721Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:30.721Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:30.893Z and lastAccessTime: 2014-09-13T21:06:30.721Z is: 172 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:30.883Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:30.885Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:30.887Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:30.980Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:30.980Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:35.986Z and lastAccessTime: 2014-09-13T21:06:30.980Z is: 5006 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:35.982Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:35.982Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:41.048Z and lastAccessTime: 2014-09-13T21:06:35.982Z is: 5066 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:41.044Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:41.044Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:46.102Z and lastAccessTime: 2014-09-13T21:06:41.044Z is: 5058 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:46.098Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:46.098Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:52.095Z and lastAccessTime: 2014-09-13T21:06:46.098Z is: 5997 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:52.092Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:52.092Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:06:58.090Z and lastAccessTime: 2014-09-13T21:06:52.092Z is: 5998 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:06:58.086Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:06:58.086Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:04.122Z and lastAccessTime: 2014-09-13T21:06:58.086Z is: 6036 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:04.118Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:11.333Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:11.333Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:11.420Z and lastAccessTime: 2014-09-13T21:07:11.333Z is: 87 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:11.408Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:11.410Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:11.417Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:11.418Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:11.418Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:16.557Z and lastAccessTime: 2014-09-13T21:07:11.418Z is: 5138 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:16.552Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:16.552Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:21.648Z and lastAccessTime: 2014-09-13T21:07:16.552Z is: 5096 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:21.644Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:21.644Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:26.696Z and lastAccessTime: 2014-09-13T21:07:21.644Z is: 5052 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:26.692Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:26.692Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:32.088Z and lastAccessTime: 2014-09-13T21:07:26.692Z is: 5396 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:32.084Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:32.084Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:38.126Z and lastAccessTime: 2014-09-13T21:07:32.084Z is: 6042 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:38.122Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:43.218Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:43.218Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:43.224Z and lastAccessTime: 2014-09-13T21:07:43.218Z is: 6 ms
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:45.688Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:45.688Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:45.897Z and lastAccessTime: 2014-09-13T21:07:45.688Z is: 209 ms
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:45.887Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:45.888Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:45.895Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:45.892Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:50.945Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:50.945Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:50.950Z and lastAccessTime: 2014-09-13T21:07:50.945Z is: 5 ms
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:07:56.089Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:07:56.089Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:07:56.094Z and lastAccessTime: 2014-09-13T21:07:56.089Z is: 5 ms
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying desk: 5412303705821775102a44ae
+found: {"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}]}
+user : volodymyr_hartsev@epam.com is the owner
+desk updated with isOwner flag:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+returning the desk:{"project":"UBS-WMAT","owner":"volodymyr_hartsev@epam.com","deck":"0","deskName":"Fibonacci desk","_id":"5412303705821775102a44ae","__v":0,"guest":[],"participant":[{"email":"volodymyr_hartsev@epam.com","name":"Volodymyr Hartsev","_id":"5412303705821775102a44af"}],"isOwner":true}
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:08:03.828Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:08:04.013Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:08:04.013Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:08:04.022Z and lastAccessTime: 2014-09-13T21:08:04.013Z is: 9 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:08:04.018Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:08:04.025Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying all stories
+query is {"deskId":"5412303705821775102a44ae"}
+found: [{"__v":0,"_id":"5412577aab8aeb4c04f2343c","active":false,"deskId":"5412303705821775102a44ae","estimate":"5","revealed":true,"summary":"Story 1"},{"__v":0,"_id":"5412ed772eefbb3702e728f2","active":false,"deskId":"5412303705821775102a44ae","estimate":"8","revealed":true,"summary":"Story 2"},{"__v":0,"_id":"5412f0c7868107fa037a2c71","active":false,"deskId":"5412303705821775102a44ae","estimate":"2","revealed":true,"summary":"Story 3"}]
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:08:04.251Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:08:04.251Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:08:10.122Z and lastAccessTime: 2014-09-13T21:08:04.251Z is: 5871 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:08:10.118Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:08:10.118Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:08:16.098Z and lastAccessTime: 2014-09-13T21:08:10.118Z is: 5980 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:08:16.094Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
+provided credentials for: volodymyr_hartsev@epam.com
+checking auth cache for key: 95659cbcc4f669309fc9601b5ce25d15
+item {"95659cbcc4f669309fc9601b5ce25d15":{"name":"volodymyr_hartsev@epam.com","profile":[{"dummy":true,"photosSum":["dummy"]}]}} found in auth cache, returning cached
+querying user statuses for desk: 5412303705821775102a44ae
+desk found
+participants are: ["volodymyr_hartsev@epam.com"]
+found statuses for: [{"email":"volodymyr_hartsev@epam.com","lastAccessTime":"2014-09-13T21:08:16.094Z","_id":"5414ab76fa8d768614707a81","__v":0}]
+mapping access time to online status
+for: volodymyr_hartsev@epam.com diff between now: 2014-09-13T21:08:22.129Z and lastAccessTime: 2014-09-13T21:08:16.094Z is: 6035 ms
+user access logged: { email: 'volodymyr_hartsev@epam.com',
+  lastAccessTime: '2014-09-13T21:08:22.125Z',
+  _id: 5414ab76fa8d768614707a81,
+  __v: 0 }
