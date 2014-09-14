@@ -33,6 +33,10 @@ register('cardimg', function(estimate) {
   return card.img;
 });
 
+register('cardcover', function(estimate) {
+  return DecksCollection.at(Application.desk.deck).get('cover');
+});
+
 register('isowner', function(options) {
   if(Application.desk.isOwner) {
     return options.fn(this);

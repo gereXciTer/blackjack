@@ -27,7 +27,7 @@
     Choose your estimate:
     <form class="cards">
         {{#each cards}}
-            <label style="background: url(/images/decks/{{img}}) 0 0 no-repeat;" class="card"><input type="radio" name="estimate" value="{{value}}"><span class="sel"></span></label>
+            <label style="background: url(/images/decks/{{img}}) 0 0 no-repeat; background-size: contain;" class="card"><input type="radio" name="estimate" value="{{value}}"><span class="sel"></span></label>
         {{/each}}
     </form>
 	{{/unless}}
