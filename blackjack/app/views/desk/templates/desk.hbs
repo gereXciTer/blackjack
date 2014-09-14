@@ -1,14 +1,14 @@
 <section class="info">
 
   <h3 class="desk-name">[{{project}}] {{deskName}}</h3>
-
+		
   <div class="participants">
     Participants:
 
     <ul>
       {{#each participant}}
         <li data-id="{{email}}">
-          <img src="/api/photo/?id=dummy" />
+          <img src="/api/photo/?id={{#if photosSum.attachment}}{{photosSum.attachment}}{{else}}dummy{{/if}}" />
           <span>{{name}}</span>
         </li>
       {{/each}}

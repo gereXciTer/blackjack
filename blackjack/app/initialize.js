@@ -19,8 +19,8 @@ $.fn.serializeObject = function()
 };
 Application.pollerConfig = {
   frequencies: {
-    'story': 1500000,
-    'vote': 500000,
+    'story': 500000,
+    'vote': 150000,
     'online': 5000
   },
   getFreq: function(name){

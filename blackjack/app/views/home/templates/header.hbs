@@ -1,3 +1,10 @@
+<a id="downloadExcel" href="#"><img width="45" height="45" src="/images/csv.jpg" /></a>
+
 <ul>
   <li><a class="header-link btn" href="{{url "home#index"}}">Start Over</a></li>
 </ul>
+
+
+<table id="stories-list" style="display: none;">
+</table>	
+<a style="display: none;" id="downloadExcelTrigger" href="#" onclick="return ExcellentExport.csv(this, 'stories-list')">to Excel</a>

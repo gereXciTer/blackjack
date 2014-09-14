@@ -10,6 +10,7 @@ var Controller = require('controllers/base/controller');
 var Model = require('models/base/model');
 
 var Poller = require('lib/poller');
+var excelExport = require('lib/export');
 
 var DeskModel = require('models/desk');
 var StoryModel = require('models/story');
@@ -29,6 +30,7 @@ var UsersOnline = require('models/users-online');
 module.exports = Controller.extend({
 
   viewdesk: function(params){
+    
     this.reuse('header', HeaderView, {region: 'header'});
     
     var _this = this;
@@ -48,32 +50,7 @@ module.exports = Controller.extend({
         region: 'main',
         model: model
       });
-      
-      var usersOnline = new UsersOnline({deskId: params.id});
-      
-      var poller = _.find(Application.pollers, function(item){
-        return item.name == 'online';
-      });
-      if(poller && poller.poller.stop){
-        poller.poller.stop();
-        poller.poller.start();
-      }else{
-        Application.pollers.push({name: 'online', poller: storiesPoller.get(usersOnline, {delay: Application.pollerConfig.getFreq('online')}).start()});
-      }
-      
-      usersOnline.on('sync', function(){
-        var users = _this.view.$el.find('.participants li[data-id]');
-        users.each(function(index, el){
-          el = $(el);
-					var found = usersOnline.find(function(item){
-            return item.get(el.data('id'));
-          });
-          if(found){
-            el.addClass('online');
-          }
-        });
-      });
-      
+            
       var poller = _.find(Application.pollers, function(item){
         return item.name == 'story';
       });
@@ -119,6 +96,34 @@ module.exports = Controller.extend({
 
     };
     
+    Chaplin.mediator.unsubscribe('online:parse');
+    Chaplin.mediator.subscribe('online:parse', function(){
+      var usersOnline = new UsersOnline({deskId: params.id});
+      
+      var poller = _.find(Application.pollers, function(item){
+        return item.name == 'online';
+      });
+      if(poller && poller.poller.stop){
+        poller.poller.stop();
+        poller.poller.start();
+      }else{
+        Application.pollers.push({name: 'online', poller: storiesPoller.get(usersOnline, {delay: Application.pollerConfig.getFreq('online')}).start()});
+      }
+      
+      usersOnline.on('sync', function(){
+       	var users = $('.participants li[data-id]');
+        users.each(function(index, el){
+          el = $(el);
+					var found = usersOnline.find(function(item){
+            return item.get(el.data('id'));
+          });
+          if(found){
+            el.addClass('online');
+          }
+        });
+      });
+    });
+
     Chaplin.mediator.unsubscribe('story:refresh');
     Chaplin.mediator.subscribe('story:refresh', function(collection){
       collection.fetch();
@@ -141,18 +146,31 @@ module.exports = Controller.extend({
       });
     });
         
+    var votesCollection = new VotesCollection();
     Chaplin.mediator.unsubscribe('vote:refresh');
     Chaplin.mediator.subscribe('vote:refresh', function(params){
-      var votesCollection = new VotesCollection({
-          storyId: params.storyId
-        });
+      
+      votesCollection.options.storyId = params.storyId;
 			
-      var drawVotes = function(collection, container){
-        var isRevealed = params.model.get('revealed');
+      var drawVotes = function(collection){
+        var container = $('.story .votes');
+        var isRevealed = container.data('revealed') || false;
         container = container.html('<ul class="votes-list"></ul>').find('.votes-list');
         var template = require('views/desk/templates/vote');
+        var average = 0;
+        var averageVal = 0;
+        var estimates = {};
         collection.each(function(item){
-          container.append('<li class="vote">' + template(_.extend(item.getAttributes(), {isRevealed: isRevealed})) + '</li>');          
+          estimates[item.get('estimate')] = estimates[item.get('estimate')] ? estimates[item.get('estimate')] + 1 : 1;
+        });
+        for(var i in estimates){
+        	if(averageVal < estimates[i]){
+            averageVal = estimates[i];
+            average = i;
+          }
+        }
+        collection.each(function(item){
+          container.append('<li class="vote' + (item.get('estimate') !== average ? ' notaverage' : '') + '">' + template(_.extend(item.getAttributes(), {isRevealed: isRevealed})) + '</li>');          
         });
       };
 
@@ -169,14 +187,7 @@ module.exports = Controller.extend({
       if(params.callback){
         params.callback(votesCollection);
       }
-      votesCollection.on('sync', function(collection){
-        if(collection.length){
-          var container = _this.view.$el.find('.story .votes');
-          if(collection.length){
-            drawVotes(collection, container);
-          }
-        }
-      });
+      votesCollection.off('sync', drawVotes).on('sync', drawVotes);
 
     });
 
@@ -215,7 +226,7 @@ module.exports = Controller.extend({
       region: 'stories',
       collection: collection
     });
-    _this.view.subview('stories', storiesCollectionView);
+    this.view.subview('stories', storiesCollectionView);
     Chaplin.mediator.publish('loader:hide');
   }
   
