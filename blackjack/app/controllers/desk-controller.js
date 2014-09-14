@@ -10,6 +10,7 @@ var Controller = require('controllers/base/controller');
 var Model = require('models/base/model');
 
 var Poller = require('lib/poller');
+var excelExport = require('lib/export');
 
 var DeskModel = require('models/desk');
 var StoryModel = require('models/story');
@@ -29,6 +30,7 @@ var UsersOnline = require('models/users-online');
 module.exports = Controller.extend({
 
   viewdesk: function(params){
+    
     this.reuse('header', HeaderView, {region: 'header'});
     
     var _this = this;

@@ -18,5 +18,5 @@ module.exports = View.extend({
   attach: function(args){
     this.constructor.__super__.attach.apply(this, arguments);
     Chaplin.mediator.publish('online:parse');
-  },
+  }
 });
