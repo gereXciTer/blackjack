@@ -32,7 +32,8 @@ module.exports = View.extend({
         var user = _.find(_this.params.parentView.subview('step3').model.get('participants'), function(el){ return el.emailSum == item; });
         item = {
           email: item,
-          name: user.fullNameSum.full
+          name: user.fullNameSum.full,
+          photoId: user.photosSum[0]
         };
         return item;
       });
@@ -41,9 +42,9 @@ module.exports = View.extend({
     }
     formData.participant.push({
       email: Application.userModel.attributes[0].emailSum,
-      name: Application.userModel.attributes[0].fullNameSum.full
+      name: Application.userModel.attributes[0].fullNameSum.full,
+      photoId: Application.userModel.attributes[0].photosSum[0]
     });
-    
 
     if(!formData.deskName || formData.deck == undefined){
       if(formData.deck == undefined){
