@@ -27,14 +27,16 @@ register('url', function(routeName) {
 });
 
 register('cardimg', function(estimate) {
-  var card = _.find(DecksCollection.at(Application.desk.deck).get('cards'), function(cardItem){
+  var deck = DecksCollection.at(Application.desk.deck);
+  var card = _.find(deck.get('cards'), function(cardItem){
     return cardItem.value == estimate;
   });
-  return DecksCollection.at(Application.desk.deck).get('path') + card.img;
+  return deck.get('path') + card.img;
 });
 
-register('cardcover', function(estimate) {
-  return DecksCollection.at(Application.desk.deck).get('cover');
+register('cardcover', function() {
+  var deck = DecksCollection.at(Application.desk.deck);
+  return deck.get('path') + deck.get('cover');
 });
 
 register('isowner', function(options) {

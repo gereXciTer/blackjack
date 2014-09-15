@@ -1,7 +1,7 @@
 <div class="decks">
 {{#each decks}}
   {{name}}
-  <label class="fibohacci"><input type="radio" name="deck" value="{{@index}}"><span class="sel"></span></label>
+  <label class="fibohacci" style="background: url(../images/{{path}}{{img}}) 0 0 no-repeat;"><input type="radio" name="deck" value="{{@index}}"><span class="sel"></span></label>
 {{/each}}
 </div>
 <br />
