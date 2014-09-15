@@ -170,7 +170,12 @@ module.exports = Controller.extend({
           }
         }
         collection.each(function(item){
-          container.append('<li class="vote' + (isRevealed && (item.get('estimate') !== average) ? ' notaverage' : '') + '">' + template(_.extend(item.getAttributes(), {isRevealed: isRevealed})) + '</li> ');          
+          var name = _.find(Application.desk.participant, function(user){
+            return user.email == item.get('email');
+          }).name;
+          container.append('<li class="vote' + (isRevealed && (item.get('estimate') !== average) ? ' notaverage' : '') + '">' + 
+                           template(_.extend(item.getAttributes(), {isRevealed: isRevealed, name: name})) + 
+                           '</li> ');          
         });
       };
 
