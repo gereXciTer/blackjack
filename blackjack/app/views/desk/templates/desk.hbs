@@ -8,7 +8,7 @@
     <ul>
       {{#each participant}}
         <li data-id="{{email}}">
-          <img src="/api/photo/?id={{#if photoId}}{{photoId}}{{else}}dummy{{/if}}" />
+          <img src="/api/photo/?id={{#if photoId}}{{photoId}}{{else}}dummy{{/if}}" {{#if photoId}}class="photo" {{/if}}/>
           <span>{{name}}</span>
         </li>
       {{/each}}

@@ -6,7 +6,8 @@ module.exports = View.extend({
   tagName: 'header',
   template: require('./templates/header'),
   events: {
-    'click #downloadExcel': 'downloadExcel'
+    'click #downloadExcel': 'downloadExcel',
+    'click #shareLink': 'shareLink'
   },
   downloadExcel: function(e){
     e.preventDefault();
@@ -16,5 +17,9 @@ module.exports = View.extend({
     });
     $('#downloadExcelTrigger').attr('download', $('.desk-name').text().trim() + '.csv')
     downloadExcelTrigger.click();
+  },
+  shareLink: function(e){
+    e.preventDefault();
+    $('#deskLink').toggle().val(window.location.href).select();
   }
 });
