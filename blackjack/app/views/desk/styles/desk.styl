@@ -21,9 +21,6 @@
       display: inline-block
       text-align: center
       margin-right: 1em
-      .photo
-      	border-radius: 0.5em
-      	box-shadow: #aaa 0 0 0.5em
       span
       	display: block
 	      text-align: center
@@ -32,6 +29,11 @@
       &.online
       	span
       		background-color: #a7f2a7
+      .photo
+      	border-radius: 0.5em
+      	box-shadow: #aaa 0 0 0.5em
+        height: 100px
+        width: auto
 
 .stories-list-wrapper
 	position: relative
@@ -125,5 +127,6 @@
     box-shadow: #fc523c 0 0 1em
     border-radius: 10px
 
-#downloadExcel
+#downloadExcel, #shareLink, #deskLink
 	float: right
+  margin-right: 1em
