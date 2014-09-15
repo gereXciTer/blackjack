@@ -27,7 +27,7 @@ exports.basic = function(mongoose) {
             var cached = myCache.get(hash);
             if(!Object.keys(cached).length) {
                 console.log("nothing in auth cache, going to e3s to authenticate");
-                skipAuth(req.headers.authorization, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=photosSum,projectall,fullNameSum,upsaidSum,emailSum&query={%22email%22:colon%22:email%22}', {
+                e3s.sendE3SHttps(req.headers.authorization, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=photosSum,projectall,fullNameSum,upsaidSum,emailSum&query={%22email%22:colon%22:email%22}', {
                     "email": user.name
                 }, function(body) {
                     console.log("authentication ok for: " + user.name);
