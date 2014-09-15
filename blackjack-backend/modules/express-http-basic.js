@@ -13,6 +13,7 @@ var myCache = new NodeCache({
 });
 var md5 = require('MD5');
 exports.basic = function(mongoose) {
+    console.log("http basic auth enabled");
     return function(req, res, next) {
         var auth = require('basic-auth');
         var user = auth(req);

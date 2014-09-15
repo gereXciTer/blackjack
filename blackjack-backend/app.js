@@ -14,7 +14,6 @@
     app.use(auth.basic(mongoose));
     var bodyParser = require('body-parser');
     app.use(bodyParser.json());
-    console.log("http basic auth enabled");
     var e3sController = require('./controllers/e3s.js').init(app, mongoose);
     var deskController = require('./controllers/desk.js').init(app, mongoose);
     var storyController = require('./controllers/story.js').init(app, mongoose);

@@ -9,12 +9,12 @@ var httpsHelper = require('./http-helper.js');
 exports.buildE3SHttpOptions = function(basicAuth, pathTemplate, params) {
     return httpsHelper.buildHttpOptions('e3s.epam.com', 443, basicAuth, pathTemplate, params);
 };
-exports.sendE3SHttps = function(basicAuth, pathTemplate, params, successCallback, errorCallback) {
+exports.sendE3SHttps = function(basicAuth, pathTemplate, params, successCallback, errorCallback, binary) {
     var options = exports.buildE3SHttpOptions(basicAuth, pathTemplate, params);
     console.log("sending request to " + options.host + ":" + options.port + options.path);
-    httpsHelper.sendHttps(options, successCallback, errorCallback);
+    httpsHelper.sendHttps(options, successCallback, errorCallback, binary);
 };
-exports.proxyE3SReq = function(req, res, pathTemplate, params, successCallback, errorCallback) {
+exports.proxyE3SReq = function(req, res, pathTemplate, params, successCallback, errorCallback, binary) {
     exports.sendE3SHttps(req.headers.authorization, pathTemplate, params, successCallback || function(body) {
         console.log("default response callback: " + body);
         res.set("Content-type", "application/json");
@@ -27,5 +27,5 @@ exports.proxyE3SReq = function(req, res, pathTemplate, params, successCallback, 
             errorMessage: "internal server error",
             innerError: err
         });
-    });
+    }, binary);
 };
