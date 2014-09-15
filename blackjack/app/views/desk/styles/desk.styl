@@ -83,7 +83,6 @@
   background-size: contain
   margin: 0 auto
   margin-right: 0.5em
- 	border: 2px solid #eee
   position: relative
   cursor: pointer
   .sel
@@ -96,7 +95,7 @@
     border: 2px solid #377ece
     box-shadow: #377ece 0 0 10px
     background: rgba(55, 126, 206, 0.3)
-    border-radius: 3px
+    border-radius: 8px
 .cards label input
   display: none
   &:checked + .sel
@@ -108,12 +107,13 @@
   list-style: none
   .vote
     display: inline-block
-    width: 75px
+    width: 144px
+    margin-right: 0.5em
 
 .vote.notaverage
 	label
-		border: 2px solid #FFC79B
-    box-shadow: #FFC79B 0 0 1em
+    box-shadow: #fc523c 0 0 1em
+    border-radius: 10px
 
 #downloadExcel
 	float: right

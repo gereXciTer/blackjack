@@ -12,49 +12,50 @@ module.exports = new Collection([
   {
     cover: '0/cover.png',
     description: 'A typical deck has cards showing the Fibonacci sequence including a zero: 0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89',
+    path: '0/',
     cards: [
       {
-        img: '0/0.png',
+        img: '0.png',
         value: 0
       },
       {
-        img: '0/1.png',
+        img: '1.png',
         value: 1
      	},
       {
-        img: '0/2.png',
+        img: '2.png',
         value: 2
       },
       {
-        img: '0/3.png',
+        img: '3.png',
         value: 3
       },
       {
-        img: '0/4.png',
+        img: '5.png',
         value: 5
       },
       {
-        img: '0/5.png',
+        img: '8.png',
         value: 8
       },
       {
-        img: '0/6.png',
+        img: '13.png',
         value: 13
       },
       {
-        img: '0/7.png',
+        img: '21.png',
         value: 21
       },
       {
-        img: '0/8.png',
+        img: '34.png',
         value: 34
       },
       {
-        img: '0/9.png',
+        img: '55.png',
         value: 55
       },
       {
-        img: '0/10png',
+        img: '89.png',
         value: 89
       }
     ]
@@ -62,29 +63,30 @@ module.exports = new Collection([
   {
     cover: '1/cover.png',
     description: 'Standard playing cards of Ace, 2, 3, 5, 8 and King',
+    path: '1/',
     cards: [
       {
-        img: '1/0.png',
+        img: 'ace.png',
         value: 1
       },
       {
-        img: '1/1.png',
+        img: '2.png',
         value: 2
       },
       {
-        img: '1/2.png',
+        img: '3.png',
         value: 3
       },
       {
-        img: '1/3.png',
+        img: '5.png',
         value: 5
       },
       {
-        img: '1/4.png',
+        img: '8.png',
         value: 8
       },
       {
-        img: '1/5.png',
+        img: 'king.png',
         value: 13
       }
     ]
@@ -92,58 +94,59 @@ module.exports = new Collection([
   {
     cover: '2/cover.png',
     description: '0, ½, 1, 2, 3, 5, 8, 13, 20, 40, 100, and optionally a ? (unsure) and a coffee cup (I need a break)',
+    path: '2/',
     cards: [
       {
-        img: '2/0.png',
+        img: 'question.png',
+        value: 'question'
+      },
+      {
+        img: '0.png',
         value: 0
       },
       {
-        img: '2/1.png',
+        img: '0.5.png',
         value: 0.5
       },
       {
-        img: '2/2.png',
+        img: '1.png',
         value: 1
       },
       {
-        img: '2/3.png',
+        img: '2.png',
         value: 2
       },
       {
-        img: '2/4.png',
+        img: '3.png',
         value: 3
       },
       {
-        img: '2/5.png',
+        img: '5.png',
         value: 5
       },
       {
-        img: '2/6.png',
+        img: '8.png',
         value: 8
       },
       {
-        img: '2/7.png',
+        img: '13.png',
         value: 13
       },
       {
-        img: '2/8.png',
+        img: '20.png',
         value: 20
       },
       {
-        img: '2/9.png',
+        img: '40.png',
         value: 40
       },
       {
-        img: '2/10.png',
+        img: '100.png',
         value: 100
       },
       {
-        img: '2/11.png',
-        value: false
-      },
-      {
-        img: '2/12.png',
-        value: false
+        img: 'coffee.png',
+        value: 'coffee'
       }
     ]
   }

@@ -30,7 +30,8 @@ register('cardimg', function(estimate) {
   var card = _.find(DecksCollection.at(Application.desk.deck).get('cards'), function(cardItem){
     return cardItem.value == estimate;
   });
-  return card.img;
+  console.log(DecksCollection.at(Application.desk.deck).get('path') + card.img)
+  return DecksCollection.at(Application.desk.deck).get('path') + card.img;
 });
 
 register('cardcover', function(estimate) {
