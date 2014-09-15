@@ -170,7 +170,7 @@ module.exports = Controller.extend({
           }
         }
         collection.each(function(item){
-          container.append('<li class="vote' + (item.get('estimate') !== average ? ' notaverage' : '') + '">' + template(_.extend(item.getAttributes(), {isRevealed: isRevealed})) + '</li>');          
+          container.append('<li class="vote' + (isRevealed && (item.get('estimate') !== average) ? ' notaverage' : '') + '">' + template(_.extend(item.getAttributes(), {isRevealed: isRevealed})) + '</li> ');          
         });
       };
 
