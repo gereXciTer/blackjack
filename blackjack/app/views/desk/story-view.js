@@ -18,6 +18,7 @@ module.exports = View.extend({
   },
   events: {
     'click a.activate': 'activateStory',
+    'click a.delete': 'deleteStory',
     'click a.reveal': 'revealStory',
     'click a.estimate': 'estimateStory',
     'change label.card': 'makeVote'
@@ -42,6 +43,18 @@ module.exports = View.extend({
   	e.preventDefault();
     this.updateStory({active: true, id: this.model.get('_id')});
 	},
+  deleteStory: function(e){
+  	e.preventDefault();
+    var _this = this;
+    this.model.urlRoot = '/api/stories';
+    this.model.set('id', this.model.get('_id'));
+    Chaplin.mediator.publish('loader:show');
+    this.model.destroy({
+      success: function(){
+        _this.collection.fetch();
+      }
+    });  
+  },
   revealStory: function(e){
   	e.preventDefault();
     var revealed = !this.model.get('revealed');

@@ -92,7 +92,11 @@ module.exports = Controller.extend({
         }
       });
 
-			storyCollection.fetch();
+			storyCollection.fetch({
+        success: function(collection){
+          _this.refreshStories(collection);
+        }
+      });
 
     };
     

@@ -2,6 +2,7 @@
   {{#compare estimate 0 operator="<"}}
 		{{#unless active}}
   		<a href="#" class="btn activate" data-id="{{_id}}">Activate</a>
+			<a href="#" class="btn delete" data-id="{{_id}}">Delete</a>
   	{{/unless}}
 		{{#if active}}
       {{#if revealed}}

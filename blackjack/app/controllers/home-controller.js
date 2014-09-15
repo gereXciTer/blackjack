@@ -31,7 +31,6 @@ module.exports = Controller.extend({
 
       Application.userModel.fetch({
         success: function(data){
-          console.log(data)
           _this.view = new HomePageView({region: 'main'});
 					Chaplin.mediator.publish('loader:hide');
         },
