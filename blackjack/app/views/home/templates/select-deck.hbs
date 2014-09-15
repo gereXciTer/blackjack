@@ -1,11 +1,8 @@
 <div class="decks">
-  Fibonacci sequence
-  <label class="fibohacci"><input type="radio" name="deck" value="0"><span class="sel"></span></label>
-  Ace-King
-  <label class="ace-king"><input type="radio" name="deck" value="1"><span class="sel"></span></label>
-  Long Coffee
-  <label class="long-coffee"><input type="radio" name="deck" value="2"><span class="sel"></span></label>
-  </select>
+{{#each decks}}
+  {{name}}
+  <label class="fibohacci"><input type="radio" name="deck" value="{{@index}}"><span class="sel"></span></label>
+{{/each}}
 </div>
 <br />
 <input type="text" name="deskName" id="deskName" placeholder="Please set desk name" />

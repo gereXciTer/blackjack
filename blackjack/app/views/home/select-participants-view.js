@@ -9,6 +9,8 @@
 var View = require('views/base/view');
 
 var SelectDeckView = require('views/home/select-deck-view');
+var DecksCollection = require('models/decks');
+var Model = require('models/base/model');
 
 module.exports = View.extend({
   autoRender: true,
@@ -28,7 +30,7 @@ module.exports = View.extend({
     
     Chaplin.mediator.publish('deskWizardGoForward', {
       step:4, 
-      model: null,
+      model: new Model({ decks: DecksCollection}),
       el:  this.$el,
       view: SelectDeckView
     });

@@ -11,6 +11,7 @@ var Collection  = require('models/base/collection');
 module.exports = new Collection([
   {
     cover: '0/cover.png',
+    name: 'Fibonacci',
     description: 'A typical deck has cards showing the Fibonacci sequence including a zero: 0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89',
     path: '0/',
     cards: [
@@ -62,6 +63,7 @@ module.exports = new Collection([
   },
   {
     cover: '1/cover.png',
+    name: 'Playing cards',
     description: 'Standard playing cards of Ace, 2, 3, 5, 8 and King',
     path: '1/',
     cards: [
@@ -93,6 +95,7 @@ module.exports = new Collection([
   },
   {
     cover: '2/cover.png',
+    name: 'Mountain goat',
     description: '0, ½, 1, 2, 3, 5, 8, 13, 20, 40, 100, and optionally a ? (unsure) and a coffee cup (I need a break)',
     path: '2/',
     cards: [

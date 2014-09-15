@@ -70,7 +70,6 @@ module.exports = Controller.extend({
     this.view = new NewDeskView({region: 'main'});
             
     var newDesk = function(data){
-      console.log(data);
       var projects = data.attributes[0].projectall.split(' '),
           projarray = [];
       for(var i = 0; i<projects.length; i++){
