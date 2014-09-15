@@ -17,12 +17,6 @@
 	{{summary}}
 </h4>
 {{#if active}}
-	Other estimates:
-	<div class="votes" {{#if revealed}}data-revealed="true"{{/if}}>
-    <div style="margin: 1em">
-      No estimates
-    </div>
-	</div>
 	{{#unless revealed}}
     Choose your estimate:
     <form class="cards">
@@ -30,5 +24,12 @@
             <label style="background: url(/images/decks/{{cardimg value}}) 0 0 no-repeat; background-size: contain;" class="card"><input type="radio" name="estimate" value="{{value}}"><span class="sel"></span></label>
         {{/each}}
     </form>
+  	<div class="hr"></div>
 	{{/unless}}
+	Other estimates:
+	<div class="votes" {{#if revealed}}data-revealed="true"{{/if}}>
+    <div style="margin: 1em">
+      No estimates
+    </div>
+	</div>
 {{/if}}
