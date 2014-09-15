@@ -66,9 +66,19 @@ exports.init = function(app, mongoose) {
             e3s.proxyE3SReq(req, res, '/rest/e3s-app-logo-impl/v1/logo?uri=:id', {
                 id: id
             }, function(body) {
-                res.set("Content-type", "image/png");
-                res.status(200).send(body);
-            });
+                res.set("Content-type", "image/gif");
+                res.set("Cache-control", "public,max-age=3600");
+                res.set("Content-length", body.length);
+                res.end(body, "binary");
+            }, function(e) {
+                var err = JSON.stringify(e);
+                console.log("default error callback: " + err);
+                res.status(500).send({
+                    errorCode: 500,
+                    errorMessage: "internal server error",
+                    innerError: err
+                });
+            }, true);
         }
     });
 

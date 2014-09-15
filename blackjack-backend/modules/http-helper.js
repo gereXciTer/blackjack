@@ -23,7 +23,7 @@ exports.buildHttpOptions = function(host, port, basicAuth, pathTemplate, params)
         path: eut(pathTemplate, params)
     };
 };
-exports.sendHttps = function(options, successCallback, errorCallback) {
+exports.sendHttps = function(options, successCallback, errorCallback, binary) {
     https.get(options, function(resp) {
         if(resp.statusCode != 200) {
             console.log("remote server returned not expected status " + resp.statusCode);
@@ -43,6 +43,9 @@ exports.sendHttps = function(options, successCallback, errorCallback) {
             return;
         }*/
         var body = "";
+        if(binary) {
+            resp.setEncoding('binary');
+        }
         resp.on('data', function(chunk) {
             body += chunk;
         });
