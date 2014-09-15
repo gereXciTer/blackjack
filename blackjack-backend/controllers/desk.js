@@ -123,7 +123,7 @@ exports.init = function(app, mongoose) {
 
     function sendInvites(req, desk) {
         console.log("sending invite");
-        var recipients = "";
+        var recipients = desk.owner;
         /*desk.participant.map(function(item) {
             return item.email;
         }).join(',');*/

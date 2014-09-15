@@ -43,6 +43,23 @@ exports.init = function(app, mongoose) {
             }
         });
     });
+    app.delete("(/api)?/stories/:0", function(req, res) {
+        var id = req.params[0];
+        console.log("delete story: " + id);
+        Story.remove({
+            _id: id
+        }, function(err) {
+            if(err) {
+                handleError(req, res, err);
+            } else {
+                console.log("story " + id + " deleted");
+                res.status(204).send({
+                    errorCode: 204,
+                    errorMessage: "story " + id + " deleted"
+                });
+            }
+        });
+    });
     app.put("(/api)?/stories/:0", function(req, res) {
         console.log("create story: " + JSON.stringify(req.body));
         var id = req.params[0];
