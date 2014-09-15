@@ -66,8 +66,8 @@ exports.init = function(app, mongoose) {
             e3s.proxyE3SReq(req, res, '/rest/e3s-app-logo-impl/v1/logo?uri=:id', {
                 id: id
             }, function(body) {
-                //res.status(200).end('<img src="data:image/gif;base64,' + new Buffer(body).toString('base64') + '" />');
                 res.set("Content-type", "image/gif");
+                res.set("Cache-control", "public,max-age=3600");
                 res.set("Content-length", body.length);
                 res.end(body, "binary");
             }, function(e) {
