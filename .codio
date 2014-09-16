@@ -6,7 +6,7 @@
         "Node version": "node --version",
         "Brunch watch": "cd ~/workspace/blackjack && brunch watch --server",
       	"start UnGit": "ungit --port=9501",
-    		"sturtup": "cd ~/workspace && ./startup.sh"
+    		"startup": "cd ~/workspace && ./startup.sh"
   },
 
 // Preview button configuration

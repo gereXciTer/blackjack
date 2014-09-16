@@ -7,7 +7,7 @@
 (function() {
     var oldConsoleLog = console.log;
     console.log = function(msg) {
-        if(false) {
+        if(true) {
             oldConsoleLog(msg);
         }
     };
