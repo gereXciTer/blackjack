@@ -13,7 +13,7 @@
   "preview": {
         "Project Index (static)": "https://{{domain}}/{{index}}",
         "Current File (static)": "https://{{domain}}/{{filepath}}",
-        "Box URL": "https://{{domain}}:9500/",
+        "Box URL": "https://{{domain}}:9500",
       	"Visit Ungit": "https://{{domain}}:9501/#/repository?path=/home/codio/workspace"
   }
 }
