@@ -100,9 +100,10 @@ module.exports = Controller.extend({
 
     };
     
+    var usersOnline = new UsersOnline();
     Chaplin.mediator.unsubscribe('online:parse');
     Chaplin.mediator.subscribe('online:parse', function(){
-      var usersOnline = new UsersOnline({deskId: params.id});
+      usersOnline = new UsersOnline({deskId: params.id});
       
       var poller = _.find(Application.pollers, function(item){
         return item.name == 'online';
