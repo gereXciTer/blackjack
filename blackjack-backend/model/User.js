@@ -8,7 +8,8 @@
 exports.make = function (Schema, mongoose) {
     User = new Schema({
 		email: String,
-        lastAccessTime: String
+        lastAccessTime: String,
+        lastDesk: String
     });
     return mongoose.model('User', User);
 };

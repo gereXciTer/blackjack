@@ -32,6 +32,13 @@ exports.init = function(app, mongoose) {
                     return item.email;
                 });
                 console.log("participants are: " + JSON.stringify(emails));
+                User.update({
+                    email: req.user.name
+                }, {
+                    lastDesk: deskId
+                }, function(err, count) {
+                    console.log("user: " + req.user.name + " record updated with lastDesk: " + deskId);
+                });
                 var query = User.where({
                     email: {
                         "$in": emails
@@ -46,7 +53,7 @@ exports.init = function(app, mongoose) {
                             console.log("mapping access time to online status");
                             var timeDiff = Math.abs(new Date() - new Date(item.lastAccessTime));
                             console.log("for: " + item.email + " diff between now: " + new Date().toISOString() + " and lastAccessTime: " + item.lastAccessTime + " is: " + timeDiff + " ms")
-                            retVal[item.email] = timeDiff < (1000 * timeout);
+                            retVal[item.email] = (timeDiff < (1000 * timeout)) && (item.lastDesk == deskId);
                         });
                     }
                     res.set("Content-type", "application/json");
