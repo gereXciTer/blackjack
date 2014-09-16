@@ -124,6 +124,8 @@ module.exports = Controller.extend({
           });
           if(found){
             el.addClass('online');
+          }else{
+            el.removeClass('online');
           }
         });
       });
