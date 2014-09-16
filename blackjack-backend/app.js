@@ -5,6 +5,12 @@
  * Time: 02:29 PM
  */
 (function() {
+    var oldConsoleLog = console.log;
+    console.log = function(msg) {
+        if(false) {
+            oldConsoleLog(msg);
+        }
+    };
     var express = require('express');
     var app = express();
     var mongoose = require('mongoose');
