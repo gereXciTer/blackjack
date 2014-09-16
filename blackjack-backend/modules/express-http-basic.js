@@ -44,8 +44,9 @@ exports.basic = function(mongoose) {
                     console.log("authentication failed for " + user.name);
                     console.log("purging cache key: " + hash);
                     myCache.del(hash);
-                    res.status(403).send({
-                        errorCode: 403,
+            		res.set("WWW-Authenticate", "Basic realm=\"|| Login with you full '@epam.com' domain credentials ||\"");
+                    res.status(401).send({
+                        errorCode: 401,
                         errorMessage: "Provided credentials are not valid",
                         innerError: err
                     });
