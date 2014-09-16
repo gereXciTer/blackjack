@@ -33,7 +33,7 @@ module.exports = View.extend({
         item = {
           email: item,
           name: user.fullNameSum.full,
-          photoId: user.photosSum[0]
+          photoId: user.photosSum ? user.photosSum[0] : 'dummy'
         };
         return item;
       });
