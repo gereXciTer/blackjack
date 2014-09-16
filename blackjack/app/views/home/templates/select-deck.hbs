@@ -1,7 +1,11 @@
-<div class="decks">
+<div class="decks" style="max-height: 75%; overflow: auto;">
 {{#each decks}}
-  {{name}}
-  <label class="fibohacci" style="background: url(../images/{{path}}{{img}}) 0 0 no-repeat;"><input type="radio" name="deck" value="{{@index}}"><span class="sel"></span></label>
+  <h5 style="margin-bottom: 0;margin-top: 0.5em;">{{name}}</h5>
+  <label>
+  	<img src="/images/decks/{{path}}{{img}}" width="200" />
+  	<input type="radio" name="deck" value="{{@index}}">
+  	<span class="sel"></span>
+  </label>
 {{/each}}
 </div>
 <br />

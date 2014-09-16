@@ -59,11 +59,8 @@
 
 .decks label
 	display: block
-  width: 200px
-  height: 128px
-  background-size: contain
   margin: 0 auto
- 	border: 2px solid transparent
+  width: 200px
   position: relative
   cursor: pointer
   .sel
@@ -73,16 +70,12 @@
     position: absolute
     width: 100%
     height: 100%
+    top: 0
+    left: 0
     border: 2px solid #377ece
     box-shadow: #377ece 0 0 10px
     background: rgba(55, 126, 206, 0.3)
     border-radius: 3px
-  &.fibohacci
-	  background: url(../images/deck0.png) 0 0 no-repeat
-  &.ace-king
-  	background: url(../images/deck1.png) 0 0 no-repeat
-  &.long-coffee
-  	background: url(../images/deck2.png) 0 0 no-repeat
 .decks label input
   display: none
   &:checked + .sel
