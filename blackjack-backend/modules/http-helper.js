@@ -12,15 +12,18 @@ exports.buildHttpOptions = function(host, port, basicAuth, pathTemplate, params)
     params.colon1 = ":";
     params.colon2 = ":";
     params.colon3 = ":";
+    params.colon4 = ":";
     params.colon5 = ":";
     console.log("sending Authorization " + basicAuth.substring(0, 15) + "[omitted...]");
+    var path = eut(pathTemplate, params);  
+    console.log("evaluated path: " + path);
     return {
         host: host,
         port: port,
         headers: {
             "Authorization": basicAuth
         },
-        path: eut(pathTemplate, params)
+        path: path
     };
 };
 exports.sendHttps = function(options, successCallback, errorCallback, binary) {
