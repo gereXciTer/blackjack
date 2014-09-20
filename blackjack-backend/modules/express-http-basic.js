@@ -28,20 +28,19 @@ exports.basic = function(mongoose) {
             var cached = myCache.get(hash);
             if(!Object.keys(cached).length) {
                 console.log("nothing in auth cache, going to e3s to authenticate");
-                e3s.sendE3SHttps(req.headers.authorization, '/rest/e3s-eco-scripting-impl/0.1.0/data/select?type=com.epam.e3s.app.people.api.data.EmployeeEntity&fields=photosSum,projectall,fullNameSum,upsaidSum,emailSum&query={%22email%22:colon%22:email%22}', {
+				e3s.sendE3SHttps(req.headers.authorization, '/rest/e3s-eco-scripting-impl/0.1.0/data/searchFts?type=com.epam.e3s.app.people.api.data.EmployeeEntity&query={"statements":colon[{"query":colon2"email:colon3(:email)"}]}&fields=photosSum,fullNameSum,upsaidSum,emailSum,projectall&limit=1', {
                     "email": user.name
                 }, function(body) {
                     console.log("authentication ok for: " + user.name);
                     console.log("deleting password before storing the object");
                     delete user["pass"];
-                    console.log("user object with no password: " + JSON.stringify(user));
                     req.user = user;
-                    req.user.profile = body;
+                    req.user.profile = JSON.parse(body)[0].data;
                     console.log("caching key: " + hash + ", user: " + JSON.stringify(req.user));
                     myCache.set(hash, req.user);
                     next();
                 }, function(err) {
-                    console.log("authentication failed for " + user.name);
+                    console.log("authentication failed for: " + user.name + " with error: " + JSON.stringify(err));
                     console.log("purging cache key: " + hash);
                     myCache.del(hash);
             		res.set("WWW-Authenticate", "Basic realm=\"|| Login with you full '@epam.com' domain credentials ||\"");

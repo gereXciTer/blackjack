@@ -1,3 +1,5 @@
 <ul class="stories-list"></ul>
-<a href="#" class="btn" id="submitNewStory">Add</a>
-<input type="text" id="newStory" placeholder="Enter new story title" />
+{{#isowner}}
+    <a href="#" class="btn" id="submitNewStory">Add</a>
+    <input type="text" id="newStory" placeholder="Enter new story title" />
+{{/isowner}}

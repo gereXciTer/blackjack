@@ -8,7 +8,7 @@
     var oldConsoleLog = console.log;
     console.log = function(msg) {
         if(true) {
-            oldConsoleLog(msg);
+            oldConsoleLog("[" + (new Date()).toISOString() + "] " + msg);
         }
     };
     var express = require('express');
